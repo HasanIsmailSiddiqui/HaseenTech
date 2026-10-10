@@ -4,316 +4,193 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>WooCommerce Store Development — HaseenTech</title>
-  <meta name="description" content="Custom WooCommerce development by Hasan Ismail. Complete e-commerce stores, product catalogs, payment gateways, and checkout optimization for international brands.">
-  <meta name="author" content="Hasan Ismail">
+  <meta name="description" content="Custom WooCommerce online stores engineered for frictionless checkout, fast page loads, and intuitive inventory management. By senior developer Hasan Ismail.">
   <link rel="canonical" href="https://haseentech.com/service-woocommerce.html">
-
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="WooCommerce Store Development — HaseenTech">
-  <meta property="og:description" content="Reliable, high-converting WooCommerce storefronts engineered for smooth checkout and effortless inventory management.">
-  <meta property="og:image" content="assets/brand/logo.svg">
-
   <link rel="icon" type="image/svg+xml" href="assets/brand/favicon.svg">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
-  <!-- SHARED HEADER -->
-  <header class="site-header" role="banner">
-    <div class="container header-inner">
-      <a href="index.html" class="brand-link" aria-label="HaseenTech Home">
-        <img src="assets/brand/logo.svg" alt="HaseenTech" class="brand-logo-img" width="180" height="36">
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="brand-logo" aria-label="HaseenTech Home">
+        <img src="assets/brand/logo.svg" alt="HaseenTech" width="160" height="32">
       </a>
-
       <nav class="nav-desktop" aria-label="Primary Navigation">
         <ul class="nav-list">
-          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-          <li class="nav-item nav-dropdown">
-            <a href="services.html" class="nav-link active" id="nav-services" aria-haspopup="true" aria-expanded="false">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="portfolio.html" class="nav-link">Work</a></li>
+          <li class="nav-item-dropdown">
+            <a href="services.html" class="nav-link dropdown-trigger active" aria-haspopup="true" aria-expanded="false">
               Services
-              <svg class="dropdown-arrow" viewBox="0 0 24 24" fill="none" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
             </a>
-            <div class="nav-dropdown-menu" role="menu" aria-label="Services Submenu">
-              <a href="services.html" class="dropdown-item" role="menuitem">
-                <span class="dropdown-item-title">All Services Overview</span>
-                <span class="dropdown-item-desc">Comprehensive agency capabilities</span>
-              </a>
-              <a href="service-wordpress.html" class="dropdown-item" role="menuitem">
-                <span class="dropdown-item-title">WordPress Development</span>
-                <span class="dropdown-item-desc">Custom brochure &amp; business sites</span>
-              </a>
-              <a href="service-woocommerce.html" class="dropdown-item active" role="menuitem">
-                <span class="dropdown-item-title">WooCommerce Stores</span>
-                <span class="dropdown-item-desc">E-commerce catalogs &amp; checkout</span>
-              </a>
-              <a href="service-landing-pages.html" class="dropdown-item" role="menuitem">
-                <span class="dropdown-item-title">Landing Pages</span>
-                <span class="dropdown-item-desc">High-converting campaign funnels</span>
-              </a>
-              <a href="service-redesign.html" class="dropdown-item" role="menuitem">
-                <span class="dropdown-item-title">Website Redesign</span>
-                <span class="dropdown-item-desc">Modernizing legacy web presences</span>
-              </a>
-              <a href="service-maintenance.html" class="dropdown-item" role="menuitem">
-                <span class="dropdown-item-title">Maintenance &amp; Support</span>
-                <span class="dropdown-item-desc">Updates, security &amp; troubleshooting</span>
-              </a>
-              <a href="service-seo-speed.html" class="dropdown-item" role="menuitem">
-                <span class="dropdown-item-title">SEO &amp; Speed Optimization</span>
-                <span class="dropdown-item-desc">Core web vitals &amp; on-page hygiene</span>
-              </a>
+            <div class="dropdown-menu" role="menu">
+              <a href="service-wordpress.html" class="dropdown-item" role="menuitem">WordPress Development</a>
+              <a href="service-woocommerce.html" class="dropdown-item active" role="menuitem">WooCommerce Stores</a>
+              <a href="service-landing-pages.html" class="dropdown-item" role="menuitem">Landing Pages</a>
+              <a href="service-redesign.html" class="dropdown-item" role="menuitem">Website Redesign</a>
+              <a href="service-maintenance.html" class="dropdown-item" role="menuitem">Maintenance & Support</a>
+              <a href="service-seo-speed.html" class="dropdown-item" role="menuitem">SEO & Speed Optimization</a>
             </div>
           </li>
-          <li class="nav-item"><a href="portfolio.html" class="nav-link">Portfolio</a></li>
-          <li class="nav-item"><a href="pricing.html" class="nav-link">Pricing</a></li>
-          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+          <li><a href="about.html" class="nav-link">Studio</a></li>
+          <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
         </ul>
-        <div class="nav-cta-box">
-          <a href="contact.html" class="btn btn-primary btn-sm">Start a Project</a>
-        </div>
       </nav>
-
-      <button type="button" class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-drawer">
-        <span class="menu-bar"></span>
-        <span class="menu-bar"></span>
-        <span class="menu-bar"></span>
-      </button>
+      <div class="header-actions">
+        <a href="contact.html" class="btn btn-primary btn-sm">Start a Project ↗</a>
+        <button id="menu-toggle" class="mobile-toggle-btn" aria-label="Toggle Navigation Menu" aria-expanded="false">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+        </button>
+      </div>
     </div>
   </header>
 
-  <!-- Mobile Drawer Menu -->
-  <div class="drawer-backdrop" id="drawer-backdrop" aria-hidden="true"></div>
-  <aside class="mobile-drawer" id="mobile-drawer" aria-label="Mobile Menu Drawer" aria-hidden="true">
+  <!-- Mobile Drawer -->
+  <div id="mobile-drawer" class="mobile-drawer" aria-hidden="true">
     <div class="drawer-header">
-      <img src="assets/brand/logo.svg" alt="HaseenTech" style="height: 30px; width: auto;">
-      <button type="button" class="btn btn-ghost btn-sm" id="drawer-close" aria-label="Close navigation">✕</button>
+      <img src="assets/brand/logo.svg" alt="HaseenTech" width="140" height="28">
+      <button id="menu-close" class="mobile-toggle-btn" aria-label="Close Navigation Menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
     </div>
-    <nav class="drawer-nav-list" aria-label="Mobile Navigation">
-      <a href="index.html" class="drawer-link">Home</a>
-      <a href="about.html" class="drawer-link">About</a>
-      <div>
-        <a href="services.html" class="drawer-link active drawer-dropdown-trigger" style="display: flex; justify-content: space-between; align-items: center;">
-          <span>Services</span>
-          <span style="font-size: 14px;">+</span>
-        </a>
+    <ul class="drawer-nav-list">
+      <li><a href="index.html" class="drawer-link">Home</a></li>
+      <li><a href="portfolio.html" class="drawer-link">Selected Work</a></li>
+      <li>
+        <a href="services.html" class="drawer-link active">Services Overview</a>
         <div class="drawer-submenu">
-          <a href="services.html" class="drawer-sublink">All Services Overview</a>
           <a href="service-wordpress.html" class="drawer-sublink">WordPress Development</a>
           <a href="service-woocommerce.html" class="drawer-sublink active">WooCommerce Stores</a>
           <a href="service-landing-pages.html" class="drawer-sublink">Landing Pages</a>
           <a href="service-redesign.html" class="drawer-sublink">Website Redesign</a>
-          <a href="service-maintenance.html" class="drawer-sublink">Maintenance &amp; Support</a>
-          <a href="service-seo-speed.html" class="drawer-sublink">SEO &amp; Speed Optimization</a>
+          <a href="service-maintenance.html" class="drawer-sublink">Maintenance & Bug Fixes</a>
+          <a href="service-seo-speed.html" class="drawer-sublink">SEO & Speed Optimization</a>
         </div>
-      </div>
-      <a href="portfolio.html" class="drawer-link">Portfolio</a>
-      <a href="pricing.html" class="drawer-link">Pricing</a>
-      <a href="contact.html" class="drawer-link">Contact</a>
-    </nav>
-    <div style="margin-top: auto; display: flex; flex-direction: column; gap: 8px;">
-      <a href="contact.html" class="btn btn-primary btn-block">Start a Project</a>
-      <a href="mailto:hello@haseentech.com" class="btn btn-ghost btn-block" style="font-size: 13px;">hello@haseentech.com</a>
-    </div>
-  </aside>
+      </li>
+      <li><a href="about.html" class="drawer-link">Studio & Founder</a></li>
+      <li><a href="pricing.html" class="drawer-link">Packages & Pricing</a></li>
+      <li><a href="contact.html" class="drawer-link">Contact & Inquiries</a></li>
+    </ul>
+  </div>
 
   <main id="main-content">
-    <section class="service-hero-layout">
-      <div class="container container-narrow">
-        <a href="services.html" style="font-size: 13px; font-weight: 600; color: var(--color-orange); margin-bottom: 12px; display: inline-block;">← All Services</a>
-        <span class="eyebrow" style="display: block;">E-Commerce Architecture</span>
-        <h1 class="section-title" style="font-size: var(--fs-4xl); margin-bottom: 20px;">
-          WooCommerce Store Development &amp; Customization
-        </h1>
-        <p class="section-lead">
-          Launch and scale your online retail presence with WooCommerce. We build fast, secure online storefronts configured for high conversion rates, streamlined mobile checkouts, and effortless catalog administration.
+    <section class="page-hero-obsidian">
+      <div class="container page-hero-inner">
+        <div class="micro-label micro-label-orange">// SERVICE 02 · E-COMMERCE</div>
+        <h1 class="page-hero-title">WooCommerce Store Development.</h1>
+        <p class="page-hero-sub">
+          High-performance online storefronts engineered with reliable checkout paths, multi-currency support, payment gateways, and scalable product architecture.
         </p>
-
-        <div class="service-specs-strip">
-          <div class="spec-column">
-            <span class="spec-column-label">Typical Timeline</span>
-            <span class="spec-column-val">3 to 5 weeks</span>
-          </div>
-          <div class="spec-column">
-            <span class="spec-column-label">Revision Rounds</span>
-            <span class="spec-column-val">3 structured passes</span>
-          </div>
-          <div class="spec-column">
-            <span class="spec-column-label">Primary Stack</span>
-            <span class="spec-column-val">WordPress, WooCommerce, Stripe, PayPal</span>
-          </div>
-          <div class="spec-column">
-            <span class="spec-column-label">Starting Investment</span>
-            <span class="spec-column-val">From $999 / PKR 75,000</span>
-          </div>
-        </div>
       </div>
     </section>
 
-    <section class="section section-white">
-      <div class="container">
-        <div class="two-col-breakdown">
-          <div>
-            <h2 style="font-size: var(--fs-2xl); margin-bottom: 20px;">Common E-Commerce Obstacles</h2>
-            <div class="checklist-block">
-              <div class="check-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>
-                <div class="check-item-text">
-                  <h4>Friction-Heavy Cart Abandonment</h4>
-                  <p>Cluttered checkouts with confusing form fields cause customers to leave before completing purchases. We streamline checkout to minimal essential steps.</p>
-                </div>
-              </div>
-              <div class="check-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>
-                <div class="check-item-text">
-                  <h4>Complex Product Attribute Breakage</h4>
-                  <p>When sizes, colors, and variations are misconfigured, stock levels desynchronize and customers get confused. We structure robust attribute frameworks.</p>
-                </div>
-              </div>
-              <div class="check-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>
-                <div class="check-item-text">
-                  <h4>Payment Gateway Failures</h4>
-                  <p>Misconfigured webhook listeners or currency conflicts result in lost revenue. We configure and test gateways end-to-end prior to launch.</p>
-                </div>
-              </div>
-            </div>
+    <section class="section-pad" style="background: var(--color-obsidian);">
+      <div class="container" style="max-width: 960px; display: flex; flex-direction: column; gap: 3rem;">
+        
+        <div class="asymmetric-project-row">
+          <div class="project-card-editorial" style="padding: 2rem;">
+            <span class="micro-label micro-label-orange">// PAIN POINTS</span>
+            <h2 style="font-size: var(--fs-xl); color: var(--color-warm-white); margin-top: 0.5rem;">Problems We Solve</h2>
+            <ul class="tier-features-list" style="margin-top: 1rem;">
+              <li class="tier-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Clunky checkout flows that cause high cart abandonment</span>
+              </li>
+              <li class="tier-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Slow catalog browsing and sluggish database queries</span>
+              </li>
+              <li class="tier-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Misconfigured shipping rules and international payment errors</span>
+              </li>
+            </ul>
           </div>
 
-          <div>
-            <h2 style="font-size: var(--fs-2xl); margin-bottom: 20px;">What We Deliver in Every Store</h2>
-            <div class="checklist-block">
-              <div class="check-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <div class="check-item-text">
-                  <h4>Structured Catalog &amp; Category Filters</h4>
-                  <p>Product templates, variable options, SKU management, and clean category filtering for seamless browsing.</p>
-                </div>
-              </div>
-              <div class="check-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <div class="check-item-text">
-                  <h4>Payment Gateway &amp; Shipping Integration</h4>
-                  <p>Stripe credit card processing, PayPal, or regional gateways (such as COD or local bank deposits), alongside tiered shipping zones.</p>
-                </div>
-              </div>
-              <div class="check-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <div class="check-item-text">
-                  <h4>Automated Order Communications</h4>
-                  <p>Branded customer receipt emails, order status notifications, and administrative alerts for new purchases.</p>
-                </div>
-              </div>
-              <div class="check-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <div class="check-item-text">
-                  <h4>Store Training &amp; Inventory Video</h4>
-                  <p>A step-by-step video guide explaining how to add products, adjust pricing, process refunds, and manage inventory.</p>
-                </div>
-              </div>
-            </div>
+          <div class="project-card-editorial" style="padding: 2rem;">
+            <span class="micro-label micro-label-orange">// DELIVERABLES</span>
+            <h2 style="font-size: var(--fs-xl); color: var(--color-warm-white); margin-top: 0.5rem;">What We Deliver</h2>
+            <ul class="tier-features-list" style="margin-top: 1rem;">
+              <li class="tier-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Complete WooCommerce store architecture and product catalog</span>
+              </li>
+              <li class="tier-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Payment gateway configuration (Stripe, PayPal, or regional)</span>
+              </li>
+              <li class="tier-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Automated customer transaction emails &amp; order management training</span>
+              </li>
+            </ul>
           </div>
         </div>
-      </div>
-    </section>
 
-    <section class="section" aria-labelledby="verified-store-project">
-      <div class="container container-narrow">
-        <div class="section-header text-left">
-          <span class="eyebrow">Proof of Work</span>
-          <h2 id="verified-store-project" class="section-title">Verified E-Commerce Project</h2>
-          <p class="section-lead">Genuine storefront customized by Hasan Ismail using WordPress and WooCommerce.</p>
+        <div style="background: var(--color-charcoal); border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: 2rem;">
+          <span class="micro-label micro-label-orange">// CASE STUDY</span>
+          <h3 style="font-size: var(--fs-lg); color: var(--color-warm-white); margin-top: 0.5rem;">Featured Storefront: GiftsPak</h3>
+          <p style="font-size: var(--fs-sm); color: var(--text-secondary); line-height: 1.6; margin-top: 0.5rem;">
+            <a href="portfolio.html#giftspak" style="color: var(--color-orange); text-decoration: underline;">GiftsPak</a> demonstrates our e-commerce implementation standard: structured category navigation, clean product variations, and dependable checkout handling.
+          </p>
         </div>
 
-        <article class="portfolio-card-item" style="max-width: 580px;">
-          <div class="portfolio-card-visual">
-            <img src="assets/portfolio/giftspak.svg" alt="GiftsPak Storefront preview" loading="lazy">
-          </div>
-          <div class="portfolio-card-body">
-            <span class="portfolio-card-cat">E-Commerce Storefront</span>
-            <h3 class="portfolio-card-title">GiftsPak</h3>
-            <p class="portfolio-card-desc">Retail and gift-focused storefront experience featuring multi-category catalog organization and streamlined cart flows.</p>
-            <div class="portfolio-card-footer">
-              <span class="status-badge">● Verified Live</span>
-              <a href="http://giftspak.com" target="_blank" rel="noopener noreferrer" style="font-weight: 600; color: var(--color-orange);">giftspak.com ↗</a>
-            </div>
-          </div>
-        </article>
-      </div>
-    </section>
+        <div style="text-align: center;">
+          <a href="contact.html?service=woocommerce" class="btn btn-primary btn-lg">Discuss Your Storefront Project ↗</a>
+        </div>
 
-    <section class="section section-dark">
-      <div class="container container-narrow text-center">
-        <h2 style="font-size: var(--fs-3xl); margin-bottom: 16px;">Ready to build a reliable WooCommerce store?</h2>
-        <p style="font-size: var(--fs-md); color: var(--text-inverse-muted); margin-bottom: 28px;">
-          Tell us about your product catalog, payment preferences, and launch schedule for a direct consultation.
-        </p>
-        <a href="contact.html?service=woocommerce" class="btn btn-primary btn-lg">Inquire About WooCommerce Stores →</a>
       </div>
     </section>
   </main>
 
-  <!-- SHARED FOOTER -->
-  <footer class="site-footer" role="contentinfo">
+  <!-- Footer -->
+  <footer class="site-footer">
     <div class="container">
-      <div class="footer-columns-grid">
-        <div class="footer-brand-col">
-          <a href="index.html" aria-label="HaseenTech Home">
-            <img src="assets/brand/logo.svg" alt="HaseenTech" style="height: 32px; width: auto; filter: invert(1) hue-rotate(180deg);">
-          </a>
-          <span class="footer-tagline-text">Modern Websites. Real Results.</span>
-          <p class="footer-about-summary">
-            Founded by <strong>Hasan Ismail</strong> in Karachi, Pakistan. Delivering bespoke WordPress development, WooCommerce storefronts, and web engineering to clients worldwide.
-          </p>
+      <div class="footer-top-grid">
+        <div class="footer-col-brand">
+          <img src="assets/brand/logo.svg" alt="HaseenTech" width="160" height="32">
+          <p class="footer-brand-desc">Independent creative technology studio founded by Hasan Ismail.</p>
+          <div style="font-family: var(--font-mono); font-size: var(--fs-xs); color: var(--color-muted);">Karachi, Pakistan · Remote Worldwide</div>
         </div>
-
         <div>
-          <h4 class="footer-col-header">Navigation</h4>
-          <ul class="footer-nav-list">
-            <li><a href="index.html" class="footer-nav-link">Home</a></li>
-            <li><a href="about.html" class="footer-nav-link">About HaseenTech</a></li>
-            <li><a href="services.html" class="footer-nav-link">Services</a></li>
-            <li><a href="portfolio.html" class="footer-nav-link">Portfolio</a></li>
-            <li><a href="pricing.html" class="footer-nav-link">Pricing &amp; Packages</a></li>
-            <li><a href="contact.html" class="footer-nav-link">Contact</a></li>
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="portfolio.html" class="footer-link">Selected Work</a></li>
+            <li><a href="services.html" class="footer-link">All Services</a></li>
+            <li><a href="about.html" class="footer-link">Studio</a></li>
+            <li><a href="pricing.html" class="footer-link">Pricing</a></li>
+            <li><a href="contact.html" class="footer-link">Contact</a></li>
           </ul>
         </div>
-
         <div>
-          <h4 class="footer-col-header">Services</h4>
-          <ul class="footer-nav-list">
-            <li><a href="service-wordpress.html" class="footer-nav-link">WordPress Development</a></li>
-            <li><a href="service-woocommerce.html" class="footer-nav-link">WooCommerce Stores</a></li>
-            <li><a href="service-landing-pages.html" class="footer-nav-link">Landing Pages</a></li>
-            <li><a href="service-redesign.html" class="footer-nav-link">Website Redesign</a></li>
-            <li><a href="service-maintenance.html" class="footer-nav-link">Maintenance &amp; Support</a></li>
-            <li><a href="service-seo-speed.html" class="footer-nav-link">SEO &amp; Speed Optimization</a></li>
+          <h4 class="footer-col-title">Services</h4>
+          <ul class="footer-links-list">
+            <li><a href="service-wordpress.html" class="footer-link">WordPress Development</a></li>
+            <li><a href="service-woocommerce.html" class="footer-link">WooCommerce Stores</a></li>
+            <li><a href="service-landing-pages.html" class="footer-link">Landing Pages</a></li>
+            <li><a href="service-redesign.html" class="footer-link">Website Redesign</a></li>
+            <li><a href="service-maintenance.html" class="footer-link">Maintenance &amp; Support</a></li>
+            <li><a href="service-seo-speed.html" class="footer-link">SEO &amp; Speed Optimization</a></li>
           </ul>
         </div>
-
         <div>
-          <h4 class="footer-col-header">Contact &amp; Regions</h4>
-          <ul class="footer-nav-list">
-            <li><a href="mailto:hello@haseentech.com" class="footer-nav-link">hello@haseentech.com</a></li>
-            <li><a href="https://wa.me/923001234567" target="_blank" rel="noopener noreferrer" class="footer-nav-link">WhatsApp: +92 300 1234567</a></li>
-            <li><span style="font-size: 13px; color: var(--text-inverse-muted);">Karachi, Pakistan</span></li>
-            <li><span style="font-size: 13px; color: var(--text-inverse-muted);">USA • UK • UAE • Canada • Europe</span></li>
+          <h4 class="footer-col-title">Direct Inquiries</h4>
+          <ul class="footer-links-list">
+            <li><a href="mailto:hello@haseentech.com" class="footer-link">hello@haseentech.com</a></li>
           </ul>
         </div>
       </div>
-
       <div class="footer-bottom-bar">
-        <div>
-          © <span id="current-year">2026</span> HaseenTech. Founded by Hasan Ismail. All rights reserved.
-        </div>
-        <div class="footer-bottom-nav">
-          <a href="privacy.html" class="footer-nav-link">Privacy Policy</a>
-          <a href="terms.html" class="footer-nav-link">Terms &amp; Conditions</a>
-          <a href="#main-content" class="footer-nav-link" style="color: var(--color-orange);">↑ Back to top</a>
+        <div>© <span id="current-year">2026</span> HaseenTech. All rights reserved. Founded by Hasan Ismail.</div>
+        <div class="footer-legal-links">
+          <a href="privacy.html" class="footer-link">Privacy Policy</a>
+          <a href="terms.html" class="footer-link">Terms &amp; Conditions</a>
         </div>
       </div>
     </div>

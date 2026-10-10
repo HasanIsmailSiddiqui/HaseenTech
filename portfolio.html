@@ -4,371 +4,358 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio — Verified Web Projects | HaseenTech</title>
-  <meta name="description" content="Explore verified client websites developed and maintained by Hasan Ismail at HaseenTech. Real business websites, e-commerce stores, and consultancy platforms.">
-  <meta name="author" content="Hasan Ismail">
+  <meta name="description" content="Explore real client web development projects completed by HaseenTech: WordPress, Elementor, and WooCommerce implementations with live URLs and verified scopes.">
   <link rel="canonical" href="https://haseentech.com/portfolio.html">
-
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Portfolio — Verified Web Projects | HaseenTech">
-  <meta property="og:description" content="Proven WordPress, WooCommerce, and web development deliverables for international clients.">
-  <meta property="og:image" content="assets/brand/logo.svg">
-
   <link rel="icon" type="image/svg+xml" href="assets/brand/favicon.svg">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
-  <!-- SHARED HEADER -->
-  <header class="site-header" role="banner">
-    <div class="container header-inner">
-      <a href="index.html" class="brand-link" aria-label="HaseenTech Home">
-        <img src="assets/brand/logo.svg" alt="HaseenTech" class="brand-logo-img" width="180" height="36">
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="brand-logo" aria-label="HaseenTech Home">
+        <img src="assets/brand/logo.svg" alt="HaseenTech" width="160" height="32">
       </a>
-
       <nav class="nav-desktop" aria-label="Primary Navigation">
         <ul class="nav-list">
-          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-          <li class="nav-item nav-dropdown">
-            <a href="services.html" class="nav-link" id="nav-services" aria-haspopup="true" aria-expanded="false">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="portfolio.html" class="nav-link active">Work</a></li>
+          <li class="nav-item-dropdown">
+            <a href="services.html" class="nav-link dropdown-trigger" aria-haspopup="true" aria-expanded="false">
               Services
-              <svg class="dropdown-arrow" viewBox="0 0 24 24" fill="none" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
             </a>
-            <div class="nav-dropdown-menu" role="menu" aria-label="Services Submenu">
-              <a href="services.html" class="dropdown-item" role="menuitem">
-                <span class="dropdown-item-title">All Services Overview</span>
-                <span class="dropdown-item-desc">Comprehensive agency capabilities</span>
-              </a>
-              <a href="service-wordpress.html" class="dropdown-item" role="menuitem">
-                <span class="dropdown-item-title">WordPress Development</span>
-                <span class="dropdown-item-desc">Custom brochure &amp; business sites</span>
-              </a>
-              <a href="service-woocommerce.html" class="dropdown-item" role="menuitem">
-                <span class="dropdown-item-title">WooCommerce Stores</span>
-                <span class="dropdown-item-desc">E-commerce catalogs &amp; checkout</span>
-              </a>
-              <a href="service-landing-pages.html" class="dropdown-item" role="menuitem">
-                <span class="dropdown-item-title">Landing Pages</span>
-                <span class="dropdown-item-desc">High-converting campaign funnels</span>
-              </a>
-              <a href="service-redesign.html" class="dropdown-item" role="menuitem">
-                <span class="dropdown-item-title">Website Redesign</span>
-                <span class="dropdown-item-desc">Modernizing legacy web presences</span>
-              </a>
-              <a href="service-maintenance.html" class="dropdown-item" role="menuitem">
-                <span class="dropdown-item-title">Maintenance &amp; Support</span>
-                <span class="dropdown-item-desc">Updates, security &amp; troubleshooting</span>
-              </a>
-              <a href="service-seo-speed.html" class="dropdown-item" role="menuitem">
-                <span class="dropdown-item-title">SEO &amp; Speed Optimization</span>
-                <span class="dropdown-item-desc">Core web vitals &amp; on-page hygiene</span>
-              </a>
+            <div class="dropdown-menu" role="menu">
+              <a href="service-wordpress.html" class="dropdown-item" role="menuitem">WordPress Development</a>
+              <a href="service-woocommerce.html" class="dropdown-item" role="menuitem">WooCommerce Stores</a>
+              <a href="service-landing-pages.html" class="dropdown-item" role="menuitem">Landing Pages</a>
+              <a href="service-redesign.html" class="dropdown-item" role="menuitem">Website Redesign</a>
+              <a href="service-maintenance.html" class="dropdown-item" role="menuitem">Maintenance & Support</a>
+              <a href="service-seo-speed.html" class="dropdown-item" role="menuitem">SEO & Speed Optimization</a>
             </div>
           </li>
-          <li class="nav-item"><a href="portfolio.html" class="nav-link active">Portfolio</a></li>
-          <li class="nav-item"><a href="pricing.html" class="nav-link">Pricing</a></li>
-          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+          <li><a href="about.html" class="nav-link">Studio</a></li>
+          <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
         </ul>
-        <div class="nav-cta-box">
-          <a href="contact.html" class="btn btn-primary btn-sm">Start a Project</a>
-        </div>
       </nav>
-
-      <button type="button" class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-drawer">
-        <span class="menu-bar"></span>
-        <span class="menu-bar"></span>
-        <span class="menu-bar"></span>
-      </button>
+      <div class="header-actions">
+        <a href="contact.html" class="btn btn-primary btn-sm">Start a Project ↗</a>
+        <button id="menu-toggle" class="mobile-toggle-btn" aria-label="Toggle Navigation Menu" aria-expanded="false">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+        </button>
+      </div>
     </div>
   </header>
 
-  <!-- Mobile Drawer Menu -->
-  <div class="drawer-backdrop" id="drawer-backdrop" aria-hidden="true"></div>
-  <aside class="mobile-drawer" id="mobile-drawer" aria-label="Mobile Menu Drawer" aria-hidden="true">
+  <!-- Mobile Drawer -->
+  <div id="mobile-drawer" class="mobile-drawer" aria-hidden="true">
     <div class="drawer-header">
-      <img src="assets/brand/logo.svg" alt="HaseenTech" style="height: 30px; width: auto;">
-      <button type="button" class="btn btn-ghost btn-sm" id="drawer-close" aria-label="Close navigation">✕</button>
+      <img src="assets/brand/logo.svg" alt="HaseenTech" width="140" height="28">
+      <button id="menu-close" class="mobile-toggle-btn" aria-label="Close Navigation Menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
     </div>
-    <nav class="drawer-nav-list" aria-label="Mobile Navigation">
-      <a href="index.html" class="drawer-link">Home</a>
-      <a href="about.html" class="drawer-link">About</a>
-      <div>
-        <a href="services.html" class="drawer-link drawer-dropdown-trigger" style="display: flex; justify-content: space-between; align-items: center;">
-          <span>Services</span>
-          <span style="font-size: 14px;">+</span>
-        </a>
+    <ul class="drawer-nav-list">
+      <li><a href="index.html" class="drawer-link">Home</a></li>
+      <li><a href="portfolio.html" class="drawer-link active">Selected Work</a></li>
+      <li>
+        <a href="services.html" class="drawer-link">Services Overview</a>
         <div class="drawer-submenu">
-          <a href="services.html" class="drawer-sublink">All Services Overview</a>
           <a href="service-wordpress.html" class="drawer-sublink">WordPress Development</a>
           <a href="service-woocommerce.html" class="drawer-sublink">WooCommerce Stores</a>
           <a href="service-landing-pages.html" class="drawer-sublink">Landing Pages</a>
           <a href="service-redesign.html" class="drawer-sublink">Website Redesign</a>
-          <a href="service-maintenance.html" class="drawer-sublink">Maintenance &amp; Support</a>
-          <a href="service-seo-speed.html" class="drawer-sublink">SEO &amp; Speed Optimization</a>
+          <a href="service-maintenance.html" class="drawer-sublink">Maintenance & Bug Fixes</a>
+          <a href="service-seo-speed.html" class="drawer-sublink">SEO & Speed Optimization</a>
         </div>
-      </div>
-      <a href="portfolio.html" class="drawer-link active">Portfolio</a>
-      <a href="pricing.html" class="drawer-link">Pricing</a>
-      <a href="contact.html" class="drawer-link">Contact</a>
-    </nav>
-    <div style="margin-top: auto; display: flex; flex-direction: column; gap: 8px;">
-      <a href="contact.html" class="btn btn-primary btn-block">Start a Project</a>
-      <a href="mailto:hello@haseentech.com" class="btn btn-ghost btn-block" style="font-size: 13px;">hello@haseentech.com</a>
-    </div>
-  </aside>
+      </li>
+      <li><a href="about.html" class="drawer-link">Studio & Founder</a></li>
+      <li><a href="pricing.html" class="drawer-link">Packages & Pricing</a></li>
+      <li><a href="contact.html" class="drawer-link">Contact & Inquiries</a></li>
+    </ul>
+  </div>
 
   <main id="main-content">
-    <section class="section" style="padding-top: 60px; padding-bottom: 40px;">
-      <div class="container container-narrow text-center">
-        <span class="eyebrow">Client Deliverables</span>
-        <h1 class="section-title" style="font-size: var(--fs-4xl); margin-bottom: 20px;">
-          Verified Portfolio &amp; Project Case Studies
-        </h1>
-        <p class="section-lead">
-          We believe in complete transparency. Every project listed here reflects authentic development, customization, or redesign work executed by Hasan Ismail.
+    <!-- Page Hero Banner -->
+    <section class="page-hero-obsidian">
+      <div class="container page-hero-inner">
+        <span class="micro-label micro-label-orange">// SELECTED CASE STUDIES</span>
+        <h1 class="page-hero-title">Verified Production Work.</h1>
+        <p class="page-hero-sub">
+          We only display authentic client work. Every listed project represents real engineering, real domain references, and transparent notes where client DNS updates remain pending.
         </p>
       </div>
     </section>
 
-    <!-- Portfolio Controls & Grid -->
-    <section class="section section-white">
+    <!-- Portfolio Gallery Section with Category Tabs -->
+    <section class="section-pad" style="background: var(--color-obsidian);">
       <div class="container">
         <!-- Filter Tabs -->
-        <div style="display: flex; justify-content: center; gap: 8px; margin-bottom: 40px; flex-wrap: wrap;">
-          <button type="button" class="btn btn-primary btn-sm portfolio-filter-btn active" data-filter="all" aria-pressed="true">All Projects</button>
-          <button type="button" class="btn btn-ghost btn-sm portfolio-filter-btn" data-filter="business" aria-pressed="false">Business Websites</button>
-          <button type="button" class="btn btn-ghost btn-sm portfolio-filter-btn" data-filter="ecommerce" aria-pressed="false">E-Commerce</button>
-          <button type="button" class="btn btn-ghost btn-sm portfolio-filter-btn" data-filter="consulting" aria-pressed="false">Consulting</button>
+        <div class="filter-tabs-bar" role="tablist" aria-label="Project Category Filters">
+          <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">All Projects (7)</button>
+          <button class="filter-btn" data-filter="business" role="tab" aria-selected="false">Business Websites (3)</button>
+          <button class="filter-btn" data-filter="ecommerce" role="tab" aria-selected="false">E-Commerce (2)</button>
+          <button class="filter-btn" data-filter="consulting" role="tab" aria-selected="false">Consulting (2)</button>
         </div>
 
-        <div class="portfolio-grid-modern" id="portfolio-container">
+        <div id="portfolio-grid" style="display: flex; flex-direction: column; gap: 2.5rem;">
+          
           <!-- 1. Izak10 -->
-          <article class="portfolio-card-item" data-category="business">
-            <div class="portfolio-card-visual">
-              <img src="assets/portfolio/izak10.svg" alt="Izak10 commercial website preview" loading="lazy">
+          <article id="izak10" class="spotlight-project-card portfolio-card-item" data-category="business">
+            <div class="spotlight-preview-wrap">
+              <img src="assets/portfolio/izak10.svg" alt="Izak10 Case Study" class="spotlight-preview-img" width="800" height="500">
             </div>
-            <div class="portfolio-card-body">
-              <span class="portfolio-card-cat">Business Website</span>
-              <h3 class="portfolio-card-title">Izak10</h3>
-              <p class="portfolio-card-desc">Commercial website designed for clear service presentation and responsive navigation across all screen viewports.</p>
-              <p style="font-size: 12px; color: var(--text-muted); margin-bottom: 12px;"><strong>Role:</strong> Web development and design implementation</p>
-              <div class="portfolio-card-tech">
-                <span class="tag">WordPress</span>
-                <span class="tag">Elementor</span>
-                <span class="tag">HTML/CSS</span>
+            <div class="spotlight-info">
+              <div class="spotlight-tags">
+                <span class="tag-badge tag-badge-orange">Business Website</span>
+                <span class="tag-badge">Verified HTTP 200</span>
               </div>
-              <div class="portfolio-card-footer">
-                <span class="status-badge">● Live &amp; Verified</span>
-                <a href="https://izak10.com" target="_blank" rel="noopener noreferrer" style="font-weight: 600; color: var(--color-orange);">izak10.com ↗</a>
+              <h2 style="font-size: var(--fs-2xl); color: var(--color-warm-white);">Izak10</h2>
+              <p style="font-size: var(--fs-sm); color: var(--text-secondary); line-height: 1.65;">
+                Corporate business website structured for clean presentation of multi-tier service offerings. Engineered with custom Elementor templates, optimized typography, and responsive touch controls.
+              </p>
+              <div style="background: var(--color-elevated); padding: 1rem; border-radius: var(--radius-sm); border: 1px solid var(--color-border); font-size: var(--fs-xs);">
+                <span style="color: var(--color-orange); font-weight: 600;">Technical Challenge &amp; Solution:</span>
+                <p style="color: var(--text-secondary); margin-top: 0.25rem;">
+                  Balancing visual card sections with sub-second navigation on mobile networks. Solved through disciplined CSS modularization and lazy-loaded image guidance.
+                </p>
               </div>
-            </div>
-          </article>
-
-          <!-- 2. SyncTech Solutions -->
-          <article class="portfolio-card-item" data-category="business">
-            <div class="portfolio-card-visual">
-              <img src="assets/portfolio/synctechsol.svg" alt="SyncTech Solutions technology preview" loading="lazy">
-            </div>
-            <div class="portfolio-card-body">
-              <span class="portfolio-card-cat">Business &amp; IT Services</span>
-              <h3 class="portfolio-card-title">SyncTech Solutions</h3>
-              <p class="portfolio-card-desc">Technology services company website featuring structured service blocks, direct contact funnels, and clean responsive layout.</p>
-              <p style="font-size: 12px; color: var(--text-muted); margin-bottom: 12px;"><strong>Role:</strong> WordPress development and customization</p>
-              <div class="portfolio-card-tech">
-                <span class="tag">WordPress</span>
-                <span class="tag">Elementor</span>
-                <span class="tag">Custom CSS</span>
+              <div style="font-family: var(--font-mono); font-size: var(--fs-xs); color: var(--color-muted);">
+                TECHNOLOGIES: WordPress · Elementor · HTML5 · CSS3
               </div>
-              <div class="portfolio-card-footer">
-                <span class="status-badge">● Live &amp; Verified</span>
-                <a href="https://synctechsol.com" target="_blank" rel="noopener noreferrer" style="font-weight: 600; color: var(--color-orange);">synctechsol.com ↗</a>
+              <div style="display: flex; gap: 1rem; align-items: center; margin-top: 0.5rem;">
+                <a href="https://izak10.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">Visit izak10.com ↗</a>
               </div>
             </div>
           </article>
 
-          <!-- 3. KUZ Consultancy -->
-          <article class="portfolio-card-item" data-category="consulting">
-            <div class="portfolio-card-visual">
-              <img src="assets/portfolio/kuzconsultancy.svg" alt="KUZ Consultancy advisory site preview" loading="lazy">
+          <!-- 2. GiftsPak -->
+          <article id="giftspak" class="spotlight-project-card portfolio-card-item" data-category="ecommerce">
+            <div class="spotlight-preview-wrap">
+              <img src="assets/portfolio/giftspak.svg" alt="GiftsPak E-Commerce Storefront" class="spotlight-preview-img" width="800" height="500">
             </div>
-            <div class="portfolio-card-body">
-              <span class="portfolio-card-cat">Consulting</span>
-              <h3 class="portfolio-card-title">KUZ Consultancy</h3>
-              <p class="portfolio-card-desc">UK-facing consultancy site built with clear international positioning, structured service modules, and contact pathways.</p>
-              <p style="font-size: 12px; color: var(--text-muted); margin-bottom: 12px;"><strong>Role:</strong> WordPress development and on-page SEO basics</p>
-              <div class="portfolio-card-tech">
-                <span class="tag">WordPress</span>
-                <span class="tag">Elementor</span>
-                <span class="tag">SEO Basics</span>
+            <div class="spotlight-info">
+              <div class="spotlight-tags">
+                <span class="tag-badge tag-badge-orange">E-Commerce</span>
+                <span class="tag-badge">WooCommerce</span>
+                <span class="tag-badge">Live Store</span>
               </div>
-              <div class="portfolio-card-footer">
-                <span class="status-badge">● Live &amp; Verified</span>
-                <a href="https://kuzconsultancy.co.uk" target="_blank" rel="noopener noreferrer" style="font-weight: 600; color: var(--color-orange);">kuzconsultancy.co.uk ↗</a>
+              <h2 style="font-size: var(--fs-2xl); color: var(--color-warm-white);">GiftsPak</h2>
+              <p style="font-size: var(--fs-sm); color: var(--text-secondary); line-height: 1.65;">
+                Online gift and retail storefront engineered on WooCommerce. Features organized product taxonomies, seasonal promotional headers, and streamlined mobile checkout flow.
+              </p>
+              <div style="background: var(--color-elevated); padding: 1rem; border-radius: var(--radius-sm); border: 1px solid var(--color-border); font-size: var(--fs-xs);">
+                <span style="color: var(--color-orange); font-weight: 600;">Technical Challenge &amp; Solution:</span>
+                <p style="color: var(--text-secondary); margin-top: 0.25rem;">
+                  Managing fluctuating seasonal product catalogs without slowing catalog indexing. Structured lean product categories and optimized database queries.
+                </p>
+              </div>
+              <div style="font-family: var(--font-mono); font-size: var(--fs-xs); color: var(--color-muted);">
+                TECHNOLOGIES: WordPress · WooCommerce · Elementor Storefront
+              </div>
+              <div style="display: flex; gap: 1rem; align-items: center; margin-top: 0.5rem;">
+                <a href="http://giftspak.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">Visit giftspak.com ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 3. SyncTech Solutions -->
+          <article id="synctechsol" class="spotlight-project-card portfolio-card-item" data-category="business">
+            <div class="spotlight-preview-wrap">
+              <img src="assets/portfolio/synctechsol.svg" alt="SyncTech Solutions Platform" class="spotlight-preview-img" width="800" height="500">
+            </div>
+            <div class="spotlight-info">
+              <div class="spotlight-tags">
+                <span class="tag-badge tag-badge-orange">Business Website</span>
+                <span class="tag-badge">Technology Services</span>
+              </div>
+              <h2 style="font-size: var(--fs-2xl); color: var(--color-warm-white);">SyncTech Solutions</h2>
+              <p style="font-size: var(--fs-sm); color: var(--text-secondary); line-height: 1.65;">
+                Technology services company platform featuring structured technical service catalogs, customer conversion funnels, and corporate credibility signals.
+              </p>
+              <div style="background: var(--color-elevated); padding: 1rem; border-radius: var(--radius-sm); border: 1px solid var(--color-border); font-size: var(--fs-xs);">
+                <span style="color: var(--color-orange); font-weight: 600;">Technical Challenge &amp; Solution:</span>
+                <p style="color: var(--text-secondary); margin-top: 0.25rem;">
+                  Communicating complex B2B technology services clearly to corporate decision-makers. Solved with modular service blocks and accessible inquiry pathways.
+                </p>
+              </div>
+              <div style="font-family: var(--font-mono); font-size: var(--fs-xs); color: var(--color-muted);">
+                TECHNOLOGIES: WordPress · Custom CSS · Elementor
+              </div>
+              <div style="display: flex; gap: 1rem; align-items: center; margin-top: 0.5rem;">
+                <a href="https://synctechsol.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">Visit synctechsol.com ↗</a>
               </div>
             </div>
           </article>
 
           <!-- 4. Zoby Consulting -->
-          <article class="portfolio-card-item" data-category="consulting">
-            <div class="portfolio-card-visual">
-              <img src="assets/portfolio/zobyconsulting.svg" alt="Zoby Consulting preview" loading="lazy">
+          <article id="zobyconsulting" class="spotlight-project-card portfolio-card-item" data-category="consulting">
+            <div class="spotlight-preview-wrap">
+              <img src="assets/portfolio/zobyconsulting.svg" alt="Zoby Consulting Brand Site" class="spotlight-preview-img" width="800" height="500">
             </div>
-            <div class="portfolio-card-body">
-              <span class="portfolio-card-cat">Consulting</span>
-              <h3 class="portfolio-card-title">Zoby Consulting</h3>
-              <p class="portfolio-card-desc">Consulting presence prioritizing professional authority, restrained typography, and friction-free lead inquiry conversions.</p>
-              <p style="font-size: 12px; color: var(--text-muted); margin-bottom: 12px;"><strong>Role:</strong> Design and WordPress implementation</p>
-              <div class="portfolio-card-tech">
-                <span class="tag">WordPress</span>
-                <span class="tag">Elementor</span>
+            <div class="spotlight-info">
+              <div class="spotlight-tags">
+                <span class="tag-badge tag-badge-orange">Consulting Brand</span>
+                <span class="tag-badge">Verified Live</span>
               </div>
-              <div class="portfolio-card-footer">
-                <span class="status-badge">● Live &amp; Verified</span>
-                <a href="https://zobyconsulting.com" target="_blank" rel="noopener noreferrer" style="font-weight: 600; color: var(--color-orange);">zobyconsulting.com ↗</a>
+              <h2 style="font-size: var(--fs-2xl); color: var(--color-warm-white);">Zoby Consulting</h2>
+              <p style="font-size: var(--fs-sm); color: var(--text-secondary); line-height: 1.65;">
+                Consulting firm brand site emphasizing executive credibility, advisory capabilities, and consultation conversion.
+              </p>
+              <div style="background: var(--color-elevated); padding: 1rem; border-radius: var(--radius-sm); border: 1px solid var(--color-border); font-size: var(--fs-xs);">
+                <span style="color: var(--color-orange); font-weight: 600;">Technical Challenge &amp; Solution:</span>
+                <p style="color: var(--text-secondary); margin-top: 0.25rem;">
+                  Projecting an authoritative executive tone without generic corporate template clutter. Handled via custom spacing rhythm and restrained typography.
+                </p>
               </div>
-            </div>
-          </article>
-
-          <!-- 5. GiftsPak Storefront -->
-          <article class="portfolio-card-item" data-category="ecommerce">
-            <div class="portfolio-card-visual">
-              <img src="assets/portfolio/giftspak.svg" alt="GiftsPak retail storefront preview" loading="lazy">
-            </div>
-            <div class="portfolio-card-body">
-              <span class="portfolio-card-cat">E-Commerce Storefront</span>
-              <h3 class="portfolio-card-title">GiftsPak</h3>
-              <p class="portfolio-card-desc">Retail and gift storefront experience featuring multi-category product catalog management and streamlined checkout.</p>
-              <p style="font-size: 12px; color: var(--text-muted); margin-bottom: 12px;"><strong>Role:</strong> WooCommerce setup &amp; storefront customization</p>
-              <div class="portfolio-card-tech">
-                <span class="tag">WordPress</span>
-                <span class="tag">WooCommerce</span>
-                <span class="tag">Elementor</span>
+              <div style="font-family: var(--font-mono); font-size: var(--fs-xs); color: var(--color-muted);">
+                TECHNOLOGIES: WordPress · Elementor · Responsive Layout
               </div>
-              <div class="portfolio-card-footer">
-                <span class="status-badge">● Live &amp; Verified</span>
-                <a href="http://giftspak.com" target="_blank" rel="noopener noreferrer" style="font-weight: 600; color: var(--color-orange);">giftspak.com ↗</a>
+              <div style="display: flex; gap: 1rem; align-items: center; margin-top: 0.5rem;">
+                <a href="https://zobyconsulting.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">Visit zobyconsulting.com ↗</a>
               </div>
             </div>
           </article>
 
-          <!-- 6. Guns and Accessories (Documented Note) -->
-          <article class="portfolio-card-item" data-category="ecommerce">
-            <div class="portfolio-card-visual">
-              <img src="assets/portfolio/gunsandaccessories.svg" alt="Guns and Accessories e-commerce preview" loading="lazy">
+          <!-- 5. KUZ Consultancy -->
+          <article id="kuzconsultancy" class="spotlight-project-card portfolio-card-item" data-category="consulting">
+            <div class="spotlight-preview-wrap">
+              <img src="assets/portfolio/kuzconsultancy.svg" alt="KUZ Consultancy UK Advisory Platform" class="spotlight-preview-img" width="800" height="500">
             </div>
-            <div class="portfolio-card-body">
-              <span class="portfolio-card-cat">E-Commerce</span>
-              <h3 class="portfolio-card-title">Guns and Accessories</h3>
-              <p class="portfolio-card-desc">E-commerce oriented web presence scoped under client development agreement.</p>
-              <p style="font-size: 12px; color: var(--text-muted); margin-bottom: 12px;"><strong>Role:</strong> Web development (scope per agreement)</p>
-              <div class="portfolio-card-tech">
-                <span class="tag">WordPress</span>
-                <span class="tag">WooCommerce</span>
+            <div class="spotlight-info">
+              <div class="spotlight-tags">
+                <span class="tag-badge tag-badge-orange">UK Consultancy</span>
+                <span class="tag-badge">SEO Foundation</span>
               </div>
-              <div class="portfolio-card-footer">
-                <span class="status-badge note">ⓘ Verification Note</span>
-                <span style="font-size: 12px; color: var(--text-muted);">Domain resolution pending</span>
+              <h2 style="font-size: var(--fs-2xl); color: var(--color-warm-white);">KUZ Consultancy</h2>
+              <p style="font-size: var(--fs-sm); color: var(--text-secondary); line-height: 1.65;">
+                United Kingdom-facing advisory website designed for high trust, regulatory compliance notices, and on-page technical SEO foundations.
+              </p>
+              <div style="background: var(--color-elevated); padding: 1rem; border-radius: var(--radius-sm); border: 1px solid var(--color-border); font-size: var(--fs-xs);">
+                <span style="color: var(--color-orange); font-weight: 600;">Technical Challenge &amp; Solution:</span>
+                <p style="color: var(--text-secondary); margin-top: 0.25rem;">
+                  Ensuring trust signals meet UK business client expectations. Engineered with clear service pages, transparent consultation forms, and fast mobile navigation.
+                </p>
+              </div>
+              <div style="font-family: var(--font-mono); font-size: var(--fs-xs); color: var(--color-muted);">
+                TECHNOLOGIES: WordPress · Elementor · Technical SEO
+              </div>
+              <div style="display: flex; gap: 1rem; align-items: center; margin-top: 0.5rem;">
+                <a href="https://kuzconsultancy.co.uk" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">Visit kuzconsultancy.co.uk ↗</a>
               </div>
             </div>
           </article>
 
-          <!-- 7. M&D Royalty (Documented Note) -->
-          <article class="portfolio-card-item" data-category="business">
-            <div class="portfolio-card-visual">
-              <img src="assets/portfolio/manddroyalty.svg" alt="M&D Royalty redesign preview" loading="lazy">
+          <!-- 6. M&D Royalty -->
+          <article id="manddroyalty" class="spotlight-project-card portfolio-card-item" data-category="business">
+            <div class="spotlight-preview-wrap">
+              <img src="assets/portfolio/manddroyalty.svg" alt="M&D Royalty Brand Redesign" class="spotlight-preview-img" width="800" height="500">
             </div>
-            <div class="portfolio-card-body">
-              <span class="portfolio-card-cat">Redesign</span>
-              <h3 class="portfolio-card-title">M&amp;D Royalty</h3>
-              <p class="portfolio-card-desc">Redesign project focused on contemporary brand layout and WordPress structure.</p>
-              <p style="font-size: 12px; color: var(--text-muted); margin-bottom: 12px;"><strong>Role:</strong> Web design and development</p>
-              <div class="portfolio-card-tech">
-                <span class="tag">WordPress</span>
-                <span class="tag">Elementor</span>
+            <div class="spotlight-info">
+              <div class="spotlight-tags">
+                <span class="tag-badge">Brand Redesign</span>
+                <span class="tag-badge" style="color: #F59E0B; border-color: rgba(245, 158, 11, 0.4);">Verification Pending</span>
               </div>
-              <div class="portfolio-card-footer">
-                <span class="status-badge note">ⓘ Verification Note</span>
-                <span style="font-size: 12px; color: var(--text-muted);">Deployment verification pending</span>
+              <h2 style="font-size: var(--fs-2xl); color: var(--color-warm-white);">M&amp;D Royalty</h2>
+              <p style="font-size: var(--fs-sm); color: var(--text-secondary); line-height: 1.65;">
+                Brand modernization and layout overhaul project. Full wireframes and styling completed per design agreement; client hosting DNS resolution pending update.
+              </p>
+              <div style="font-family: var(--font-mono); font-size: var(--fs-xs); color: var(--color-muted);">
+                TECHNOLOGIES: WordPress · Elementor · UX System
               </div>
             </div>
           </article>
+
+          <!-- 7. Guns and Accessories -->
+          <article id="gunsandaccessories" class="spotlight-project-card portfolio-card-item" data-category="ecommerce">
+            <div class="spotlight-preview-wrap">
+              <img src="assets/portfolio/gunsandaccessories.svg" alt="Guns and Accessories E-Commerce" class="spotlight-preview-img" width="800" height="500">
+            </div>
+            <div class="spotlight-info">
+              <div class="spotlight-tags">
+                <span class="tag-badge">E-Commerce</span>
+                <span class="tag-badge" style="color: #F59E0B; border-color: rgba(245, 158, 11, 0.4);">Verification Pending</span>
+              </div>
+              <h2 style="font-size: var(--fs-2xl); color: var(--color-warm-white);">Guns &amp; Accessories</h2>
+              <p style="font-size: var(--fs-sm); color: var(--text-secondary); line-height: 1.65;">
+                Catalog structure and WooCommerce product configuration project. Scope fully documented; live domain resolution pending client infrastructure configuration.
+              </p>
+              <div style="font-family: var(--font-mono); font-size: var(--fs-xs); color: var(--color-muted);">
+                TECHNOLOGIES: WordPress · WooCommerce Store Architecture
+              </div>
+            </div>
+          </article>
+
         </div>
       </div>
     </section>
 
-    <!-- Project Discussion CTA -->
-    <section class="section section-dark">
-      <div class="container container-narrow text-center">
-        <h2 style="font-size: var(--fs-3xl); margin-bottom: 16px;">Have a project in mind?</h2>
-        <p style="font-size: var(--fs-md); color: var(--text-inverse-muted); margin-bottom: 28px;">
-          Review our packages or share your specific requirements for a tailored consultation.
+    <!-- Closing Call to Action -->
+    <section class="cta-banner-obsidian">
+      <div class="container cta-banner-inner">
+        <span class="micro-label micro-label-orange">// READY FOR YOUR PROJECT</span>
+        <h2 style="font-size: var(--fs-3xl); font-weight: 700; color: var(--color-warm-white);">Have a Similar Project in Mind?</h2>
+        <p style="font-size: var(--fs-base); color: var(--text-secondary); max-width: 580px;">
+          Let's review your goals and architect a tailored web platform.
         </p>
-        <a href="contact.html" class="btn btn-primary btn-lg">Start a Project Discussion →</a>
+        <a href="contact.html" class="btn btn-primary btn-lg">Start Project Discussion ↗</a>
       </div>
     </section>
   </main>
 
-  <!-- SHARED FOOTER -->
-  <footer class="site-footer" role="contentinfo">
+  <!-- Footer -->
+  <footer class="site-footer">
     <div class="container">
-      <div class="footer-columns-grid">
-        <div class="footer-brand-col">
-          <a href="index.html" aria-label="HaseenTech Home">
-            <img src="assets/brand/logo.svg" alt="HaseenTech" style="height: 32px; width: auto; filter: invert(1) hue-rotate(180deg);">
-          </a>
-          <span class="footer-tagline-text">Modern Websites. Real Results.</span>
-          <p class="footer-about-summary">
-            Founded by <strong>Hasan Ismail</strong> in Karachi, Pakistan. Delivering bespoke WordPress development, WooCommerce storefronts, and web engineering to clients worldwide.
+      <div class="footer-top-grid">
+        <div class="footer-col-brand">
+          <img src="assets/brand/logo.svg" alt="HaseenTech" width="160" height="32">
+          <p class="footer-brand-desc">
+            Independent creative technology studio founded by Hasan Ismail. Delivering modern, high-performance web engineering for ambitious international businesses.
           </p>
+          <div style="font-family: var(--font-mono); font-size: var(--fs-xs); color: var(--color-muted);">
+            Karachi, Pakistan · Remote Worldwide
+          </div>
         </div>
-
         <div>
-          <h4 class="footer-col-header">Navigation</h4>
-          <ul class="footer-nav-list">
-            <li><a href="index.html" class="footer-nav-link">Home</a></li>
-            <li><a href="about.html" class="footer-nav-link">About HaseenTech</a></li>
-            <li><a href="services.html" class="footer-nav-link">Services</a></li>
-            <li><a href="portfolio.html" class="footer-nav-link">Portfolio</a></li>
-            <li><a href="pricing.html" class="footer-nav-link">Pricing &amp; Packages</a></li>
-            <li><a href="contact.html" class="footer-nav-link">Contact</a></li>
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="portfolio.html" class="footer-link">Selected Work</a></li>
+            <li><a href="services.html" class="footer-link">All Services</a></li>
+            <li><a href="about.html" class="footer-link">Studio &amp; Founder</a></li>
+            <li><a href="pricing.html" class="footer-link">Packages &amp; Pricing</a></li>
+            <li><a href="contact.html" class="footer-link">Contact</a></li>
           </ul>
         </div>
-
         <div>
-          <h4 class="footer-col-header">Services</h4>
-          <ul class="footer-nav-list">
-            <li><a href="service-wordpress.html" class="footer-nav-link">WordPress Development</a></li>
-            <li><a href="service-woocommerce.html" class="footer-nav-link">WooCommerce Stores</a></li>
-            <li><a href="service-landing-pages.html" class="footer-nav-link">Landing Pages</a></li>
-            <li><a href="service-redesign.html" class="footer-nav-link">Website Redesign</a></li>
-            <li><a href="service-maintenance.html" class="footer-nav-link">Maintenance &amp; Support</a></li>
-            <li><a href="service-seo-speed.html" class="footer-nav-link">SEO &amp; Speed Optimization</a></li>
+          <h4 class="footer-col-title">Services</h4>
+          <ul class="footer-links-list">
+            <li><a href="service-wordpress.html" class="footer-link">WordPress Development</a></li>
+            <li><a href="service-woocommerce.html" class="footer-link">WooCommerce Stores</a></li>
+            <li><a href="service-landing-pages.html" class="footer-link">Landing Pages</a></li>
+            <li><a href="service-redesign.html" class="footer-link">Website Redesign</a></li>
+            <li><a href="service-maintenance.html" class="footer-link">Maintenance &amp; Support</a></li>
+            <li><a href="service-seo-speed.html" class="footer-link">SEO &amp; Speed Optimization</a></li>
           </ul>
         </div>
-
         <div>
-          <h4 class="footer-col-header">Contact &amp; Regions</h4>
-          <ul class="footer-nav-list">
-            <li><a href="mailto:hello@haseentech.com" class="footer-nav-link">hello@haseentech.com</a></li>
-            <li><a href="https://wa.me/923001234567" target="_blank" rel="noopener noreferrer" class="footer-nav-link">WhatsApp: +92 300 1234567</a></li>
-            <li><span style="font-size: 13px; color: var(--text-inverse-muted);">Karachi, Pakistan</span></li>
-            <li><span style="font-size: 13px; color: var(--text-inverse-muted);">USA • UK • UAE • Canada • Europe</span></li>
+          <h4 class="footer-col-title">Direct Inquiries</h4>
+          <ul class="footer-links-list">
+            <li><a href="mailto:hello@haseentech.com" class="footer-link">hello@haseentech.com</a></li>
+            <li><span style="font-size: var(--fs-sm); color: var(--text-secondary);">Direct WhatsApp upon project brief</span></li>
           </ul>
         </div>
       </div>
-
       <div class="footer-bottom-bar">
         <div>
-          © <span id="current-year">2026</span> HaseenTech. Founded by Hasan Ismail. All rights reserved.
+          © <span id="current-year">2026</span> HaseenTech. All rights reserved. Founded by Hasan Ismail.
         </div>
-        <div class="footer-bottom-nav">
-          <a href="privacy.html" class="footer-nav-link">Privacy Policy</a>
-          <a href="terms.html" class="footer-nav-link">Terms &amp; Conditions</a>
-          <a href="#main-content" class="footer-nav-link" style="color: var(--color-orange);">↑ Back to top</a>
+        <div class="footer-legal-links">
+          <a href="privacy.html" class="footer-link">Privacy Policy</a>
+          <a href="terms.html" class="footer-link">Terms &amp; Conditions</a>
         </div>
       </div>
     </div>

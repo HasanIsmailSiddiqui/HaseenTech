@@ -2,13 +2,13 @@ import { writeFileSync, mkdirSync } from "node:fs";
 import { join } from "node:path";
 
 const projects = [
-  { file: "izak10", label: "izak10.com", tag: "Business Website · Elementor", color: "#FF6B35" },
-  { file: "giftspak", label: "giftspak.com", tag: "WooCommerce Store", color: "#FF6B35" },
-  { file: "synctechsol", label: "synctechsol.com", tag: "Tech Services · WordPress", color: "#FF6B35" },
-  { file: "zobyconsulting", label: "zobyconsulting.com", tag: "Consulting Brand · Elementor", color: "#FF6B35" },
-  { file: "kuzconsultancy", label: "kuzconsultancy.co.uk", tag: "UK Consultancy · SEO", color: "#FF6B35" },
-  { file: "gunsandaccessories", label: "gunsandaccessories.com", tag: "E-Commerce (Pending DNS)", color: "#737373" },
-  { file: "manddroyalty", label: "manddroyalty.com", tag: "Brand Redesign (Pending DNS)", color: "#737373" },
+  { file: "izak10", label: "izak10.com", category: "Business Website · Elementor", accent: "#FF6B35" },
+  { file: "giftspak", label: "giftspak.com", category: "WooCommerce Store · Retail", accent: "#FF6B35" },
+  { file: "synctechsol", label: "synctechsol.com", category: "Technology Services · WordPress", accent: "#FF6B35" },
+  { file: "zobyconsulting", label: "zobyconsulting.com", category: "Consulting Brand · Elementor", accent: "#FF6B35" },
+  { file: "kuzconsultancy", label: "kuzconsultancy.co.uk", category: "UK Consultancy · SEO", accent: "#FF6B35" },
+  { file: "gunsandaccessories", label: "gunsandaccessories.com", category: "E-Commerce Catalog (Verification Pending)", accent: "#71717A" },
+  { file: "manddroyalty", label: "manddroyalty.com", category: "Brand Redesign (Verification Pending)", accent: "#71717A" },
 ];
 
 const targetDirs = [
@@ -21,67 +21,83 @@ for (const dir of targetDirs) {
 }
 
 for (const p of projects) {
-  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="900" height="560" viewBox="0 0 900 560">
   <defs>
-    <linearGradient id="bg-${p.file}" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#F7F7F2"/>
-      <stop offset="100%" stop-color="#ECEAE4"/>
-    </linearGradient>
+    <radialGradient id="grad-${p.file}" cx="80%" cy="20%" r="60%">
+      <stop offset="0%" stop-color="#222427" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#101112" stop-opacity="1"/>
+    </radialGradient>
+    <filter id="shadow-${p.file}" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="16" stdDeviation="24" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
   </defs>
+
   <!-- Canvas Background -->
-  <rect width="800" height="500" fill="url(#bg-${p.file})"/>
+  <rect width="900" height="560" fill="url(#grad-${p.file})"/>
   
-  <!-- Browser Window Frame -->
-  <rect x="50" y="45" width="700" height="410" rx="12" fill="#FFFFFF" stroke="#E7E5E0" stroke-width="2"/>
+  <!-- Subtle Architectural Grid Lines -->
+  <line x1="60" y1="0" x2="60" y2="560" stroke="#343538" stroke-width="1" stroke-opacity="0.3"/>
+  <line x1="840" y1="0" x2="840" y2="560" stroke="#343538" stroke-width="1" stroke-opacity="0.3"/>
   
-  <!-- Browser Window Top Bar -->
-  <path d="M 50 57 A 12 12 0 0 1 62 45 L 738 45 A 12 12 0 0 1 750 57 L 750 85 L 50 85 Z" fill="#F1EFEA" stroke="#E7E5E0" stroke-width="1"/>
-  
-  <!-- Window Controls -->
-  <circle cx="75" cy="65" r="5" fill="#EF4444"/>
-  <circle cx="93" cy="65" r="5" fill="#F59E0B"/>
-  <circle cx="111" cy="65" r="5" fill="#10B981"/>
-  
-  <!-- URL Address Bar -->
-  <rect x="140" y="55" width="480" height="20" rx="4" fill="#FFFFFF" stroke="#E7E5E0" stroke-width="1"/>
-  <text x="150" y="69" fill="#737373" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif" font-size="11" font-weight="500">https://${p.label}</text>
-  
-  <!-- Hero Section Wireframe -->
-  <rect x="85" y="115" width="220" height="22" rx="4" fill="#171717"/>
-  <rect x="85" y="147" width="380" height="10" rx="3" fill="#D4D0C8"/>
-  <rect x="85" y="165" width="340" height="10" rx="3" fill="#E7E5E0"/>
-  
-  <!-- Call To Action Button -->
-  <rect x="85" y="195" width="120" height="28" rx="6" fill="${p.color}"/>
-  
-  <!-- Visual Hero Card -->
-  <rect x="510" y="115" width="205" height="110" rx="8" fill="#F7F7F2" stroke="#E7E5E0" stroke-width="1"/>
-  <circle cx="560" cy="155" r="22" fill="${p.color}" opacity="0.15"/>
-  <rect x="595" y="145" width="90" height="8" rx="2" fill="#171717" opacity="0.7"/>
-  <rect x="595" y="160" width="70" height="6" rx="2" fill="#A3A3A3"/>
-  
-  <!-- 3 Service Grid Columns -->
-  <rect x="85" y="255" width="190" height="120" rx="8" fill="#FAFAF8" stroke="#E7E5E0" stroke-width="1"/>
-  <rect x="105" y="275" width="32" height="32" rx="6" fill="${p.color}" opacity="0.15"/>
-  <rect x="105" y="320" width="110" height="10" rx="2" fill="#171717"/>
-  <rect x="105" y="338" width="140" height="6" rx="2" fill="#A3A3A3"/>
-  <rect x="105" y="350" width="120" height="6" rx="2" fill="#D4D0C8"/>
-  
-  <rect x="305" y="255" width="190" height="120" rx="8" fill="#FAFAF8" stroke="#E7E5E0" stroke-width="1"/>
-  <rect x="325" y="275" width="32" height="32" rx="6" fill="${p.color}" opacity="0.15"/>
-  <rect x="325" y="320" width="110" height="10" rx="2" fill="#171717"/>
-  <rect x="325" y="338" width="140" height="6" rx="2" fill="#A3A3A3"/>
-  <rect x="325" y="350" width="120" height="6" rx="2" fill="#D4D0C8"/>
-  
-  <rect x="525" y="255" width="190" height="120" rx="8" fill="#FAFAF8" stroke="#E7E5E0" stroke-width="1"/>
-  <rect x="545" y="275" width="32" height="32" rx="6" fill="${p.color}" opacity="0.15"/>
-  <rect x="545" y="320" width="110" height="10" rx="2" fill="#171717"/>
-  <rect x="545" y="338" width="140" height="6" rx="2" fill="#A3A3A3"/>
-  <rect x="545" y="350" width="120" height="6" rx="2" fill="#D4D0C8"/>
-  
-  <!-- Bottom Caption -->
-  <text x="400" y="420" text-anchor="middle" fill="#171717" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif" font-size="16" font-weight="600">${p.label}</text>
-  <text x="400" y="440" text-anchor="middle" fill="#737373" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif" font-size="12">${p.tag}</text>
+  <!-- Browser Mockup Window -->
+  <g filter="url(#shadow-${p.file})">
+    <rect x="60" y="44" width="780" height="472" rx="14" fill="#191A1C" stroke="#343538" stroke-width="1.5"/>
+    
+    <!-- Window Header -->
+    <path d="M 60 58 A 14 14 0 0 1 74 44 L 826 44 A 14 14 0 0 1 840 58 L 840 88 L 60 88 Z" fill="#141517" stroke="#343538" stroke-width="1"/>
+    
+    <!-- Window Controls -->
+    <circle cx="88" cy="66" r="5" fill="#EF4444" opacity="0.8"/>
+    <circle cx="106" cy="66" r="5" fill="#F59E0B" opacity="0.8"/>
+    <circle cx="124" cy="66" r="5" fill="#10B981" opacity="0.8"/>
+    
+    <!-- Address Bar -->
+    <rect x="150" y="55" width="560" height="22" rx="5" fill="#222427" stroke="#343538" stroke-width="1"/>
+    <circle cx="166" cy="66" r="3.5" fill="#10B981"/>
+    <text x="180" y="70" fill="#F5F3EE" font-family="'Space Grotesk', -apple-system, sans-serif" font-size="11" font-weight="500">https://${p.label}</text>
+    
+    <!-- Interior Viewport Content -->
+    <rect x="61" y="89" width="778" height="426" fill="#101112"/>
+    
+    <!-- Mockup Hero Layout -->
+    <rect x="100" y="125" width="280" height="26" rx="4" fill="#F5F3EE" opacity="0.9"/>
+    <rect x="100" y="162" width="420" height="12" rx="3" fill="#A1A1AA" opacity="0.6"/>
+    <rect x="100" y="182" width="360" height="12" rx="3" fill="#A1A1AA" opacity="0.3"/>
+    
+    <!-- Primary CTA -->
+    <rect x="100" y="215" width="130" height="34" rx="6" fill="${p.accent}"/>
+    <rect x="245" y="215" width="110" height="34" rx="6" fill="#222427" stroke="#343538" stroke-width="1"/>
+    
+    <!-- Right Mockup Visual Card -->
+    <rect x="560" y="125" width="240" height="140" rx="10" fill="#191A1C" stroke="#343538" stroke-width="1"/>
+    <circle cx="680" cy="195" r="40" fill="${p.accent}" opacity="0.15"/>
+    <rect x="620" y="210" width="120" height="10" rx="3" fill="#F5F3EE" opacity="0.8"/>
+    <rect x="640" y="228" width="80" height="6" rx="2" fill="${p.accent}"/>
+
+    <!-- 3 Grid Columns in Mockup -->
+    <rect x="100" y="285" width="210" height="140" rx="8" fill="#191A1C" stroke="#343538" stroke-width="1"/>
+    <rect x="120" y="305" width="36" height="36" rx="6" fill="${p.accent}" opacity="0.15"/>
+    <rect x="120" y="355" width="120" height="12" rx="2" fill="#F5F3EE" opacity="0.85"/>
+    <rect x="120" y="375" width="150" height="8" rx="2" fill="#A1A1AA" opacity="0.5"/>
+    <rect x="120" y="390" width="130" height="8" rx="2" fill="#A1A1AA" opacity="0.3"/>
+
+    <rect x="330" y="285" width="210" height="140" rx="8" fill="#191A1C" stroke="#343538" stroke-width="1"/>
+    <rect x="350" y="305" width="36" height="36" rx="6" fill="${p.accent}" opacity="0.15"/>
+    <rect x="350" y="355" width="120" height="12" rx="2" fill="#F5F3EE" opacity="0.85"/>
+    <rect x="350" y="375" width="150" height="8" rx="2" fill="#A1A1AA" opacity="0.5"/>
+    <rect x="350" y="390" width="130" height="8" rx="2" fill="#A1A1AA" opacity="0.3"/>
+
+    <rect x="560" y="285" width="240" height="140" rx="8" fill="#191A1C" stroke="#343538" stroke-width="1"/>
+    <rect x="580" y="305" width="36" height="36" rx="6" fill="${p.accent}" opacity="0.15"/>
+    <rect x="580" y="355" width="120" height="12" rx="2" fill="#F5F3EE" opacity="0.85"/>
+    <rect x="580" y="375" width="150" height="8" rx="2" fill="#A1A1AA" opacity="0.5"/>
+    <rect x="580" y="390" width="130" height="8" rx="2" fill="#A1A1AA" opacity="0.3"/>
+    
+    <!-- Footer Status Banner -->
+    <rect x="61" y="465" width="778" height="50" fill="#191A1C" stroke="#343538" stroke-width="1"/>
+    <text x="100" y="495" fill="#F5F3EE" font-family="'Space Grotesk', -apple-system, sans-serif" font-size="14" font-weight="600">${p.label}</text>
+    <text x="790" y="495" text-anchor="end" fill="#A1A1AA" font-family="-apple-system, sans-serif" font-size="12">${p.category}</text>
+  </g>
 </svg>`;
 
   for (const dir of targetDirs) {
@@ -89,4 +105,4 @@ for (const p of projects) {
   }
 }
 
-console.log("Updated portfolio preview SVGs written to public/portfolio/ and assets/portfolio/ with Warm Ivory and Charcoal branding.");
+console.log("Obsidian Dark portfolio preview SVGs generated successfully in public/portfolio/ and assets/portfolio/.");

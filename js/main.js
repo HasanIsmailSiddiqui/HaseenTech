@@ -1,6 +1,7 @@
 /**
  * HaseenTech — Main Interactive Logic
- * Navigation, Active State, Contact Form Validation, Accessible Handlers
+ * Obsidian Digital Studio Design System
+ * Navigation, Active State, Contact Form Validation, Accessible Handlers, Portfolio Filters
  */
 
 (function () {
@@ -14,10 +15,10 @@
     const toggle = document.getElementById('menu-toggle');
     const drawer = document.getElementById('mobile-drawer');
     const backdrop = document.getElementById('drawer-backdrop');
-    const closeBtn = document.getElementById('drawer-close');
+    const closeBtn = document.getElementById('menu-close') || document.getElementById('drawer-close');
     const drawerLinks = document.querySelectorAll('.drawer-link, .drawer-sublink');
 
-    // Scroll state for header shadow
+    // Scroll state for header styling
     function onScroll() {
       if (window.scrollY > 20) {
         header?.classList.add('scrolled');
@@ -29,20 +30,22 @@
     onScroll();
 
     function openDrawer() {
-      drawer?.classList.add('open');
+      if (!drawer) return;
+      drawer.classList.add('open');
       backdrop?.classList.add('active');
       toggle?.setAttribute('aria-expanded', 'true');
-      drawer?.setAttribute('aria-hidden', 'false');
+      drawer.setAttribute('aria-hidden', 'false');
       backdrop?.setAttribute('aria-hidden', 'false');
       document.body.style.overflow = 'hidden';
       closeBtn?.focus();
     }
 
     function closeDrawer() {
-      drawer?.classList.remove('open');
+      if (!drawer) return;
+      drawer.classList.remove('open');
       backdrop?.classList.remove('active');
       toggle?.setAttribute('aria-expanded', 'false');
-      drawer?.setAttribute('aria-hidden', 'true');
+      drawer.setAttribute('aria-hidden', 'true');
       backdrop?.setAttribute('aria-hidden', 'true');
       document.body.style.overflow = '';
       toggle?.focus();
@@ -69,17 +72,6 @@
         closeDrawer();
       }
     });
-
-    // Mobile Drawer Dropdown Accordion Toggle
-    const drawerDropdownTrigger = document.querySelector('.drawer-dropdown-trigger');
-    const drawerSubmenu = document.querySelector('.drawer-submenu');
-    if (drawerDropdownTrigger && drawerSubmenu) {
-      drawerDropdownTrigger.addEventListener('click', function (e) {
-        e.preventDefault();
-        const isHidden = drawerSubmenu.style.display === 'none';
-        drawerSubmenu.style.display = isHidden ? 'flex' : 'none';
-      });
-    }
   }
 
   /* ------------------------------------------------------------------------
@@ -99,7 +91,7 @@
 
         // If it's a sub-service dropdown item, also highlight the parent "Services" nav link
         if (link.classList.contains('dropdown-item')) {
-          const parentServices = document.getElementById('nav-services');
+          const parentServices = document.querySelector('.dropdown-trigger');
           if (parentServices) parentServices.classList.add('active');
         }
       }
@@ -120,7 +112,7 @@
      4. Contact Form Validation & Transparent Dispatch
      ------------------------------------------------------------------------ */
   function initContactForm() {
-    const form = document.getElementById('contact-form');
+    const form = document.getElementById('contact-form') || document.getElementById('inquiry-form');
     if (!form) return;
 
     const nameInput = document.getElementById('contact-name');
@@ -131,20 +123,31 @@
     const messageInput = document.getElementById('contact-message');
     const statusContainer = document.getElementById('form-status-message');
 
-    // Handle service pre-selection via URL param ?service=...
+    // Handle service pre-selection via URL param ?service=... or ?package=...
     const urlParams = new URLSearchParams(window.location.search);
     const preselectedService = urlParams.get('service');
-    if (preselectedService && serviceSelect) {
-      serviceSelect.value = preselectedService;
+    const preselectedPackage = urlParams.get('package');
+
+    if (serviceSelect) {
+      if (preselectedService && serviceSelect.querySelector(`option[value="${preselectedService}"]`)) {
+        serviceSelect.value = preselectedService;
+      } else if (preselectedPackage) {
+        if (preselectedPackage === 'landing') serviceSelect.value = 'landing';
+        else if (preselectedPackage === 'business') serviceSelect.value = 'business';
+        else if (preselectedPackage === 'woocommerce') serviceSelect.value = 'woocommerce';
+      }
     }
 
     function setFieldError(field, hasError) {
-      const group = field.closest('.form-group-modern');
+      if (!field) return;
+      const group = field.closest('.form-group-modern') || field.closest('.form-group-obsidian');
       if (group) {
         if (hasError) {
           group.classList.add('has-error');
+          field.style.borderColor = '#EF4444';
         } else {
           group.classList.remove('has-error');
+          field.style.borderColor = '';
         }
       }
     }
@@ -161,7 +164,7 @@
       let isValid = true;
 
       // Validate Name
-      if (!nameInput.value.trim() || nameInput.value.trim().length < 2) {
+      if (!nameInput || !nameInput.value.trim() || nameInput.value.trim().length < 2) {
         setFieldError(nameInput, true);
         isValid = false;
       } else {
@@ -170,7 +173,7 @@
 
       // Validate Email
       const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      if (!emailPattern.test(emailInput.value.trim())) {
+      if (!emailInput || !emailPattern.test(emailInput.value.trim())) {
         setFieldError(emailInput, true);
         isValid = false;
       } else {
@@ -178,7 +181,7 @@
       }
 
       // Validate Service
-      if (!serviceSelect.value) {
+      if (!serviceSelect || !serviceSelect.value) {
         setFieldError(serviceSelect, true);
         isValid = false;
       } else {
@@ -186,7 +189,7 @@
       }
 
       // Validate Message
-      if (!messageInput.value.trim() || messageInput.value.trim().length < 15) {
+      if (!messageInput || !messageInput.value.trim() || messageInput.value.trim().length < 15) {
         setFieldError(messageInput, true);
         isValid = false;
       } else {
@@ -195,7 +198,7 @@
 
       if (!isValid) {
         if (statusContainer) {
-          statusContainer.className = 'form-status-alert notice';
+          statusContainer.className = 'form-status-box error';
           statusContainer.textContent = 'Please complete all required fields (marked *) before submitting.';
           statusContainer.style.display = 'block';
         }
@@ -226,20 +229,20 @@
       const whatsappUrl = `https://wa.me/923001234567?text=${whatsappText}`;
 
       if (statusContainer) {
-        statusContainer.className = 'form-status-alert success';
+        statusContainer.className = 'form-status-box success';
         statusContainer.innerHTML = `
           <div style="margin-bottom: 12px;">
-            <strong>✓ Project brief prepared successfully!</strong><br>
+            <strong style="color: #10B981;">✓ Project brief prepared successfully!</strong><br>
             HaseenTech maintains strict client confidentiality. To ensure direct delivery without third-party email tracking, choose how you would like to dispatch your brief to Hasan Ismail:
           </div>
-          <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px;">
+          <div class="form-actions-transparent">
             <a href="${mailtoUrl}" class="btn btn-primary btn-sm" id="btn-dispatch-email">
-              Send via Email Application
+              Send via Email Application ↗
             </a>
-            <a href="${whatsappUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
-              Chat on WhatsApp (+92 300 1234567)
+            <a href="${whatsappUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm" id="btn-dispatch-whatsapp">
+              Chat on WhatsApp (+92 300 1234567) ↗
             </a>
-            <button type="button" class="btn btn-outline btn-sm" id="btn-copy-brief">
+            <button type="button" class="btn btn-ghost btn-sm" id="btn-copy-brief">
               Copy Brief to Clipboard
             </button>
           </div>
@@ -264,9 +267,6 @@
             }
           });
         }
-
-        // Trigger native email client
-        window.location.href = mailtoUrl;
       }
     });
   }
@@ -275,7 +275,7 @@
      5. Portfolio Category Filter
      ------------------------------------------------------------------------ */
   function initPortfolioFilters() {
-    const filterBtns = document.querySelectorAll('.portfolio-filter-btn');
+    const filterBtns = document.querySelectorAll('.portfolio-filter-btn, .filter-btn, button[data-filter]');
     const projectCards = document.querySelectorAll('.portfolio-card-item');
 
     if (!filterBtns.length || !projectCards.length) return;
@@ -286,11 +286,11 @@
 
         filterBtns.forEach(b => {
           b.classList.remove('active');
-          b.setAttribute('aria-pressed', 'false');
+          b.setAttribute('aria-selected', 'false');
         });
 
         this.classList.add('active');
-        this.setAttribute('aria-pressed', 'true');
+        this.setAttribute('aria-selected', 'true');
 
         projectCards.forEach(card => {
           const cardCat = card.getAttribute('data-category');

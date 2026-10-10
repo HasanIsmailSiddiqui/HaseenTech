@@ -3,261 +3,225 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About HaseenTech — Founder Hasan Ismail &amp; Agency Philosophy</title>
-  <meta name="description" content="Learn about HaseenTech and founder Hasan Ismail. We build modern, maintainable WordPress websites and digital solutions for international businesses with clarity and care.">
-  <meta name="author" content="Hasan Ismail">
+  <title>About HaseenTech — Studio Philosophy & Founder Hasan Ismail</title>
+  <meta name="description" content="Learn about HaseenTech, an independent creative technology studio in Karachi founded by Hasan Ismail, dedicated to bespoke web engineering and WordPress development for international clients.">
   <link rel="canonical" href="https://haseentech.com/about.html">
-
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="About HaseenTech — Modern Websites. Real Results.">
-  <meta property="og:description" content="Meet Hasan Ismail, founder of HaseenTech. Learn about our engineering principles, WordPress expertise, and remote delivery for clients worldwide.">
-  <meta property="og:image" content="assets/brand/logo.svg">
-
   <link rel="icon" type="image/svg+xml" href="assets/brand/favicon.svg">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
-  <!-- SHARED HEADER -->
-  <header class="site-header" role="banner">
-    <div class="container header-inner">
-      <a href="index.html" class="brand-link" aria-label="HaseenTech Home">
-        <img src="assets/brand/logo.svg" alt="HaseenTech" class="brand-logo-img" width="180" height="36">
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="brand-logo" aria-label="HaseenTech Home">
+        <img src="assets/brand/logo.svg" alt="HaseenTech" width="160" height="32">
       </a>
-
       <nav class="nav-desktop" aria-label="Primary Navigation">
         <ul class="nav-list">
-          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-          <li class="nav-item"><a href="about.html" class="nav-link active">About</a></li>
-          <li class="nav-item nav-dropdown">
-            <a href="services.html" class="nav-link" id="nav-services" aria-haspopup="true" aria-expanded="false">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="portfolio.html" class="nav-link">Work</a></li>
+          <li class="nav-item-dropdown">
+            <a href="services.html" class="nav-link dropdown-trigger" aria-haspopup="true" aria-expanded="false">
               Services
-              <svg class="dropdown-arrow" viewBox="0 0 24 24" fill="none" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
             </a>
-            <div class="nav-dropdown-menu" role="menu" aria-label="Services Submenu">
-              <a href="services.html" class="dropdown-item" role="menuitem">
-                <span class="dropdown-item-title">All Services Overview</span>
-                <span class="dropdown-item-desc">Comprehensive agency capabilities</span>
-              </a>
-              <a href="service-wordpress.html" class="dropdown-item" role="menuitem">
-                <span class="dropdown-item-title">WordPress Development</span>
-                <span class="dropdown-item-desc">Custom brochure &amp; business sites</span>
-              </a>
-              <a href="service-woocommerce.html" class="dropdown-item" role="menuitem">
-                <span class="dropdown-item-title">WooCommerce Stores</span>
-                <span class="dropdown-item-desc">E-commerce catalogs &amp; checkout</span>
-              </a>
-              <a href="service-landing-pages.html" class="dropdown-item" role="menuitem">
-                <span class="dropdown-item-title">Landing Pages</span>
-                <span class="dropdown-item-desc">High-converting campaign funnels</span>
-              </a>
-              <a href="service-redesign.html" class="dropdown-item" role="menuitem">
-                <span class="dropdown-item-title">Website Redesign</span>
-                <span class="dropdown-item-desc">Modernizing legacy web presences</span>
-              </a>
-              <a href="service-maintenance.html" class="dropdown-item" role="menuitem">
-                <span class="dropdown-item-title">Maintenance &amp; Support</span>
-                <span class="dropdown-item-desc">Updates, security &amp; troubleshooting</span>
-              </a>
-              <a href="service-seo-speed.html" class="dropdown-item" role="menuitem">
-                <span class="dropdown-item-title">SEO &amp; Speed Optimization</span>
-                <span class="dropdown-item-desc">Core web vitals &amp; on-page hygiene</span>
-              </a>
+            <div class="dropdown-menu" role="menu">
+              <a href="service-wordpress.html" class="dropdown-item" role="menuitem">WordPress Development</a>
+              <a href="service-woocommerce.html" class="dropdown-item" role="menuitem">WooCommerce Stores</a>
+              <a href="service-landing-pages.html" class="dropdown-item" role="menuitem">Landing Pages</a>
+              <a href="service-redesign.html" class="dropdown-item" role="menuitem">Website Redesign</a>
+              <a href="service-maintenance.html" class="dropdown-item" role="menuitem">Maintenance & Support</a>
+              <a href="service-seo-speed.html" class="dropdown-item" role="menuitem">SEO & Speed Optimization</a>
             </div>
           </li>
-          <li class="nav-item"><a href="portfolio.html" class="nav-link">Portfolio</a></li>
-          <li class="nav-item"><a href="pricing.html" class="nav-link">Pricing</a></li>
-          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+          <li><a href="about.html" class="nav-link active">Studio</a></li>
+          <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
         </ul>
-        <div class="nav-cta-box">
-          <a href="contact.html" class="btn btn-primary btn-sm">Start a Project</a>
-        </div>
       </nav>
-
-      <button type="button" class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-drawer">
-        <span class="menu-bar"></span>
-        <span class="menu-bar"></span>
-        <span class="menu-bar"></span>
-      </button>
+      <div class="header-actions">
+        <a href="contact.html" class="btn btn-primary btn-sm">Start a Project ↗</a>
+        <button id="menu-toggle" class="mobile-toggle-btn" aria-label="Toggle Navigation Menu" aria-expanded="false">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+        </button>
+      </div>
     </div>
   </header>
 
-  <!-- Mobile Drawer Menu -->
-  <div class="drawer-backdrop" id="drawer-backdrop" aria-hidden="true"></div>
-  <aside class="mobile-drawer" id="mobile-drawer" aria-label="Mobile Menu Drawer" aria-hidden="true">
+  <!-- Mobile Drawer -->
+  <div id="mobile-drawer" class="mobile-drawer" aria-hidden="true">
     <div class="drawer-header">
-      <img src="assets/brand/logo.svg" alt="HaseenTech" style="height: 30px; width: auto;">
-      <button type="button" class="btn btn-ghost btn-sm" id="drawer-close" aria-label="Close navigation">✕</button>
+      <img src="assets/brand/logo.svg" alt="HaseenTech" width="140" height="28">
+      <button id="menu-close" class="mobile-toggle-btn" aria-label="Close Navigation Menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
     </div>
-    <nav class="drawer-nav-list" aria-label="Mobile Navigation">
-      <a href="index.html" class="drawer-link">Home</a>
-      <a href="about.html" class="drawer-link active">About</a>
-      <div>
-        <a href="services.html" class="drawer-link drawer-dropdown-trigger" style="display: flex; justify-content: space-between; align-items: center;">
-          <span>Services</span>
-          <span style="font-size: 14px;">+</span>
-        </a>
+    <ul class="drawer-nav-list">
+      <li><a href="index.html" class="drawer-link">Home</a></li>
+      <li><a href="portfolio.html" class="drawer-link">Selected Work</a></li>
+      <li>
+        <a href="services.html" class="drawer-link">Services Overview</a>
         <div class="drawer-submenu">
-          <a href="services.html" class="drawer-sublink">All Services Overview</a>
           <a href="service-wordpress.html" class="drawer-sublink">WordPress Development</a>
           <a href="service-woocommerce.html" class="drawer-sublink">WooCommerce Stores</a>
           <a href="service-landing-pages.html" class="drawer-sublink">Landing Pages</a>
           <a href="service-redesign.html" class="drawer-sublink">Website Redesign</a>
-          <a href="service-maintenance.html" class="drawer-sublink">Maintenance &amp; Support</a>
-          <a href="service-seo-speed.html" class="drawer-sublink">SEO &amp; Speed Optimization</a>
+          <a href="service-maintenance.html" class="drawer-sublink">Maintenance & Bug Fixes</a>
+          <a href="service-seo-speed.html" class="drawer-sublink">SEO & Speed Optimization</a>
         </div>
-      </div>
-      <a href="portfolio.html" class="drawer-link">Portfolio</a>
-      <a href="pricing.html" class="drawer-link">Pricing</a>
-      <a href="contact.html" class="drawer-link">Contact</a>
-    </nav>
-    <div style="margin-top: auto; display: flex; flex-direction: column; gap: 8px;">
-      <a href="contact.html" class="btn btn-primary btn-block">Start a Project</a>
-      <a href="mailto:hello@haseentech.com" class="btn btn-ghost btn-block" style="font-size: 13px;">hello@haseentech.com</a>
-    </div>
-  </aside>
+      </li>
+      <li><a href="about.html" class="drawer-link active">Studio & Founder</a></li>
+      <li><a href="pricing.html" class="drawer-link">Packages & Pricing</a></li>
+      <li><a href="contact.html" class="drawer-link">Contact & Inquiries</a></li>
+    </ul>
+  </div>
 
   <main id="main-content">
-    <!-- Header Hero -->
-    <section class="section" style="padding-top: 60px; padding-bottom: 40px;">
-      <div class="container container-narrow">
-        <span class="eyebrow">About HaseenTech</span>
-        <h1 class="section-title" style="font-size: var(--fs-4xl); margin-bottom: 20px;">
-          Building modern websites with clarity, integrity and care.
-        </h1>
-        <p class="section-lead">
-          I'm <strong>Hasan Ismail</strong>, founder and lead web developer at HaseenTech. Based in Karachi, Pakistan, I partner with businesses, consultants, and agencies locally and remotely across the United States, United Kingdom, UAE, Canada, Australia, and Europe.
+    <!-- Page Hero Banner -->
+    <section class="page-hero-obsidian">
+      <div class="container page-hero-inner">
+        <span class="micro-label micro-label-orange">// STUDIO PHILOSOPHY</span>
+        <h1 class="page-hero-title">Deliberate Craft. Direct Partnership.</h1>
+        <p class="page-hero-sub">
+          HaseenTech was founded to reject bloated agency bureaucracy. We are an engineering-led digital studio delivering high-performance WordPress systems, storefronts, and marketing sites with transparent communication and zero nonsense.
         </p>
       </div>
     </section>
 
-    <!-- Founder Bio & Story -->
-    <section class="section section-white">
-      <div class="container container-narrow prose-editorial">
-        <h2>The Story Behind HaseenTech</h2>
-        <p>
-          Too many growing businesses find themselves trapped in one of two extremes: either struggling with generic, brittle DIY templates that look cheap and load slowly, or spending astronomical agency retainers on over-engineered bespoke platforms they can neither afford nor maintain.
-        </p>
-        <p>
-          HaseenTech was founded to provide a balanced, authoritative alternative: <strong>clean, high-performance WordPress and custom web development</strong> delivered with direct founder accountability. When you hire HaseenTech, you work directly with me—the developer executing your code, configuring your templates, and optimizing your mobile layouts.
-        </p>
-
-        <h2>Core Engineering Principles</h2>
-        <div style="display: grid; grid-template-columns: 1fr; gap: 20px; margin: 30px 0;">
-          <div style="background-color: var(--color-ivory); border: 1px solid var(--border-light); padding: 24px; border-radius: var(--radius-md);">
-            <h3 style="margin-top: 0; margin-bottom: 8px; color: var(--color-charcoal);">1. Outcomes Over Ornament</h3>
-            <p style="margin: 0; font-size: 15px;">
-              Visual design must serve your commercial proposition and make customer inquiry effortless. We avoid frivolous animations, heavy third-party scripts, and decorative clutter that dilutes visitor attention or harms conversion rates.
-            </p>
-          </div>
-
-          <div style="background-color: var(--color-ivory); border: 1px solid var(--border-light); padding: 24px; border-radius: var(--radius-md);">
-            <h3 style="margin-top: 0; margin-bottom: 8px; color: var(--color-charcoal);">2. Maintainable Architecture</h3>
-            <p style="margin: 0; font-size: 15px;">
-              You should never have to hire an engineer to fix a typo or swap out a photo. We structure WordPress using standard conventions, reusable global styles, and clean blocks so you or your staff can safely update copy without breaking page layouts.
-            </p>
-          </div>
-
-          <div style="background-color: var(--color-ivory); border: 1px solid var(--border-light); padding: 24px; border-radius: var(--radius-md);">
-            <h3 style="margin-top: 0; margin-bottom: 8px; color: var(--color-charcoal);">3. Transparent Remote Collaboration</h3>
-            <p style="margin: 0; font-size: 15px;">
-              Remote projects thrive on clarity. We work on private staging servers, establish fixed milestone schedules, communicate via structured async updates, and respect international timezones with scheduled video overlap.
-            </p>
+    <!-- Studio Narrative & Visual Split -->
+    <section class="section-pad" style="background: var(--color-obsidian);">
+      <div class="container studio-grid">
+        <div class="studio-photo-card">
+          <img src="assets/images/studio-space.jpg" alt="HaseenTech Studio Environment" width="800" height="500">
+          <div class="studio-photo-caption">
+            <span>KARACHI STUDIO BASE</span>
+            <span class="micro-label-orange">REMOTE PARTNERSHIPS GLOBALLY</span>
           </div>
         </div>
 
-        <h2>Verified Technical Expertise</h2>
-        <p>
-          We believe in honest capability boundaries. We do not claim to build massive custom enterprise applications or invent artificial hype. We focus deeply on the technologies that drive real business results:
-        </p>
-        <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 32px;">
-          <span class="tag">WordPress Core</span>
-          <span class="tag">Elementor Pro</span>
-          <span class="tag">WooCommerce</span>
-          <span class="tag">Shopify Theme Customization</span>
-          <span class="tag">Semantic HTML5 &amp; CSS3</span>
-          <span class="tag">Mobile Responsive UI</span>
-          <span class="tag">Basic Technical On-Page SEO</span>
-          <span class="tag">PageSpeed Optimization</span>
-          <span class="tag">Staging &amp; Migration Protocols</span>
-          <span class="tag">Stripe &amp; Regional Gateway Setup</span>
-        </div>
+        <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+          <span class="micro-label micro-label-orange">// OUR STORY</span>
+          <h2 style="font-size: var(--fs-3xl); font-weight: 700; color: var(--color-warm-white);">
+            Built from real engineering discipline.
+          </h2>
+          <p style="font-size: var(--fs-base); color: var(--text-secondary); line-height: 1.7;">
+            In an industry flooded with copy-paste templates and generic artificial layouts, HaseenTech operates on a fundamentally different standard: every line of code, every database query, and every layout transition must serve a clear business purpose.
+          </p>
+          <p style="font-size: var(--fs-sm); color: var(--text-secondary); line-height: 1.65;">
+            Founder Hasan Ismail brings hands-on full-stack web and WordPress expertise to every engagement. Rather than passing your requirements down a chain of project coordinators, Hasan personally architectures the structure, implements the templates, and verifies performance across real devices.
+          </p>
 
-        <h2>Ownership &amp; Ethical Guarantee</h2>
-        <p>
-          Unlike agencies that hold clients hostage by registering domain names under their own accounts or locking down hosting access, HaseenTech guarantees <strong>100% client ownership</strong>. Your domain, your hosting account, your codebase, and your assets belong exclusively to you from day one.
-        </p>
-
-        <div style="margin-top: 40px; padding: 32px; background-color: var(--color-ivory); border: 1px solid var(--border-light); border-radius: var(--radius-md); text-align: center;">
-          <h3 style="margin-top: 0; margin-bottom: 8px;">Let's discuss your web project</h3>
-          <p style="margin-bottom: 20px; font-size: 15px;">Reach out directly with your goals and timeline for a clear, direct response.</p>
-          <a href="contact.html" class="btn btn-primary">Start a Project Discussion →</a>
+          <div class="principles-grid" style="margin-top: 1rem;">
+            <div class="principle-item">
+              <div class="principle-num">INTEGRITY</div>
+              <h3 class="principle-title">No False Metrics</h3>
+              <p class="principle-desc">We never invent fake awards, false reviews, or fictitious 10,000% ROI claims.</p>
+            </div>
+            <div class="principle-item">
+              <div class="principle-num">EFFICIENCY</div>
+              <h3 class="principle-title">Lean Tooling</h3>
+              <p class="principle-desc">Zero bloat. Fast loading speeds that keep visitors engaged and reduce bounce rates.</p>
+            </div>
+          </div>
         </div>
+      </div>
+    </section>
+
+    <!-- Founder Profile Section -->
+    <section class="section-pad" style="background: var(--color-charcoal); border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border);">
+      <div class="container" style="max-width: 960px;">
+        <div class="founder-profile-grid">
+          <div style="background: var(--color-elevated); border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: 1.5rem; text-align: center;">
+            <div style="width: 120px; height: 120px; border-radius: 50%; background: var(--color-charcoal); border: 2px solid var(--color-orange); margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; font-weight: 700; color: var(--color-warm-white);">
+              HI
+            </div>
+            <h3 style="font-size: var(--fs-xl); color: var(--color-warm-white);">Hasan Ismail</h3>
+            <p style="font-family: var(--font-mono); font-size: var(--fs-xs); color: var(--color-orange); margin-top: 0.25rem;">Founder &amp; Lead Web Developer</p>
+            <p style="font-size: var(--fs-xs); color: var(--color-muted); margin-top: 0.5rem;">Karachi, Pakistan</p>
+          </div>
+
+          <div style="display: flex; flex-direction: column; gap: 1rem;">
+            <span class="micro-label micro-label-orange">// LEADERSHIP</span>
+            <h2 style="font-size: var(--fs-2xl); color: var(--color-warm-white);">Senior Developer Craft.</h2>
+            <p style="font-size: var(--fs-sm); color: var(--text-secondary); line-height: 1.65;">
+              Hasan specializes in custom WordPress architecture, Elementor design systems, WooCommerce storefront customization, and front-end performance tuning. His background blends aesthetic visual judgment with rigorous technical problem-solving.
+            </p>
+            <p style="font-size: var(--fs-sm); color: var(--text-secondary); line-height: 1.65;">
+              Working with clients across North America, the UK, Europe, and the Middle East, Hasan emphasizes asynchronous clarity: annotated screen recordings, documented pull requests, and predictable milestone deliveries.
+            </p>
+            <div style="margin-top: 1rem;">
+              <a href="contact.html" class="btn btn-primary">Work with Hasan ↗</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Closing Call to Action -->
+    <section class="cta-banner-obsidian">
+      <div class="container cta-banner-inner">
+        <span class="micro-label micro-label-orange">// START THE CONVERSATION</span>
+        <h2 style="font-size: var(--fs-3xl); font-weight: 700; color: var(--color-warm-white);">Ready to Elevate Your Web Presence?</h2>
+        <p style="font-size: var(--fs-base); color: var(--text-secondary); max-width: 580px;">
+          Send us your initial project brief or schedule a technical consultation.
+        </p>
+        <a href="contact.html" class="btn btn-primary btn-lg">Submit Project Brief ↗</a>
       </div>
     </section>
   </main>
 
-  <!-- SHARED FOOTER -->
-  <footer class="site-footer" role="contentinfo">
+  <!-- Footer -->
+  <footer class="site-footer">
     <div class="container">
-      <div class="footer-columns-grid">
-        <div class="footer-brand-col">
-          <a href="index.html" aria-label="HaseenTech Home">
-            <img src="assets/brand/logo.svg" alt="HaseenTech" style="height: 32px; width: auto; filter: invert(1) hue-rotate(180deg);">
-          </a>
-          <span class="footer-tagline-text">Modern Websites. Real Results.</span>
-          <p class="footer-about-summary">
-            Founded by <strong>Hasan Ismail</strong> in Karachi, Pakistan. Delivering bespoke WordPress development, WooCommerce storefronts, and web engineering to clients worldwide.
+      <div class="footer-top-grid">
+        <div class="footer-col-brand">
+          <img src="assets/brand/logo.svg" alt="HaseenTech" width="160" height="32">
+          <p class="footer-brand-desc">
+            Independent creative technology studio founded by Hasan Ismail. Delivering modern, high-performance web engineering for ambitious international businesses.
           </p>
+          <div style="font-family: var(--font-mono); font-size: var(--fs-xs); color: var(--color-muted);">
+            Karachi, Pakistan · Remote Worldwide
+          </div>
         </div>
-
         <div>
-          <h4 class="footer-col-header">Navigation</h4>
-          <ul class="footer-nav-list">
-            <li><a href="index.html" class="footer-nav-link">Home</a></li>
-            <li><a href="about.html" class="footer-nav-link">About HaseenTech</a></li>
-            <li><a href="services.html" class="footer-nav-link">Services</a></li>
-            <li><a href="portfolio.html" class="footer-nav-link">Portfolio</a></li>
-            <li><a href="pricing.html" class="footer-nav-link">Pricing &amp; Packages</a></li>
-            <li><a href="contact.html" class="footer-nav-link">Contact</a></li>
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="portfolio.html" class="footer-link">Selected Work</a></li>
+            <li><a href="services.html" class="footer-link">All Services</a></li>
+            <li><a href="about.html" class="footer-link">Studio &amp; Founder</a></li>
+            <li><a href="pricing.html" class="footer-link">Packages &amp; Pricing</a></li>
+            <li><a href="contact.html" class="footer-link">Contact</a></li>
           </ul>
         </div>
-
         <div>
-          <h4 class="footer-col-header">Services</h4>
-          <ul class="footer-nav-list">
-            <li><a href="service-wordpress.html" class="footer-nav-link">WordPress Development</a></li>
-            <li><a href="service-woocommerce.html" class="footer-nav-link">WooCommerce Stores</a></li>
-            <li><a href="service-landing-pages.html" class="footer-nav-link">Landing Pages</a></li>
-            <li><a href="service-redesign.html" class="footer-nav-link">Website Redesign</a></li>
-            <li><a href="service-maintenance.html" class="footer-nav-link">Maintenance &amp; Support</a></li>
-            <li><a href="service-seo-speed.html" class="footer-nav-link">SEO &amp; Speed Optimization</a></li>
+          <h4 class="footer-col-title">Services</h4>
+          <ul class="footer-links-list">
+            <li><a href="service-wordpress.html" class="footer-link">WordPress Development</a></li>
+            <li><a href="service-woocommerce.html" class="footer-link">WooCommerce Stores</a></li>
+            <li><a href="service-landing-pages.html" class="footer-link">Landing Pages</a></li>
+            <li><a href="service-redesign.html" class="footer-link">Website Redesign</a></li>
+            <li><a href="service-maintenance.html" class="footer-link">Maintenance &amp; Support</a></li>
+            <li><a href="service-seo-speed.html" class="footer-link">SEO &amp; Speed Optimization</a></li>
           </ul>
         </div>
-
         <div>
-          <h4 class="footer-col-header">Contact &amp; Regions</h4>
-          <ul class="footer-nav-list">
-            <li><a href="mailto:hello@haseentech.com" class="footer-nav-link">hello@haseentech.com</a></li>
-            <li><a href="https://wa.me/923001234567" target="_blank" rel="noopener noreferrer" class="footer-nav-link">WhatsApp: +92 300 1234567</a></li>
-            <li><span style="font-size: 13px; color: var(--text-inverse-muted);">Karachi, Pakistan</span></li>
-            <li><span style="font-size: 13px; color: var(--text-inverse-muted);">USA • UK • UAE • Canada • Europe</span></li>
+          <h4 class="footer-col-title">Direct Inquiries</h4>
+          <ul class="footer-links-list">
+            <li><a href="mailto:hello@haseentech.com" class="footer-link">hello@haseentech.com</a></li>
+            <li><span style="font-size: var(--fs-sm); color: var(--text-secondary);">Direct WhatsApp upon project brief</span></li>
           </ul>
         </div>
       </div>
-
       <div class="footer-bottom-bar">
         <div>
-          © <span id="current-year">2026</span> HaseenTech. Founded by Hasan Ismail. All rights reserved.
+          © <span id="current-year">2026</span> HaseenTech. All rights reserved. Founded by Hasan Ismail.
         </div>
-        <div class="footer-bottom-nav">
-          <a href="privacy.html" class="footer-nav-link">Privacy Policy</a>
-          <a href="terms.html" class="footer-nav-link">Terms &amp; Conditions</a>
-          <a href="#main-content" class="footer-nav-link" style="color: var(--color-orange);">↑ Back to top</a>
+        <div class="footer-legal-links">
+          <a href="privacy.html" class="footer-link">Privacy Policy</a>
+          <a href="terms.html" class="footer-link">Terms &amp; Conditions</a>
         </div>
       </div>
     </div>

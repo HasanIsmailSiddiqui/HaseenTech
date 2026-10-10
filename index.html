@@ -3,735 +3,803 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HaseenTech — Modern Websites. Real Results.</title>
-  <meta name="description" content="HaseenTech, founded by Hasan Ismail, designs and builds high-performance WordPress websites, WooCommerce stores, and bespoke web experiences for clients worldwide.">
-  <meta name="author" content="Hasan Ismail">
+  <title>HaseenTech — Creative Technology Studio | Modern Websites. Real Results.</title>
+  <meta name="description" content="Independent creative technology studio founded by Hasan Ismail. Engineering bespoke WordPress platforms, high-converting landing pages, and WooCommerce storefronts for ambitious international brands.">
   <link rel="canonical" href="https://haseentech.com/">
-
-  <!-- Open Graph / Meta -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="HaseenTech — Modern Websites. Real Results.">
-  <meta property="og:description" content="Bespoke WordPress, WooCommerce and web engineering studio founded by Hasan Ismail. Serving businesses in the USA, UK, UAE, Canada, Australia, Europe, and Pakistan.">
-  <meta property="og:image" content="assets/brand/logo.svg">
-
-  <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="assets/brand/favicon.svg">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="HaseenTech — Creative Technology Studio">
+  <meta property="og:description" content="We make digital feel different. Bespoke websites and web engineering for brands in the USA, UK, UAE, and Europe.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://haseentech.com/">
+  <meta property="og:image" content="assets/images/hero-sculpture.jpg">
 
-  <!-- Typography: Google Fonts Preconnect -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
-
-  <!-- Core Design System -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <!-- Accessible Skip Link -->
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
-  <!-- ========================================================================
-       SHARED HEADER
-       ======================================================================== -->
-  <header class="site-header" role="banner">
-    <div class="container header-inner">
-      <a href="index.html" class="brand-link" aria-label="HaseenTech Home">
-        <img src="assets/brand/logo.svg" alt="HaseenTech" class="brand-logo-img" width="180" height="36">
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="brand-logo" aria-label="HaseenTech Home">
+        <img src="assets/brand/logo.svg" alt="HaseenTech" width="160" height="32">
       </a>
 
-      <!-- Desktop Navigation -->
       <nav class="nav-desktop" aria-label="Primary Navigation">
         <ul class="nav-list">
-          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-          <li class="nav-item nav-dropdown">
-            <a href="services.html" class="nav-link" id="nav-services" aria-haspopup="true" aria-expanded="false">
+          <li><a href="index.html" class="nav-link active">Home</a></li>
+          <li><a href="portfolio.html" class="nav-link">Work</a></li>
+          <li class="nav-item-dropdown">
+            <a href="services.html" class="nav-link dropdown-trigger" aria-haspopup="true" aria-expanded="false">
               Services
-              <svg class="dropdown-arrow" viewBox="0 0 24 24" fill="none" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
             </a>
-            <div class="nav-dropdown-menu" role="menu" aria-label="Services Submenu">
-              <a href="services.html" class="dropdown-item" role="menuitem">
-                <span class="dropdown-item-title">All Services Overview</span>
-                <span class="dropdown-item-desc">Comprehensive agency capabilities</span>
-              </a>
-              <a href="service-wordpress.html" class="dropdown-item" role="menuitem">
-                <span class="dropdown-item-title">WordPress Development</span>
-                <span class="dropdown-item-desc">Custom brochure &amp; business sites</span>
-              </a>
-              <a href="service-woocommerce.html" class="dropdown-item" role="menuitem">
-                <span class="dropdown-item-title">WooCommerce Stores</span>
-                <span class="dropdown-item-desc">E-commerce catalogs &amp; checkout</span>
-              </a>
-              <a href="service-landing-pages.html" class="dropdown-item" role="menuitem">
-                <span class="dropdown-item-title">Landing Pages</span>
-                <span class="dropdown-item-desc">High-converting campaign funnels</span>
-              </a>
-              <a href="service-redesign.html" class="dropdown-item" role="menuitem">
-                <span class="dropdown-item-title">Website Redesign</span>
-                <span class="dropdown-item-desc">Modernizing legacy web presences</span>
-              </a>
-              <a href="service-maintenance.html" class="dropdown-item" role="menuitem">
-                <span class="dropdown-item-title">Maintenance &amp; Support</span>
-                <span class="dropdown-item-desc">Updates, security &amp; troubleshooting</span>
-              </a>
-              <a href="service-seo-speed.html" class="dropdown-item" role="menuitem">
-                <span class="dropdown-item-title">SEO &amp; Speed Optimization</span>
-                <span class="dropdown-item-desc">Core web vitals &amp; on-page hygiene</span>
-              </a>
+            <div class="dropdown-menu" role="menu">
+              <a href="service-wordpress.html" class="dropdown-item" role="menuitem">WordPress Development</a>
+              <a href="service-woocommerce.html" class="dropdown-item" role="menuitem">WooCommerce Stores</a>
+              <a href="service-landing-pages.html" class="dropdown-item" role="menuitem">Landing Pages</a>
+              <a href="service-redesign.html" class="dropdown-item" role="menuitem">Website Redesign</a>
+              <a href="service-maintenance.html" class="dropdown-item" role="menuitem">Maintenance & Support</a>
+              <a href="service-seo-speed.html" class="dropdown-item" role="menuitem">SEO & Speed Optimization</a>
             </div>
           </li>
-          <li class="nav-item"><a href="portfolio.html" class="nav-link">Portfolio</a></li>
-          <li class="nav-item"><a href="pricing.html" class="nav-link">Pricing</a></li>
-          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+          <li><a href="about.html" class="nav-link">Studio</a></li>
+          <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
         </ul>
-        <div class="nav-cta-box">
-          <a href="contact.html" class="btn btn-primary btn-sm">Start a Project</a>
-        </div>
       </nav>
 
-      <!-- Mobile Toggle -->
-      <button type="button" class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-drawer">
-        <span class="menu-bar"></span>
-        <span class="menu-bar"></span>
-        <span class="menu-bar"></span>
-      </button>
+      <div class="header-actions">
+        <div class="status-indicator-header">
+          <span class="pill-badge"><span class="pulse-dot"></span> Available Q4/2026</span>
+        </div>
+        <a href="contact.html" class="btn btn-primary btn-sm">Start a Project ↗</a>
+        <button id="menu-toggle" class="mobile-toggle-btn" aria-label="Toggle Navigation Menu" aria-expanded="false">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+        </button>
+      </div>
     </div>
   </header>
 
-  <!-- Mobile Drawer Menu -->
-  <div class="drawer-backdrop" id="drawer-backdrop" aria-hidden="true"></div>
-  <aside class="mobile-drawer" id="mobile-drawer" aria-label="Mobile Menu Drawer" aria-hidden="true">
+  <!-- Mobile Drawer -->
+  <div id="mobile-drawer" class="mobile-drawer" aria-hidden="true">
     <div class="drawer-header">
-      <img src="assets/brand/logo.svg" alt="HaseenTech" style="height: 30px; width: auto;">
-      <button type="button" class="btn btn-ghost btn-sm" id="drawer-close" aria-label="Close navigation">✕</button>
+      <img src="assets/brand/logo.svg" alt="HaseenTech" width="140" height="28">
+      <button id="menu-close" class="mobile-toggle-btn" aria-label="Close Navigation Menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
     </div>
-    <nav class="drawer-nav-list" aria-label="Mobile Navigation">
-      <a href="index.html" class="drawer-link">Home</a>
-      <a href="about.html" class="drawer-link">About</a>
-      <div>
-        <a href="services.html" class="drawer-link drawer-dropdown-trigger" style="display: flex; justify-content: space-between; align-items: center;">
-          <span>Services</span>
-          <span style="font-size: 14px;">+</span>
-        </a>
+    <ul class="drawer-nav-list">
+      <li><a href="index.html" class="drawer-link active">Home</a></li>
+      <li><a href="portfolio.html" class="drawer-link">Selected Work</a></li>
+      <li>
+        <a href="services.html" class="drawer-link">Services Overview</a>
         <div class="drawer-submenu">
-          <a href="services.html" class="drawer-sublink">All Services Overview</a>
           <a href="service-wordpress.html" class="drawer-sublink">WordPress Development</a>
           <a href="service-woocommerce.html" class="drawer-sublink">WooCommerce Stores</a>
           <a href="service-landing-pages.html" class="drawer-sublink">Landing Pages</a>
           <a href="service-redesign.html" class="drawer-sublink">Website Redesign</a>
-          <a href="service-maintenance.html" class="drawer-sublink">Maintenance &amp; Support</a>
-          <a href="service-seo-speed.html" class="drawer-sublink">SEO &amp; Speed Optimization</a>
+          <a href="service-maintenance.html" class="drawer-sublink">Maintenance & Bug Fixes</a>
+          <a href="service-seo-speed.html" class="drawer-sublink">SEO & Speed Optimization</a>
         </div>
-      </div>
-      <a href="portfolio.html" class="drawer-link">Portfolio</a>
-      <a href="pricing.html" class="drawer-link">Pricing</a>
-      <a href="contact.html" class="drawer-link">Contact</a>
-    </nav>
-    <div style="margin-top: auto; display: flex; flex-direction: column; gap: 8px;">
-      <a href="contact.html" class="btn btn-primary btn-block">Start a Project</a>
-      <a href="mailto:hello@haseentech.com" class="btn btn-ghost btn-block" style="font-size: 13px;">hello@haseentech.com</a>
+      </li>
+      <li><a href="about.html" class="drawer-link">Studio & Founder</a></li>
+      <li><a href="pricing.html" class="drawer-link">Packages & Pricing</a></li>
+      <li><a href="contact.html" class="drawer-link">Contact & Inquiries</a></li>
+    </ul>
+    <div style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--color-border);">
+      <a href="contact.html" class="btn btn-primary" style="width: 100%;">Start a Project ↗</a>
     </div>
-  </aside>
+  </div>
 
-  <!-- ========================================================================
-       HOMEPAGE CONTENT
-       ======================================================================== -->
   <main id="main-content">
-
-    <!-- 1. Hero Section -->
-    <section class="hero-editorial" aria-labelledby="hero-title">
-      <div class="container hero-editorial-grid">
-        <div class="hero-editorial-content">
-          <div class="tag tag-orange" style="margin-bottom: 20px;">
-            <span>Digital Agency</span> • Serving US, UK, UAE &amp; Global Clients
+    <!-- Hero Section -->
+    <section class="hero-obsidian">
+      <div class="container hero-obsidian-grid">
+        <div class="hero-editorial-lead">
+          <div class="micro-label">
+            <span class="pill-badge"><span class="pulse-dot"></span> STUDIO ACTIVE · Q4 2026</span>
+            <span>// KARACHI &amp; GLOBAL</span>
           </div>
 
-          <h1 id="hero-title" class="hero-editorial-title">
-            Modern Websites.<br>
-            <span class="accent">Real Results.</span>
+          <h1 class="hero-headline-display">
+            We Make<br>
+            Digital<br>
+            <span class="text-highlight-orange">Feel Different.</span>
           </h1>
 
-          <p class="hero-editorial-lead">
-            Founded by <strong>Hasan Ismail</strong>, HaseenTech designs and develops high-performance WordPress websites, WooCommerce stores, and bespoke web platforms for ambitious businesses across the USA, UK, UAE, Canada, Australia, Europe, and Pakistan.
+          <p class="hero-subtext">
+            HaseenTech is an independent creative technology studio founded by Hasan Ismail. We partner with founders and business teams across the USA, UK, UAE, and Europe to engineer bespoke WordPress platforms, high-impact landing pages, and eCommerce storefronts built for measurable business conversion.
           </p>
 
-          <div class="hero-actions-row">
-            <a href="contact.html" class="btn btn-primary btn-lg">
-              Start a Project
-              <svg viewBox="0 0 24 24" stroke-width="2.5" width="18" height="18" fill="none" stroke="currentColor"><path d="m9 18 6-6-6-6"/></svg>
-            </a>
-            <a href="portfolio.html" class="btn btn-outline btn-lg">View Verified Work</a>
+          <div class="hero-action-row">
+            <a href="contact.html" class="btn btn-primary btn-lg">Start a Project ↗</a>
+            <a href="#selected-work" class="btn btn-secondary btn-lg">View Selected Work ↓</a>
           </div>
 
-          <div class="hero-commitments-strip">
-            <div class="commitment-item">
-              <svg viewBox="0 0 24 24" stroke-width="2" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg>
-              <div>
-                <strong>Direct Collaboration</strong>
-                <p>Work directly with founder Hasan Ismail</p>
-              </div>
+          <div class="hero-meta-telemetry">
+            <div class="hero-meta-item">
+              <span class="micro-label-orange">CORE STACK:</span>
+              <span>WordPress · Elementor · WooCommerce · Clean Code</span>
             </div>
-            <div class="commitment-item">
-              <svg viewBox="0 0 24 24" stroke-width="2" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg>
-              <div>
-                <strong>Engineered for Speed</strong>
-                <p>Semantic markup &amp; lightweight Core Web Vitals</p>
-              </div>
-            </div>
-            <div class="commitment-item">
-              <svg viewBox="0 0 24 24" stroke-width="2" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg>
-              <div>
-                <strong>Predictable Delivery</strong>
-                <p>Defined milestone scopes &amp; honest timelines</p>
-              </div>
+            <div class="hero-meta-item">
+              <span class="micro-label-orange">DELIVERY:</span>
+              <span>Remote Worldwide · Direct Founder Collaboration</span>
             </div>
           </div>
         </div>
 
-        <!-- Editorial Website Mockup Composition -->
-        <div class="hero-editorial-visual">
-          <div class="browser-mockup" aria-label="Agency Portfolio Preview Mockup">
-            <div class="mockup-topbar">
-              <div class="mockup-dots" aria-hidden="true">
-                <span class="mockup-dot"></span>
-                <span class="mockup-dot"></span>
-                <span class="mockup-dot"></span>
-              </div>
-              <div class="mockup-address">https://haseentech.com/portfolio/featured</div>
-            </div>
-            <div class="mockup-viewport">
-              <img src="assets/portfolio/izak10.svg" alt="Izak10 featured website preview" width="800" height="500" loading="eager">
-            </div>
-            <div style="padding: 16px; background-color: #FFFFFF; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border-light);">
-              <div>
-                <span style="font-size: 11px; font-weight: 700; text-transform: uppercase; color: var(--color-orange);">Featured Project</span>
-                <h4 style="font-size: 16px; font-weight: 700; margin: 0;">Izak10 Business Presence</h4>
-              </div>
-              <a href="portfolio.html" class="btn btn-ghost btn-sm" style="font-size: 12px;">Explore Case Study →</a>
-            </div>
+        <div class="hero-visual-frame">
+          <img src="assets/images/hero-sculpture.jpg" alt="Obsidian Chrome Geometric Sculpture by HaseenTech" class="hero-artwork-img" width="600" height="600">
+          <div class="hero-artwork-caption">
+            <span>FIGURE 01.0 // LIQUID CHROME &amp; OBSIDIAN TORUS</span>
+            <span class="micro-label-orange">EST. 2026</span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- 2. Why Work With HaseenTech (Editorial Numbers, No Fake Stats) -->
-    <section class="section section-white" aria-labelledby="why-title">
-      <div class="container">
-        <div class="section-header text-left">
-          <span class="eyebrow">Our Agency Philosophy</span>
-          <h2 id="why-title" class="section-title">Built on Engineering Clarity &amp; Honest Delivery</h2>
-          <p class="section-lead">We reject flimsy templates and bloated visual builders that break under real customer traffic. Here is how we partner with our clients.</p>
+    <!-- Studio Statement & Principles Strip -->
+    <section class="statement-strip">
+      <div class="container statement-grid">
+        <div>
+          <span class="micro-label micro-label-orange">// PHILOSOPHY</span>
+          <h2 class="statement-quote" style="margin-top: 0.5rem;">
+            Precision craft over template noise.
+          </h2>
+          <p style="margin-top: 1rem; color: var(--text-secondary); max-width: 500px; font-size: var(--fs-sm); line-height: 1.65;">
+            Most agency websites feel identical because they rely on generic AI prompts and bloated page builders. We engineer deliberate, hand-crafted digital touchpoints designed for clarity, sub-second speed, and customer trust.
+          </p>
         </div>
 
-        <div class="why-section-grid">
-          <div class="why-card">
-            <div class="why-num">01</div>
-            <h3 class="why-title">Direct Founder Accountability</h3>
-            <p class="why-desc">No junior account managers or offshore handoffs. Hasan Ismail leads discovery, layout architecture, and code execution directly.</p>
+        <div class="principles-grid">
+          <div class="principle-item">
+            <div class="principle-num">01 / ARCHITECTURE</div>
+            <h3 class="principle-title">Bespoke Design</h3>
+            <p class="principle-desc">Every layout is intentionally designed for your specific business narrative and conversion goal.</p>
           </div>
-
-          <div class="why-card">
-            <div class="why-num">02</div>
-            <h3 class="why-title">Outcomes Over Ornament</h3>
-            <p class="why-desc">Every element is designed to clarify your commercial proposition and convert qualified inquiries, rather than create superficial distraction.</p>
+          <div class="principle-item">
+            <div class="principle-num">02 / VELOCITY</div>
+            <h3 class="principle-title">Sub-Second Speed</h3>
+            <p class="principle-desc">Optimized assets, minimal script overhead, and clean Core Web Vitals performance.</p>
           </div>
-
-          <div class="why-card">
-            <div class="why-num">03</div>
-            <h3 class="why-title">Maintainable WordPress</h3>
-            <p class="why-desc">We structure websites so your internal team can comfortably edit page content, publish articles, and update inventory without breaking layouts.</p>
+          <div class="principle-item">
+            <div class="principle-num">03 / CLARITY</div>
+            <h3 class="principle-title">Direct Partnership</h3>
+            <p class="principle-desc">You collaborate directly with senior developer Hasan Ismail, not junior account managers.</p>
           </div>
-
-          <div class="why-card">
-            <div class="why-num">04</div>
-            <h3 class="why-title">International Workflows</h3>
-            <p class="why-desc">Collaborating seamlessly with clients across the US, UK, UAE, and Europe through structured async check-ins and video milestones.</p>
+          <div class="principle-item">
+            <div class="principle-num">04 / INTEGRITY</div>
+            <h3 class="principle-title">Verified Output</h3>
+            <p class="principle-desc">Zero fabricated testimonials or fake statistics. Real client websites you can inspect live.</p>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 3. Specialized Services Overview -->
-    <section class="section" aria-labelledby="services-overview-title">
-      <div class="container">
-        <div class="section-header text-center">
-          <span class="eyebrow">Services Overview</span>
-          <h2 id="services-overview-title" class="section-title">Specialized Web Services</h2>
-          <p class="section-lead">Focused on practical business outcomes: websites that communicate with clarity, load swiftly, and convert visitors.</p>
-        </div>
-
-        <div class="services-overview-grid">
-          <!-- 1. WordPress -->
-          <article class="service-card-modern">
-            <div class="service-icon-box" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
-            </div>
-            <h3 class="service-card-title">WordPress Development</h3>
-            <p class="service-card-desc">Bespoke WordPress setups engineered for clarity, brand credibility, clean hierarchy, and safe client updating.</p>
-            <a href="service-wordpress.html" class="service-card-link">Learn More &amp; Scope →</a>
-          </article>
-
-          <!-- 2. WooCommerce -->
-          <article class="service-card-modern">
-            <div class="service-icon-box" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
-            </div>
-            <h3 class="service-card-title">WooCommerce Stores</h3>
-            <p class="service-card-desc">Complete e-commerce deployment with organized product catalogs, streamlined cart flows, and regional payment gateways.</p>
-            <a href="service-woocommerce.html" class="service-card-link">Learn More &amp; Scope →</a>
-          </article>
-
-          <!-- 3. Landing Pages -->
-          <article class="service-card-modern">
-            <div class="service-icon-box" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
-            </div>
-            <h3 class="service-card-title">High-Converting Landing Pages</h3>
-            <p class="service-card-desc">Laser-focused single-page funnels designed for product launches, ad campaigns, and high-conversion lead generation.</p>
-            <a href="service-landing-pages.html" class="service-card-link">Learn More &amp; Scope →</a>
-          </article>
-
-          <!-- 4. Website Redesign -->
-          <article class="service-card-modern">
-            <div class="service-icon-box" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
-            </div>
-            <h3 class="service-card-title">Website Redesign &amp; Overhaul</h3>
-            <p class="service-card-desc">Upgrading outdated web presences with modern typography, responsive polish, and strict redirect mapping to safeguard rankings.</p>
-            <a href="service-redesign.html" class="service-card-link">Learn More &amp; Scope →</a>
-          </article>
-
-          <!-- 5. Maintenance & Support -->
-          <article class="service-card-modern">
-            <div class="service-icon-box" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
-            </div>
-            <h3 class="service-card-title">Maintenance &amp; Support</h3>
-            <p class="service-card-desc">Scheduled WordPress core and plugin updates, database backups, security hygiene, and responsive technical troubleshooting.</p>
-            <a href="service-maintenance.html" class="service-card-link">Learn More &amp; Scope →</a>
-          </article>
-
-          <!-- 6. SEO & Speed Optimization -->
-          <article class="service-card-modern">
-            <div class="service-icon-box" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            </div>
-            <h3 class="service-card-title">SEO &amp; Speed Optimization</h3>
-            <p class="service-card-desc">Essential on-page technical SEO, semantic structured data, page speed caching, asset minification, and Core Web Vitals tune-ups.</p>
-            <a href="service-seo-speed.html" class="service-card-link">Learn More &amp; Scope →</a>
-          </article>
         </div>
       </div>
     </section>
 
-    <!-- 4. Selected Real Portfolio Showcase -->
-    <section class="section section-white" aria-labelledby="portfolio-preview-title">
+    <!-- Selected Work Showcase -->
+    <section id="selected-work" class="portfolio-showcase-section">
       <div class="container">
-        <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 40px; flex-wrap: wrap; gap: 20px;">
+        <div class="section-head-editorial section-head-split">
           <div>
-            <span class="eyebrow">Proof of Work</span>
-            <h2 id="portfolio-preview-title" class="section-title" style="margin-bottom: 8px;">Verified Client Work</h2>
-            <p class="section-lead" style="max-width: 600px;">We present only genuine websites built or maintained by Hasan Ismail. No fabricated case studies.</p>
+            <span class="micro-label micro-label-orange">// SELECTED WORK</span>
+            <h2 class="section-title-large">Engineered for Real Businesses.</h2>
           </div>
-          <a href="portfolio.html" class="btn btn-outline">View All Projects →</a>
+          <a href="portfolio.html" class="btn btn-secondary">Explore All Projects ↗</a>
         </div>
 
-        <div class="portfolio-grid-modern">
-          <!-- Project 1: Izak10 -->
-          <article class="portfolio-card-item">
-            <div class="portfolio-card-visual">
-              <img src="assets/portfolio/izak10.svg" alt="Izak10 commercial website preview" loading="lazy">
+        <!-- Spotlight Project: Izak10 -->
+        <article class="spotlight-project-card">
+          <div class="spotlight-preview-wrap">
+            <img src="assets/portfolio/izak10.svg" alt="Izak10 Business Website Showcase" class="spotlight-preview-img" width="800" height="500">
+          </div>
+          <div class="spotlight-info">
+            <div class="spotlight-tags">
+              <span class="tag-badge tag-badge-orange">Featured Case Study</span>
+              <span class="tag-badge">Business Website</span>
+              <span class="tag-badge">Live HTTP 200</span>
             </div>
-            <div class="portfolio-card-body">
-              <span class="portfolio-card-cat">Business Website</span>
-              <h3 class="portfolio-card-title">Izak10</h3>
-              <p class="portfolio-card-desc">Business website focused on clear service presentation, fast mobile navigation, and structured WordPress sections.</p>
-              <div class="portfolio-card-tech">
-                <span class="tag">WordPress</span>
-                <span class="tag">Elementor</span>
-                <span class="tag">HTML/CSS</span>
+            <h3 style="font-size: var(--fs-2xl); font-weight: 700; color: var(--color-warm-white);">Izak10</h3>
+            <p style="font-size: var(--fs-sm); color: var(--text-secondary); line-height: 1.65;">
+              A modern corporate web presence built on WordPress and custom Elementor templates. Structured for clear service presentation, intuitive navigation across international devices, and disciplined mobile performance.
+            </p>
+            <div style="font-family: var(--font-mono); font-size: var(--fs-xs); color: var(--color-muted);">
+              STACK: WordPress · Elementor · Custom CSS · Speed Optimization
+            </div>
+            <div style="margin-top: 0.5rem; display: flex; gap: 1rem; align-items: center;">
+              <a href="https://izak10.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">Visit Live Website ↗</a>
+              <a href="portfolio.html#izak10" class="btn btn-ghost btn-sm">Read Architecture Notes</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Asymmetrical 2-Column Showcase: GiftsPak & SyncTech -->
+        <div class="asymmetric-project-row">
+          <article class="project-card-editorial">
+            <div class="card-img-wrap">
+              <img src="assets/portfolio/giftspak.svg" alt="GiftsPak WooCommerce Store" width="800" height="500">
+            </div>
+            <div class="card-content">
+              <div class="spotlight-tags">
+                <span class="tag-badge tag-badge-orange">WooCommerce</span>
+                <span class="tag-badge">E-Commerce</span>
               </div>
-              <div class="portfolio-card-footer">
-                <span class="status-badge">● Live &amp; Verified</span>
-                <a href="https://izak10.com" target="_blank" rel="noopener noreferrer" style="font-weight: 600; color: var(--color-orange);">izak10.com ↗</a>
+              <h3 style="font-size: var(--fs-xl); color: var(--color-warm-white);">GiftsPak</h3>
+              <p style="font-size: var(--fs-sm); color: var(--text-secondary); line-height: 1.6;">
+                Specialty gift and retail storefront engineered with WooCommerce. Streamlined category catalog, seasonal product hierarchy, and localized checkout flow.
+              </p>
+              <div style="margin-top: auto; padding-top: 1rem; border-top: 1px solid var(--color-border); display: flex; justify-content: space-between; align-items: center;">
+                <span style="font-family: var(--font-mono); font-size: var(--fs-xs); color: var(--color-muted);">http://giftspak.com</span>
+                <a href="http://giftspak.com" target="_blank" rel="noopener noreferrer" class="btn-link" style="font-size: var(--fs-xs);">Visit Store ↗</a>
               </div>
             </div>
           </article>
 
-          <!-- Project 2: SyncTech Solutions -->
-          <article class="portfolio-card-item">
-            <div class="portfolio-card-visual">
-              <img src="assets/portfolio/synctechsol.svg" alt="SyncTech Solutions technology website preview" loading="lazy">
+          <article class="project-card-editorial">
+            <div class="card-img-wrap">
+              <img src="assets/portfolio/synctechsol.svg" alt="SyncTech Solutions Website" width="800" height="500">
             </div>
-            <div class="portfolio-card-body">
-              <span class="portfolio-card-cat">IT &amp; Tech Services</span>
-              <h3 class="portfolio-card-title">SyncTech Solutions</h3>
-              <p class="portfolio-card-desc">Technology services company website featuring structured service blocks, direct contact funnels, and clean layout.</p>
-              <div class="portfolio-card-tech">
-                <span class="tag">WordPress</span>
-                <span class="tag">Elementor</span>
-                <span class="tag">Custom CSS</span>
+            <div class="card-content">
+              <div class="spotlight-tags">
+                <span class="tag-badge tag-badge-orange">Corporate</span>
+                <span class="tag-badge">WordPress</span>
               </div>
-              <div class="portfolio-card-footer">
-                <span class="status-badge">● Live &amp; Verified</span>
-                <a href="https://synctechsol.com" target="_blank" rel="noopener noreferrer" style="font-weight: 600; color: var(--color-orange);">synctechsol.com ↗</a>
+              <h3 style="font-size: var(--fs-xl); color: var(--color-warm-white);">SyncTech Solutions</h3>
+              <p style="font-size: var(--fs-sm); color: var(--text-secondary); line-height: 1.6;">
+                Technology services company platform featuring structured service portfolios, client conversion pathways, and dependable mobile responsiveness.
+              </p>
+              <div style="margin-top: auto; padding-top: 1rem; border-top: 1px solid var(--color-border); display: flex; justify-content: space-between; align-items: center;">
+                <span style="font-family: var(--font-mono); font-size: var(--fs-xs); color: var(--color-muted);">https://synctechsol.com</span>
+                <a href="https://synctechsol.com" target="_blank" rel="noopener noreferrer" class="btn-link" style="font-size: var(--fs-xs);">Visit Website ↗</a>
               </div>
             </div>
           </article>
+        </div>
 
-          <!-- Project 3: KUZ Consultancy -->
-          <article class="portfolio-card-item">
-            <div class="portfolio-card-visual">
-              <img src="assets/portfolio/kuzconsultancy.svg" alt="KUZ Consultancy advisory site preview" loading="lazy">
+        <!-- Modern 4-Card Strip: Zoby, KUZ, M&D, Guns & Accessories -->
+        <div class="project-strip-grid">
+          <div class="project-card-editorial">
+            <div class="card-img-wrap" style="padding: 0.85rem;">
+              <img src="assets/portfolio/zobyconsulting.svg" alt="Zoby Consulting Preview" width="800" height="500">
             </div>
-            <div class="portfolio-card-body">
-              <span class="portfolio-card-cat">Consulting</span>
-              <h3 class="portfolio-card-title">KUZ Consultancy</h3>
-              <p class="portfolio-card-desc">UK-facing consultancy site built with clear international positioning, structured service modules, and contact pathways.</p>
-              <div class="portfolio-card-tech">
-                <span class="tag">WordPress</span>
-                <span class="tag">Elementor</span>
-                <span class="tag">SEO Basics</span>
-              </div>
-              <div class="portfolio-card-footer">
-                <span class="status-badge">● Live &amp; Verified</span>
-                <a href="https://kuzconsultancy.co.uk" target="_blank" rel="noopener noreferrer" style="font-weight: 600; color: var(--color-orange);">kuzconsultancy.co.uk ↗</a>
-              </div>
+            <div class="card-content" style="padding: 1.15rem;">
+              <span class="tag-badge" style="width: fit-content;">Consulting</span>
+              <h4 style="font-size: var(--fs-md); color: var(--color-warm-white);">Zoby Consulting</h4>
+              <p style="font-size: var(--fs-xs); color: var(--text-secondary);">Restrained editorial brand presentation for management advisory services.</p>
+              <a href="https://zobyconsulting.com" target="_blank" rel="noopener noreferrer" class="btn-link" style="font-size: var(--fs-xs); margin-top: auto;">zobyconsulting.com ↗</a>
             </div>
-          </article>
+          </div>
+
+          <div class="project-card-editorial">
+            <div class="card-img-wrap" style="padding: 0.85rem;">
+              <img src="assets/portfolio/kuzconsultancy.svg" alt="KUZ Consultancy Preview" width="800" height="500">
+            </div>
+            <div class="card-content" style="padding: 1.15rem;">
+              <span class="tag-badge" style="width: fit-content;">UK Consultancy</span>
+              <h4 style="font-size: var(--fs-md); color: var(--color-warm-white);">KUZ Consultancy</h4>
+              <p style="font-size: var(--fs-xs); color: var(--text-secondary);">UK-facing advisory platform built with baseline technical SEO and fast navigation.</p>
+              <a href="https://kuzconsultancy.co.uk" target="_blank" rel="noopener noreferrer" class="btn-link" style="font-size: var(--fs-xs); margin-top: auto;">kuzconsultancy.co.uk ↗</a>
+            </div>
+          </div>
+
+          <div class="project-card-editorial">
+            <div class="card-img-wrap" style="padding: 0.85rem;">
+              <img src="assets/portfolio/manddroyalty.svg" alt="M&D Royalty Preview" width="800" height="500">
+            </div>
+            <div class="card-content" style="padding: 1.15rem;">
+              <span class="tag-badge" style="width: fit-content;">Brand Redesign</span>
+              <h4 style="font-size: var(--fs-md); color: var(--color-warm-white);">M&amp;D Royalty</h4>
+              <p style="font-size: var(--fs-xs); color: var(--text-secondary);">Modernized web identity and layout structure (client DNS verification pending).</p>
+              <span style="font-family: var(--font-mono); font-size: var(--fs-2xs); color: var(--color-muted); margin-top: auto;">Scope Documented</span>
+            </div>
+          </div>
+
+          <div class="project-card-editorial">
+            <div class="card-img-wrap" style="padding: 0.85rem;">
+              <img src="assets/portfolio/gunsandaccessories.svg" alt="Guns & Accessories Preview" width="800" height="500">
+            </div>
+            <div class="card-content" style="padding: 1.15rem;">
+              <span class="tag-badge" style="width: fit-content;">WooCommerce</span>
+              <h4 style="font-size: var(--fs-md); color: var(--color-warm-white);">Guns &amp; Accessories</h4>
+              <p style="font-size: var(--fs-xs); color: var(--text-secondary);">Product catalog structure and eCommerce setup (verification pending).</p>
+              <span style="font-family: var(--font-mono); font-size: var(--fs-2xs); color: var(--color-muted); margin-top: auto;">Scope Documented</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- 5. Structured 5-Step Process -->
-    <section class="section" aria-labelledby="process-title">
-      <div class="container">
-        <div class="section-header text-center">
-          <span class="eyebrow">Working Method</span>
-          <h2 id="process-title" class="section-title">A Predictable, Transparent Process</h2>
-          <p class="section-lead">Every project follows five clear stages with defined milestones, structured revision rounds, and honest timelines.</p>
+    <!-- Services Section (Editorial Split Layout) -->
+    <section class="services-editorial-section">
+      <div class="container services-split-layout">
+        <div class="services-visual-column">
+          <span class="micro-label micro-label-orange">// CORE CAPABILITIES</span>
+          <h2 class="section-title-large">Engineered Solutions for Growth.</h2>
+          <p style="color: var(--text-secondary); line-height: 1.65; font-size: var(--fs-sm);">
+            We don't offer bloated full-service packages you don't need. Our studio specializes in high-velocity web engineering, precision WordPress implementations, and eCommerce solutions tailored to your operational scale.
+          </p>
+
+          <div class="services-visual-frame">
+            <img src="assets/images/interface-craft.jpg" alt="Design System Interface Craftsmanship" width="600" height="340">
+          </div>
+
+          <div style="background: var(--color-elevated); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--color-border);">
+            <div style="font-family: var(--font-mono); font-size: var(--fs-xs); color: var(--color-orange); margin-bottom: 0.25rem;">GUARANTEE:</div>
+            <p style="font-size: var(--fs-xs); color: var(--text-secondary); line-height: 1.5;">
+              Every build includes 100% responsive cross-device testing, semantic HTML markup, zero console warnings, and clean administrative handover training.
+            </p>
+          </div>
         </div>
 
-        <div class="process-editorial-row">
-          <div class="process-col">
-            <div class="process-step-num">Step 01</div>
-            <h3 class="process-step-title">Discovery</h3>
-            <p class="process-step-desc">We align on commercial objectives, page sitemaps, required integrations, and agree on a fixed scope agreement.</p>
+        <div class="services-list-column">
+          <!-- 01 WordPress Development -->
+          <a href="service-wordpress.html" class="service-row-card">
+            <div class="service-row-header">
+              <span class="service-row-number">01 / CAPABILITY</span>
+              <span class="service-row-arrow">↗</span>
+            </div>
+            <h3 class="service-row-title">WordPress Development</h3>
+            <p class="service-row-desc">
+              Custom WordPress websites built for clarity, editorial flexibility, and lightning load speeds. Easy for your marketing team to manage without touching code.
+            </p>
+            <div class="service-deliverables-pills">
+              <span class="tag-badge">Custom Templates</span>
+              <span class="tag-badge">Clean Plugins</span>
+              <span class="tag-badge">Security Hardening</span>
+              <span class="tag-badge">Mobile Responsive</span>
+            </div>
+          </a>
+
+          <!-- 02 WooCommerce Stores -->
+          <a href="service-woocommerce.html" class="service-row-card">
+            <div class="service-row-header">
+              <span class="service-row-number">02 / CAPABILITY</span>
+              <span class="service-row-arrow">↗</span>
+            </div>
+            <h3 class="service-row-title">WooCommerce Storefronts</h3>
+            <p class="service-row-desc">
+              Robust online stores featuring frictionless checkout, localized payment gateways, tax calculation rules, and clean catalog inventory organization.
+            </p>
+            <div class="service-deliverables-pills">
+              <span class="tag-badge">Payment Gateways</span>
+              <span class="tag-badge">Inventory Setup</span>
+              <span class="tag-badge">Shipping Logic</span>
+              <span class="tag-badge">Store Training</span>
+            </div>
+          </a>
+
+          <!-- 03 Landing Pages -->
+          <a href="service-landing-pages.html" class="service-row-card">
+            <div class="service-row-header">
+              <span class="service-row-number">03 / CAPABILITY</span>
+              <span class="service-row-arrow">↗</span>
+            </div>
+            <h3 class="service-row-title">High-Converting Landing Pages</h3>
+            <p class="service-row-desc">
+              Laser-focused single-purpose landing pages engineered for paid campaigns, lead capture, and immediate conversion response across mobile traffic.
+            </p>
+            <div class="service-deliverables-pills">
+              <span class="tag-badge">Rapid Turnaround</span>
+              <span class="tag-badge">Lead Forms</span>
+              <span class="tag-badge">Analytics Ready</span>
+              <span class="tag-badge">Speed Optimized</span>
+            </div>
+          </a>
+
+          <!-- 04 Website Redesign -->
+          <a href="service-redesign.html" class="service-row-card">
+            <div class="service-row-header">
+              <span class="service-row-number">04 / CAPABILITY</span>
+              <span class="service-row-arrow">↗</span>
+            </div>
+            <h3 class="service-row-title">Website Redesign &amp; Overhauls</h3>
+            <p class="service-row-desc">
+              Transform dated, slow, or disorganized legacy sites into high-end modern digital brand assets while preserving established SEO URLs and content equity.
+            </p>
+            <div class="service-deliverables-pills">
+              <span class="tag-badge">UX Architecture</span>
+              <span class="tag-badge">Visual Identity</span>
+              <span class="tag-badge">Content Migration</span>
+              <span class="tag-badge">301 Redirects</span>
+            </div>
+          </a>
+
+          <!-- 05 Maintenance & Support -->
+          <a href="service-maintenance.html" class="service-row-card">
+            <div class="service-row-header">
+              <span class="service-row-number">05 / CAPABILITY</span>
+              <span class="service-row-arrow">↗</span>
+            </div>
+            <h3 class="service-row-title">Website Maintenance &amp; Bug Fixes</h3>
+            <p class="service-row-desc">
+              Proactive core updates, plugin conflict resolution, layout debugging, and continuous security monitoring so your revenue-driving site never goes down.
+            </p>
+            <div class="service-deliverables-pills">
+              <span class="tag-badge">Core Updates</span>
+              <span class="tag-badge">Emergency Fixes</span>
+              <span class="tag-badge">Backup Verification</span>
+              <span class="tag-badge">Direct Access</span>
+            </div>
+          </a>
+
+          <!-- 06 Basic SEO & Speed Optimization -->
+          <a href="service-seo-speed.html" class="service-row-card">
+            <div class="service-row-header">
+              <span class="service-row-number">06 / CAPABILITY</span>
+              <span class="service-row-arrow">↗</span>
+            </div>
+            <h3 class="service-row-title">SEO &amp; Speed Optimization</h3>
+            <p class="service-row-desc">
+              Foundational technical on-page SEO, schema markup, image compression, caching strategies, and Core Web Vitals optimization without empty ranking guarantees.
+            </p>
+            <div class="service-deliverables-pills">
+              <span class="tag-badge">Core Web Vitals</span>
+              <span class="tag-badge">Meta Architecture</span>
+              <span class="tag-badge">Schema Markup</span>
+              <span class="tag-badge">Asset Minification</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Studio / About & Founder Context -->
+    <section class="studio-philosophy-section">
+      <div class="container studio-grid">
+        <div class="studio-photo-card">
+          <img src="assets/images/studio-space.jpg" alt="HaseenTech Engineering Studio Environment" width="800" height="500">
+          <div class="studio-photo-caption">
+            <span>LOCATION: KARACHI, PAKISTAN</span>
+            <span class="micro-label-orange">CLIENTS: USA · UK · UAE · EU</span>
+          </div>
+        </div>
+
+        <div class="studio-copy">
+          <span class="micro-label micro-label-orange">// ABOUT HASEENTECH</span>
+          <h2 class="section-title-large">Engineered with Intentional Craft.</h2>
+          <p style="font-size: var(--fs-base); color: var(--text-secondary); line-height: 1.7;">
+            Founded by developer Hasan Ismail, HaseenTech operates as a focused creative technology studio based in Karachi, Pakistan, serving businesses worldwide. We bridge the gap between creative visual direction and production-grade engineering.
+          </p>
+          <p style="font-size: var(--fs-sm); color: var(--text-secondary); line-height: 1.65;">
+            We believe client collaboration should be straightforward and respectful of your time: clear technical scopes, upfront proposals in your local currency, milestones you can test live, and zero corporate fluff.
+          </p>
+
+          <div class="founder-quote-box">
+            <p class="founder-quote-text">
+              “Our goal is simple: build websites that don't just look great on launch day, but remain fast, dependable, and easy to maintain for years.”
+            </p>
+            <div class="founder-signature">
+              — Hasan Ismail, Founder &amp; Lead Web Developer
+            </div>
           </div>
 
-          <div class="process-col">
-            <div class="process-step-num">Step 02</div>
-            <h3 class="process-step-title">Architecture</h3>
-            <p class="process-step-desc">We design wireframe layouts, establish typographic and color scales, and structure your conversion hierarchy.</p>
-          </div>
-
-          <div class="process-col">
-            <div class="process-step-num">Step 03</div>
-            <h3 class="process-step-title">Development</h3>
-            <p class="process-step-desc">Built cleanly on a private staging server with semantic HTML5, responsive CSS, and maintainable WordPress templates.</p>
-          </div>
-
-          <div class="process-col">
-            <div class="process-step-num">Step 04</div>
-            <h3 class="process-step-title">Refinement</h3>
-            <p class="process-step-desc">We conduct structured revision rounds to polish imagery, copy alignment, form validation, and cross-device display.</p>
-          </div>
-
-          <div class="process-col">
-            <div class="process-step-num">Step 05</div>
-            <h3 class="process-step-title">Launch &amp; Handover</h3>
-            <p class="process-step-desc">Domain pointing, SSL verification, security hygiene pass, and a clear handover guide so you can edit content safely.</p>
+          <div style="margin-top: 0.5rem; display: flex; gap: 1rem; align-items: center;">
+            <a href="about.html" class="btn btn-secondary">Read Studio Story ↗</a>
+            <a href="contact.html" class="btn btn-primary">Start Discussion ↗</a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- 6. Country-Aware Pricing Preview -->
-    <section class="section section-white" aria-labelledby="pricing-preview-title">
+    <!-- 5-Step Process Section -->
+    <section class="process-timeline-section">
       <div class="container">
-        <div class="section-header text-center">
-          <span class="eyebrow">Investment Framework</span>
-          <h2 id="pricing-preview-title" class="section-title">Country-Aware Pricing Proposals</h2>
-          <p class="section-lead">Centrally defined package rates for clients across the US, UK, UAE, Canada, Australia, and Pakistan.</p>
+        <div class="section-head-editorial">
+          <span class="micro-label micro-label-orange">// METHODOLOGY</span>
+          <h2 class="section-title-large">A Rigorous, Repeatable Process.</h2>
+          <p style="color: var(--text-secondary); max-width: 600px; font-size: var(--fs-sm); line-height: 1.6;">
+            Every engagement follows a structured 5-step delivery pipeline engineered to minimize revisions and launch on schedule.
+          </p>
         </div>
 
-        <!-- Country Selector -->
-        <div class="pricing-switcher-wrap">
-          <div class="pricing-selector-row">
-            <label for="country-select" class="pricing-selector-label">
-              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-              Select Country:
+        <div class="process-cards-grid">
+          <div class="process-step-card">
+            <div class="step-number">01</div>
+            <h3 class="step-title">Discovery &amp; Scope</h3>
+            <p class="step-body">We audit your current web footprint, define conversion objectives, agree on sitemap, and finalize package deliverables.</p>
+          </div>
+          <div class="process-step-card">
+            <div class="step-number">02</div>
+            <h3 class="step-title">Visual Direction</h3>
+            <p class="step-body">We establish typographical hierarchy, layout compositions, brand colors, and component styling before development.</p>
+          </div>
+          <div class="process-step-card">
+            <div class="step-number">03</div>
+            <h3 class="step-title">Clean Engineering</h3>
+            <p class="step-body">We build on WordPress, Elementor, or vanilla code with clean markup, modular styles, and functional integrations.</p>
+          </div>
+          <div class="process-step-card">
+            <div class="step-number">04</div>
+            <h3 class="step-title">Rigorous QA</h3>
+            <p class="step-body">Cross-device validation across mobile (375px), tablet, and desktop viewports, form checks, and speed optimization.</p>
+          </div>
+          <div class="process-step-card">
+            <div class="step-number">05</div>
+            <h3 class="step-title">Launch &amp; Handover</h3>
+            <p class="step-body">DNS configuration, production go-live support, comprehensive training notes, and optional ongoing maintenance.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Country-Aware Pricing Preview Section -->
+    <section class="pricing-section-obsidian">
+      <div class="container">
+        <div class="section-head-editorial section-head-split">
+          <div>
+            <span class="micro-label micro-label-orange">// TRANSPARENT PACKAGES</span>
+            <h2 class="section-title-large">Country-Aware Pricing.</h2>
+            <p style="color: var(--text-secondary); font-size: var(--fs-sm); margin-top: 0.25rem;">
+              Defined initial proposals for clients across 8 major markets. Select your region below:
+            </p>
+          </div>
+          <a href="pricing.html" class="btn btn-secondary">Full Comparison Table ↗</a>
+        </div>
+
+        <!-- Country Selector Bar -->
+        <div class="pricing-controls-bar">
+          <div style="display: flex; align-items: center; gap: 0.75rem;">
+            <label for="country-select" style="font-family: var(--font-mono); font-size: var(--fs-xs); color: var(--color-warm-white); text-transform: uppercase;">
+              Select Region:
             </label>
-            <select id="country-select" class="pricing-country-select" aria-label="Select market country">
-              <option value="US">🇺🇸 United States (USD)</option>
-              <option value="GB">🇬🇧 United Kingdom (GBP)</option>
-              <option value="EU">🇪🇺 European Union (EUR)</option>
-              <option value="AE">🇦🇪 United Arab Emirates (AED)</option>
-              <option value="CA">🇨🇦 Canada (CAD)</option>
-              <option value="AU">🇦🇺 Australia (AUD)</option>
-              <option value="SA">🇸🇦 Saudi Arabia (SAR)</option>
-              <option value="PK">🇵🇰 Pakistan (PKR)</option>
+            <select id="country-select" class="pricing-select-control" aria-label="Select Country for Regional Pricing">
+              <option value="US">United States (USD $)</option>
+              <option value="GB">United Kingdom (GBP £)</option>
+              <option value="EU">European Union (EUR €)</option>
+              <option value="AE">United Arab Emirates (AED)</option>
+              <option value="CA">Canada (CAD C$)</option>
+              <option value="AU">Australia (AUD A$)</option>
+              <option value="SA">Saudi Arabia (SAR)</option>
+              <option value="PK">Pakistan (PKR ₨)</option>
             </select>
           </div>
-          <div id="pricing-market-subtext" class="pricing-market-subtext">Initial proposals in USD for clients in the United States and international markets.</div>
+          <div id="pricing-note" style="font-family: var(--font-mono); font-size: var(--fs-xs); color: var(--color-muted);">
+            Proposals shown in USD ($) · Editable initial proposals
+          </div>
         </div>
 
-        <!-- 3 Packages -->
-        <div class="pricing-cards-grid">
+        <!-- 3 Tiers Grid -->
+        <div class="pricing-tiers-grid">
           <!-- Tier 1: Landing Page -->
-          <article class="pricing-card-box">
-            <h3 class="pricing-tier-title">Landing Page</h3>
-            <p class="pricing-tier-summary">Single-page marketing funnel optimized for lead capture and advertising campaigns.</p>
-            <div class="pricing-price-display">
-              <span class="pricing-currency-sym">$</span>
-              <span class="pricing-num" data-tier="landing">299</span>
-              <span class="pricing-cycle-label">/ fixed proposal</span>
+          <article class="pricing-card-obsidian">
+            <h3 class="tier-name">Landing Page</h3>
+            <p class="tier-desc">Focused single-page site for high-converting marketing campaigns and product launches.</p>
+            <div class="tier-price-box">
+              <span class="pricing-currency-sym tier-currency-sym">$</span>
+              <span class="tier-amount" data-tier="landing">299</span>
+              <span class="tier-period">/ project</span>
             </div>
-            <span class="pricing-timing-pill">Typically 1–2 weeks delivery</span>
-            <div class="pricing-features-block">
-              <div class="pricing-feature-row">
-                <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Single high-converting page layout</span>
-              </div>
-              <div class="pricing-feature-row">
-                <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Lead inquiry &amp; WhatsApp integration</span>
-              </div>
-              <div class="pricing-feature-row">
-                <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Mobile responsive &amp; fast loading</span>
-              </div>
-              <div class="pricing-feature-row">
-                <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>2 structured revision rounds</span>
-              </div>
-            </div>
-            <a href="contact.html?service=landing" class="btn btn-ghost btn-block">Inquire About Landing Page</a>
+            <ul class="tier-features-list">
+              <li class="tier-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Single-purpose custom conversion layout</span>
+              </li>
+              <li class="tier-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Mobile-first responsive optimization</span>
+              </li>
+              <li class="tier-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Lead capture contact form integration</span>
+              </li>
+              <li class="tier-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Sub-second page loading speed pass</span>
+              </li>
+              <li class="tier-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Delivery in 3 to 7 business days</span>
+              </li>
+            </ul>
+            <a href="contact.html?package=landing" class="btn btn-secondary" style="width: 100%;">Select Landing Page ↗</a>
           </article>
 
-          <!-- Tier 2: Business Website -->
-          <article class="pricing-card-box featured">
-            <span class="pricing-card-badge">Most Requested</span>
-            <h3 class="pricing-tier-title">Business Website</h3>
-            <p class="pricing-tier-summary">Complete multi-page WordPress presence built with custom Elementor layouts.</p>
-            <div class="pricing-price-display">
-              <span class="pricing-currency-sym">$</span>
-              <span class="pricing-num" data-tier="business">599</span>
-              <span class="pricing-cycle-label">/ fixed proposal</span>
+          <!-- Tier 2: Business Website (Featured) -->
+          <article class="pricing-card-obsidian featured">
+            <span class="pricing-badge-popular">MOST POPULAR</span>
+            <h3 class="tier-name">Business Website</h3>
+            <p class="tier-desc">Complete multi-page corporate or service website built for long-term credibility.</p>
+            <div class="tier-price-box">
+              <span class="pricing-currency-sym tier-currency-sym">$</span>
+              <span class="tier-amount" data-tier="business">599</span>
+              <span class="tier-period">/ project</span>
             </div>
-            <span class="pricing-timing-pill">Typically 2–4 weeks delivery</span>
-            <div class="pricing-features-block">
-              <div class="pricing-feature-row">
-                <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Up to 10 bespoke page layouts</span>
-              </div>
-              <div class="pricing-feature-row">
-                <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Custom Elementor visual system</span>
-              </div>
-              <div class="pricing-feature-row">
-                <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>On-page SEO fundamentals &amp; caching</span>
-              </div>
-              <div class="pricing-feature-row">
-                <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>3 structured revision rounds</span>
-              </div>
-            </div>
-            <a href="contact.html?service=business" class="btn btn-primary btn-block">Inquire About Business Site</a>
+            <ul class="tier-features-list">
+              <li class="tier-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Up to 5 to 7 bespoke page templates</span>
+              </li>
+              <li class="tier-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>WordPress + Elementor CMS configuration</span>
+              </li>
+              <li class="tier-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Custom design system aligned with brand</span>
+              </li>
+              <li class="tier-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Foundational on-page SEO &amp; metadata</span>
+              </li>
+              <li class="tier-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Comprehensive team admin video handover</span>
+              </li>
+            </ul>
+            <a href="contact.html?package=business" class="btn btn-primary" style="width: 100%;">Select Business Package ↗</a>
           </article>
 
           <!-- Tier 3: WooCommerce Store -->
-          <article class="pricing-card-box">
-            <h3 class="pricing-tier-title">WooCommerce Store</h3>
-            <p class="pricing-tier-summary">Robust e-commerce presence with product management, shopping cart, and checkout.</p>
-            <div class="pricing-price-display">
-              <span class="pricing-currency-sym">$</span>
-              <span class="pricing-num" data-tier="woocommerce">999</span>
-              <span class="pricing-cycle-label">/ fixed proposal</span>
+          <article class="pricing-card-obsidian">
+            <h3 class="tier-name">WooCommerce Store</h3>
+            <p class="tier-desc">Fully featured online storefront with products, payments, taxes, and order routing.</p>
+            <div class="tier-price-box">
+              <span class="pricing-currency-sym tier-currency-sym">$</span>
+              <span class="tier-amount" data-tier="woocommerce">999</span>
+              <span class="tier-period">/ project</span>
             </div>
-            <span class="pricing-timing-pill">Typically 3–5 weeks delivery</span>
-            <div class="pricing-features-block">
-              <div class="pricing-feature-row">
-                <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Complete WooCommerce store setup</span>
-              </div>
-              <div class="pricing-feature-row">
-                <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Cart, checkout &amp; payment gateway setup</span>
-              </div>
-              <div class="pricing-feature-row">
-                <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Shipping rules &amp; order email alerts</span>
-              </div>
-              <div class="pricing-feature-row">
-                <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>3 structured revision rounds &amp; handover</span>
-              </div>
-            </div>
-            <a href="contact.html?service=woocommerce" class="btn btn-ghost btn-block">Inquire About Store</a>
+            <ul class="tier-features-list">
+              <li class="tier-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Complete WooCommerce store architecture</span>
+              </li>
+              <li class="tier-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Product catalog, variable items, categories</span>
+              </li>
+              <li class="tier-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Stripe / PayPal / Regional payment gateways</span>
+              </li>
+              <li class="tier-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Shipping rules and transactional email setup</span>
+              </li>
+              <li class="tier-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Detailed store management training session</span>
+              </li>
+            </ul>
+            <a href="contact.html?package=woocommerce" class="btn btn-secondary" style="width: 100%;">Select WooCommerce ↗</a>
           </article>
         </div>
-
-        <div style="text-align: center; margin-top: 32px;">
-          <a href="pricing.html" class="btn btn-outline">Explore Full Pricing Policy &amp; Comparison →</a>
-        </div>
       </div>
     </section>
 
-    <!-- 7. FAQ Section -->
-    <section class="section" aria-labelledby="faq-title">
-      <div class="container container-narrow">
-        <div class="section-header text-center">
-          <span class="eyebrow">Clear Answers</span>
-          <h2 id="faq-title" class="section-title">Frequently Asked Questions</h2>
-          <p class="section-lead">Honest answers regarding how we scope, quote, and deliver remote client projects.</p>
-        </div>
-
-        <div class="faq-clean-wrap">
-          <details class="faq-clean-item" open>
-            <summary class="faq-clean-summary">
-              <span>Do you work with international clients outside Pakistan?</span>
-              <svg class="faq-clean-icon" viewBox="0 0 24 24" fill="none" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-            </summary>
-            <div class="faq-clean-content">
-              Yes. HaseenTech works remotely with businesses and agencies across the United States, United Kingdom, UAE, Canada, Australia, and Europe. We align on milestones, async communication tools (Slack, email, Loom), and scheduled video calls that match your timezone.
-            </div>
-          </details>
-
-          <details class="faq-clean-item">
-            <summary class="faq-clean-summary">
-              <span>What do you need from me to begin a project?</span>
-              <svg class="faq-clean-icon" viewBox="0 0 24 24" fill="none" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-            </summary>
-            <div class="faq-clean-content">
-              A brief summary of your project goals, your page outline or content draft, your logo/brand assets, and hosting or domain access if applicable. If you do not yet have copy finalized, we can provide structural wireframes to help your team prepare it.
-            </div>
-          </details>
-
-          <details class="faq-clean-item">
-            <summary class="faq-clean-summary">
-              <span>Are your package prices fixed or customizable?</span>
-              <svg class="faq-clean-icon" viewBox="0 0 24 24" fill="none" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-            </summary>
-            <div class="faq-clean-content">
-              The prices shown represent baseline initial proposals for predefined page counts and standard scopes. If your project involves custom plugins, CRM integrations, multilingual setup, or specific API feeds, we provide a transparent written quotation before kickoff.
-            </div>
-          </details>
-
-          <details class="faq-clean-item">
-            <summary class="faq-clean-summary">
-              <span>Do you supply web hosting and domain registration?</span>
-              <svg class="faq-clean-icon" viewBox="0 0 24 24" fill="none" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-            </summary>
-            <div class="faq-clean-content">
-              Hosting and domain registration are owned and billed directly by you to ensure you retain complete legal and technical ownership of your website. We can recommend reputable providers (e.g. Cloudways, Hostinger) and handle the full deployment and DNS configuration on your account.
-            </div>
-          </details>
-
-          <details class="faq-clean-item">
-            <summary class="faq-clean-summary">
-              <span>How do revisions work?</span>
-              <svg class="faq-clean-icon" viewBox="0 0 24 24" fill="none" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-            </summary>
-            <div class="faq-clean-content">
-              Each package includes structured revision rounds (2 rounds for Landing Pages, 3 rounds for Business and WooCommerce sites). A revision round consists of a consolidated list of feedback regarding styling, spacing, typography, and copy alignment. Additional rounds can be quoted if your requirements expand.
-            </div>
-          </details>
-        </div>
-      </div>
-    </section>
-
-    <!-- 8. Final CTA Banner -->
-    <section class="section section-dark" aria-labelledby="cta-title">
-      <div class="container" style="text-align: center; max-width: 760px;">
-        <span class="eyebrow" style="color: var(--color-orange);">Let's Build Something Exceptional</span>
-        <h2 id="cta-title" class="section-title" style="color: var(--color-white); margin-bottom: 16px;">
-          Ready to launch or modernize your website?
-        </h2>
-        <p style="color: var(--text-inverse-muted); font-size: var(--fs-md); margin-bottom: 32px; line-height: 1.6;">
-          Share your project requirements directly with founder Hasan Ismail. We respond with an honest assessment, scope recommendation, and timeline within one business day.
-        </p>
-        <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
-          <a href="contact.html" class="btn btn-primary btn-lg">
-            Start Your Project Inquiry
-            <svg viewBox="0 0 24 24" stroke-width="2" width="18" height="18" fill="none" stroke="currentColor"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
-          </a>
-          <a href="portfolio.html" class="btn btn-ghost btn-lg" style="color: var(--color-white); border-color: rgba(255,255,255,0.2);">View Verified Work</a>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- ========================================================================
-       SHARED FOOTER
-       ======================================================================== -->
-  <footer class="site-footer" role="contentinfo">
-    <div class="container">
-      <div class="footer-columns-grid">
-        <!-- Brand Column -->
-        <div class="footer-brand-col">
-          <a href="index.html" aria-label="HaseenTech Home">
-            <img src="assets/brand/logo.svg" alt="HaseenTech" style="height: 32px; width: auto; filter: invert(1) hue-rotate(180deg);">
-          </a>
-          <span class="footer-tagline-text">Modern Websites. Real Results.</span>
-          <p class="footer-about-summary">
-            Founded by <strong>Hasan Ismail</strong> in Karachi, Pakistan. Delivering bespoke WordPress development, WooCommerce storefronts, and web engineering to clients worldwide.
+    <!-- FAQ Accordion Section -->
+    <section class="faq-section-obsidian">
+      <div class="container">
+        <div class="section-head-editorial" style="text-align: center; align-items: center;">
+          <span class="micro-label micro-label-orange">// COMMON QUESTIONS</span>
+          <h2 class="section-title-large">Frequently Asked Questions.</h2>
+          <p style="color: var(--text-secondary); max-width: 580px; font-size: var(--fs-sm);">
+            Clear, honest answers about our technical capabilities, pricing, and project workflows.
           </p>
         </div>
 
-        <!-- Navigation Links -->
+        <div class="faq-accordion-list">
+          <details class="faq-item-obsidian" open>
+            <summary class="faq-summary">Do you offer hosting, domain registration, and email accounts?</summary>
+            <div class="faq-answer-content">
+              Hosting and domain registrations are billed directly by your preferred provider (such as Hostinger, SiteGround, Cloudways, or Namecheap) so you retain 100% ownership and administrative access. We provide clear provider recommendations and handle deployment and configuration for you.
+            </div>
+          </details>
+
+          <details class="faq-item-obsidian">
+            <summary class="faq-summary">Can my team edit website pages, copy, and images after launch?</summary>
+            <div class="faq-answer-content">
+              Yes. All our WordPress and WooCommerce builds are configured with visual editing controls. We provide a concise walkthrough and recorded training notes so you can update text, blog posts, case studies, and products without writing code.
+            </div>
+          </details>
+
+          <details class="faq-item-obsidian">
+            <summary class="faq-summary">How does international communication and payment work?</summary>
+            <div class="faq-answer-content">
+              We collaborate asynchronously via email, Loom video walkthroughs, and scheduled WhatsApp or video calls across North American, European, and Gulf time zones. Invoicing is conducted with milestone terms via secure international wire or digital transfer.
+            </div>
+          </details>
+
+          <details class="faq-item-obsidian">
+            <summary class="faq-summary">Do you guarantee specific Google keyword rankings or sales numbers?</summary>
+            <div class="faq-answer-content">
+              No ethical agency guarantees search rankings or revenue figures because search algorithms and market demand are external variables. What we guarantee is rigorous technical execution: proper schema markup, semantic headings, fast load times, and conversion-focused UI design.
+            </div>
+          </details>
+
+          <details class="faq-item-obsidian">
+            <summary class="faq-summary">Can you take over or fix an existing website built by another team?</summary>
+            <div class="faq-answer-content">
+              Yes. We conduct a preliminary technical review to inspect your hosting, theme structure, and active plugins. If viable, we formulate an action plan for maintenance, redesign, or speed remediation.
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Closing Call to Action Banner -->
+    <section class="cta-banner-obsidian">
+      <div class="container cta-banner-inner">
+        <span class="micro-label micro-label-orange">// LET'S BUILD TOGETHER</span>
+        <h2 style="font-size: clamp(2.2rem, 5vw, 3.8rem); font-weight: 700; color: var(--color-warm-white); letter-spacing: -0.03em;">
+          Have a Project in Mind?
+        </h2>
+        <p style="font-size: var(--fs-md); color: var(--text-secondary); max-width: 600px; line-height: 1.6;">
+          Let's discuss your timeline, technical goals, and scope. We will respond with an honest assessment and actionable proposal.
+        </p>
+        <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; margin-top: 0.5rem;">
+          <a href="contact.html" class="btn btn-primary btn-lg">Start a Discussion ↗</a>
+          <a href="portfolio.html" class="btn btn-secondary btn-lg">Review Verified Work</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div class="footer-col-brand">
+          <img src="assets/brand/logo.svg" alt="HaseenTech" width="160" height="32">
+          <p class="footer-brand-desc">
+            Independent creative technology studio founded by Hasan Ismail. Delivering modern, high-performance web engineering for ambitious international businesses.
+          </p>
+          <div style="font-family: var(--font-mono); font-size: var(--fs-xs); color: var(--color-muted);">
+            Karachi, Pakistan · Remote Worldwide
+          </div>
+        </div>
+
         <div>
-          <h4 class="footer-col-header">Navigation</h4>
-          <ul class="footer-nav-list">
-            <li><a href="index.html" class="footer-nav-link">Home</a></li>
-            <li><a href="about.html" class="footer-nav-link">About HaseenTech</a></li>
-            <li><a href="services.html" class="footer-nav-link">Services</a></li>
-            <li><a href="portfolio.html" class="footer-nav-link">Portfolio</a></li>
-            <li><a href="pricing.html" class="footer-nav-link">Pricing &amp; Packages</a></li>
-            <li><a href="contact.html" class="footer-nav-link">Contact</a></li>
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="portfolio.html" class="footer-link">Selected Work</a></li>
+            <li><a href="services.html" class="footer-link">All Services</a></li>
+            <li><a href="about.html" class="footer-link">Studio &amp; Founder</a></li>
+            <li><a href="pricing.html" class="footer-link">Packages &amp; Pricing</a></li>
+            <li><a href="contact.html" class="footer-link">Contact</a></li>
           </ul>
         </div>
 
-        <!-- Services Links -->
         <div>
-          <h4 class="footer-col-header">Services</h4>
-          <ul class="footer-nav-list">
-            <li><a href="service-wordpress.html" class="footer-nav-link">WordPress Development</a></li>
-            <li><a href="service-woocommerce.html" class="footer-nav-link">WooCommerce Stores</a></li>
-            <li><a href="service-landing-pages.html" class="footer-nav-link">Landing Pages</a></li>
-            <li><a href="service-redesign.html" class="footer-nav-link">Website Redesign</a></li>
-            <li><a href="service-maintenance.html" class="footer-nav-link">Maintenance &amp; Support</a></li>
-            <li><a href="service-seo-speed.html" class="footer-nav-link">SEO &amp; Speed Optimization</a></li>
+          <h4 class="footer-col-title">Services</h4>
+          <ul class="footer-links-list">
+            <li><a href="service-wordpress.html" class="footer-link">WordPress Development</a></li>
+            <li><a href="service-woocommerce.html" class="footer-link">WooCommerce Stores</a></li>
+            <li><a href="service-landing-pages.html" class="footer-link">Landing Pages</a></li>
+            <li><a href="service-redesign.html" class="footer-link">Website Redesign</a></li>
+            <li><a href="service-maintenance.html" class="footer-link">Maintenance &amp; Support</a></li>
+            <li><a href="service-seo-speed.html" class="footer-link">SEO &amp; Speed Optimization</a></li>
           </ul>
         </div>
 
-        <!-- Contact & Target Markets -->
         <div>
-          <h4 class="footer-col-header">Contact &amp; Regions</h4>
-          <ul class="footer-nav-list">
-            <li><a href="mailto:hello@haseentech.com" class="footer-nav-link">hello@haseentech.com</a></li>
-            <li><a href="https://wa.me/923001234567" target="_blank" rel="noopener noreferrer" class="footer-nav-link">WhatsApp: +92 300 1234567</a></li>
-            <li><span style="font-size: 13px; color: var(--text-inverse-muted);">Karachi, Pakistan</span></li>
-            <li><span style="font-size: 13px; color: var(--text-inverse-muted);">USA • UK • UAE • Canada • Europe</span></li>
+          <h4 class="footer-col-title">Direct Inquiries</h4>
+          <ul class="footer-links-list">
+            <li><a href="mailto:hello@haseentech.com" class="footer-link">hello@haseentech.com</a></li>
+            <li><span style="font-size: var(--fs-sm); color: var(--text-secondary);">Direct WhatsApp upon project brief</span></li>
+            <li style="margin-top: 1rem;">
+              <span class="pill-badge" style="font-size: var(--fs-2xs);">
+                <span class="pulse-dot"></span> Active Studio Status
+              </span>
+            </li>
           </ul>
         </div>
       </div>
 
       <div class="footer-bottom-bar">
         <div>
-          © <span id="current-year">2026</span> HaseenTech. Founded by Hasan Ismail. All rights reserved.
+          © <span id="current-year">2026</span> HaseenTech. All rights reserved. Founded by Hasan Ismail.
         </div>
-        <div class="footer-bottom-nav">
-          <a href="privacy.html" class="footer-nav-link">Privacy Policy</a>
-          <a href="terms.html" class="footer-nav-link">Terms &amp; Conditions</a>
-          <a href="#main-content" class="footer-nav-link" style="color: var(--color-orange);">↑ Back to top</a>
+        <div class="footer-legal-links">
+          <a href="privacy.html" class="footer-link">Privacy Policy</a>
+          <a href="terms.html" class="footer-link">Terms &amp; Conditions</a>
         </div>
       </div>
     </div>
   </footer>
 
-  <!-- Scripts -->
   <script src="js/pricing.js"></script>
   <script src="js/main.js"></script>
 </body>
