@@ -2,32 +2,91 @@ import { writeFileSync, mkdirSync } from "node:fs";
 import { join } from "node:path";
 
 const projects = [
-  { file: "izak10", label: "izak10.com", color: "#3B82F6" },
-  { file: "giftspak", label: "giftspak.com", color: "#8B5CF6" },
-  { file: "synctechsol", label: "synctechsol.com", color: "#06B6D4" },
-  { file: "zobyconsulting", label: "zobyconsulting.com", color: "#3B82F6" },
-  { file: "kuzconsultancy", label: "kuzconsultancy.co.uk", color: "#8B5CF6" },
-  { file: "gunsandaccessories", label: "gunsandaccessories.com", color: "#06B6D4" },
-  { file: "manddroyalty", label: "manddroyalty.com", color: "#3B82F6" },
+  { file: "izak10", label: "izak10.com", tag: "Business Website · Elementor", color: "#FF6B35" },
+  { file: "giftspak", label: "giftspak.com", tag: "WooCommerce Store", color: "#FF6B35" },
+  { file: "synctechsol", label: "synctechsol.com", tag: "Tech Services · WordPress", color: "#FF6B35" },
+  { file: "zobyconsulting", label: "zobyconsulting.com", tag: "Consulting Brand · Elementor", color: "#FF6B35" },
+  { file: "kuzconsultancy", label: "kuzconsultancy.co.uk", tag: "UK Consultancy · SEO", color: "#FF6B35" },
+  { file: "gunsandaccessories", label: "gunsandaccessories.com", tag: "E-Commerce (Pending DNS)", color: "#737373" },
+  { file: "manddroyalty", label: "manddroyalty.com", tag: "Brand Redesign (Pending DNS)", color: "#737373" },
 ];
 
-const dir = join(process.cwd(), "public", "portfolio");
-mkdirSync(dir, { recursive: true });
+const targetDirs = [
+  join(process.cwd(), "public", "portfolio"),
+  join(process.cwd(), "assets", "portfolio"),
+];
+
+for (const dir of targetDirs) {
+  mkdirSync(dir, { recursive: true });
+}
 
 for (const p of projects) {
   const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
-  <rect width="800" height="500" fill="#0B1220"/>
-  <rect x="48" y="48" width="704" height="404" rx="16" fill="#1E293B" stroke="${p.color}" stroke-width="2"/>
-  <rect x="80" y="88" width="240" height="28" rx="6" fill="${p.color}" opacity="0.9"/>
-  <rect x="80" y="140" width="520" height="16" rx="4" fill="#334155"/>
-  <rect x="80" y="168" width="460" height="16" rx="4" fill="#334155"/>
-  <rect x="80" y="220" width="200" height="120" rx="10" fill="#0F172A"/>
-  <rect x="300" y="220" width="200" height="120" rx="10" fill="#0F172A"/>
-  <rect x="520" y="220" width="200" height="120" rx="10" fill="#0F172A"/>
-  <text x="400" y="420" text-anchor="middle" fill="#94A3B8" font-family="Arial,sans-serif" font-size="22">${p.label}</text>
-  <text x="400" y="448" text-anchor="middle" fill="#64748B" font-family="Arial,sans-serif" font-size="14">Preview placeholder — replace with screenshot</text>
+  <defs>
+    <linearGradient id="bg-${p.file}" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F7F7F2"/>
+      <stop offset="100%" stop-color="#ECEAE4"/>
+    </linearGradient>
+  </defs>
+  <!-- Canvas Background -->
+  <rect width="800" height="500" fill="url(#bg-${p.file})"/>
+  
+  <!-- Browser Window Frame -->
+  <rect x="50" y="45" width="700" height="410" rx="12" fill="#FFFFFF" stroke="#E7E5E0" stroke-width="2"/>
+  
+  <!-- Browser Window Top Bar -->
+  <path d="M 50 57 A 12 12 0 0 1 62 45 L 738 45 A 12 12 0 0 1 750 57 L 750 85 L 50 85 Z" fill="#F1EFEA" stroke="#E7E5E0" stroke-width="1"/>
+  
+  <!-- Window Controls -->
+  <circle cx="75" cy="65" r="5" fill="#EF4444"/>
+  <circle cx="93" cy="65" r="5" fill="#F59E0B"/>
+  <circle cx="111" cy="65" r="5" fill="#10B981"/>
+  
+  <!-- URL Address Bar -->
+  <rect x="140" y="55" width="480" height="20" rx="4" fill="#FFFFFF" stroke="#E7E5E0" stroke-width="1"/>
+  <text x="150" y="69" fill="#737373" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif" font-size="11" font-weight="500">https://${p.label}</text>
+  
+  <!-- Hero Section Wireframe -->
+  <rect x="85" y="115" width="220" height="22" rx="4" fill="#171717"/>
+  <rect x="85" y="147" width="380" height="10" rx="3" fill="#D4D0C8"/>
+  <rect x="85" y="165" width="340" height="10" rx="3" fill="#E7E5E0"/>
+  
+  <!-- Call To Action Button -->
+  <rect x="85" y="195" width="120" height="28" rx="6" fill="${p.color}"/>
+  
+  <!-- Visual Hero Card -->
+  <rect x="510" y="115" width="205" height="110" rx="8" fill="#F7F7F2" stroke="#E7E5E0" stroke-width="1"/>
+  <circle cx="560" cy="155" r="22" fill="${p.color}" opacity="0.15"/>
+  <rect x="595" y="145" width="90" height="8" rx="2" fill="#171717" opacity="0.7"/>
+  <rect x="595" y="160" width="70" height="6" rx="2" fill="#A3A3A3"/>
+  
+  <!-- 3 Service Grid Columns -->
+  <rect x="85" y="255" width="190" height="120" rx="8" fill="#FAFAF8" stroke="#E7E5E0" stroke-width="1"/>
+  <rect x="105" y="275" width="32" height="32" rx="6" fill="${p.color}" opacity="0.15"/>
+  <rect x="105" y="320" width="110" height="10" rx="2" fill="#171717"/>
+  <rect x="105" y="338" width="140" height="6" rx="2" fill="#A3A3A3"/>
+  <rect x="105" y="350" width="120" height="6" rx="2" fill="#D4D0C8"/>
+  
+  <rect x="305" y="255" width="190" height="120" rx="8" fill="#FAFAF8" stroke="#E7E5E0" stroke-width="1"/>
+  <rect x="325" y="275" width="32" height="32" rx="6" fill="${p.color}" opacity="0.15"/>
+  <rect x="325" y="320" width="110" height="10" rx="2" fill="#171717"/>
+  <rect x="325" y="338" width="140" height="6" rx="2" fill="#A3A3A3"/>
+  <rect x="325" y="350" width="120" height="6" rx="2" fill="#D4D0C8"/>
+  
+  <rect x="525" y="255" width="190" height="120" rx="8" fill="#FAFAF8" stroke="#E7E5E0" stroke-width="1"/>
+  <rect x="545" y="275" width="32" height="32" rx="6" fill="${p.color}" opacity="0.15"/>
+  <rect x="545" y="320" width="110" height="10" rx="2" fill="#171717"/>
+  <rect x="545" y="338" width="140" height="6" rx="2" fill="#A3A3A3"/>
+  <rect x="545" y="350" width="120" height="6" rx="2" fill="#D4D0C8"/>
+  
+  <!-- Bottom Caption -->
+  <text x="400" y="420" text-anchor="middle" fill="#171717" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif" font-size="16" font-weight="600">${p.label}</text>
+  <text x="400" y="440" text-anchor="middle" fill="#737373" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif" font-size="12">${p.tag}</text>
 </svg>`;
-  writeFileSync(join(dir, `${p.file}.svg`), svg, "utf8");
+
+  for (const dir of targetDirs) {
+    writeFileSync(join(dir, `${p.file}.svg`), svg, "utf8");
+  }
 }
 
-console.log("Portfolio preview SVGs written to public/portfolio/");
+console.log("Updated portfolio preview SVGs written to public/portfolio/ and assets/portfolio/ with Warm Ivory and Charcoal branding.");

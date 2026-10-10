@@ -3,14 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "eslint",
-    "test": "vitest run",
-    "test:watch": "vitest",
-    "test:e2e": "playwright test",
-    "gen:portfolio": "node scripts/gen-portfolio-previews.mjs"
+    "dev": "node scripts/dev-server.js",
+    "start": "node scripts/dev-server.js",
+    "test": "node scripts/test-all-pages.js",
+    "test:e2e": "node scripts/test-all-pages.js",
+    "gen:portfolio": "node scripts/gen-portfolio-previews.mjs",
+    "legacy:next:dev": "next dev",
+    "legacy:next:build": "next build",
+    "legacy:test": "vitest run"
   },
   "dependencies": {
     "lucide-react": "^1.54.0",
