@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website Redesign &amp; Overhaul Services — HaseenTech</title>
+  <meta name="description" content="Professional website redesign and modernization by Hasan Ismail. Transform outdated websites into modern, fast, responsive digital assets while safeguarding SEO rankings.">
+  <meta name="author" content="Hasan Ismail">
+  <link rel="canonical" href="https://haseentech.com/service-redesign.html">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Website Redesign &amp; Overhaul Services — HaseenTech">
+  <meta property="og:description" content="Modernize your online brand presence with clean code, contemporary typography, and strict 301 SEO migration preservation.">
+  <meta property="og:image" content="assets/brand/logo.svg">
+
+  <link rel="icon" type="image/svg+xml" href="assets/brand/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- SHARED HEADER -->
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-link" aria-label="HaseenTech Home">
+        <img src="assets/brand/logo.svg" alt="HaseenTech" class="brand-logo-img" width="180" height="36">
+      </a>
+
+      <nav class="nav-desktop" aria-label="Primary Navigation">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+          <li class="nav-item nav-dropdown">
+            <a href="services.html" class="nav-link active" id="nav-services" aria-haspopup="true" aria-expanded="false">
+              Services
+              <svg class="dropdown-arrow" viewBox="0 0 24 24" fill="none" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </a>
+            <div class="nav-dropdown-menu" role="menu" aria-label="Services Submenu">
+              <a href="services.html" class="dropdown-item" role="menuitem">
+                <span class="dropdown-item-title">All Services Overview</span>
+                <span class="dropdown-item-desc">Comprehensive agency capabilities</span>
+              </a>
+              <a href="service-wordpress.html" class="dropdown-item" role="menuitem">
+                <span class="dropdown-item-title">WordPress Development</span>
+                <span class="dropdown-item-desc">Custom brochure &amp; business sites</span>
+              </a>
+              <a href="service-woocommerce.html" class="dropdown-item" role="menuitem">
+                <span class="dropdown-item-title">WooCommerce Stores</span>
+                <span class="dropdown-item-desc">E-commerce catalogs &amp; checkout</span>
+              </a>
+              <a href="service-landing-pages.html" class="dropdown-item" role="menuitem">
+                <span class="dropdown-item-title">Landing Pages</span>
+                <span class="dropdown-item-desc">High-converting campaign funnels</span>
+              </a>
+              <a href="service-redesign.html" class="dropdown-item active" role="menuitem">
+                <span class="dropdown-item-title">Website Redesign</span>
+                <span class="dropdown-item-desc">Modernizing legacy web presences</span>
+              </a>
+              <a href="service-maintenance.html" class="dropdown-item" role="menuitem">
+                <span class="dropdown-item-title">Maintenance &amp; Support</span>
+                <span class="dropdown-item-desc">Updates, security &amp; troubleshooting</span>
+              </a>
+              <a href="service-seo-speed.html" class="dropdown-item" role="menuitem">
+                <span class="dropdown-item-title">SEO &amp; Speed Optimization</span>
+                <span class="dropdown-item-desc">Core web vitals &amp; on-page hygiene</span>
+              </a>
+            </div>
+          </li>
+          <li class="nav-item"><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+          <li class="nav-item"><a href="pricing.html" class="nav-link">Pricing</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+        <div class="nav-cta-box">
+          <a href="contact.html" class="btn btn-primary btn-sm">Start a Project</a>
+        </div>
+      </nav>
+
+      <button type="button" class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-drawer">
+        <span class="menu-bar"></span>
+        <span class="menu-bar"></span>
+        <span class="menu-bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="drawer-backdrop" id="drawer-backdrop" aria-hidden="true"></div>
+  <aside class="mobile-drawer" id="mobile-drawer" aria-label="Mobile Menu Drawer" aria-hidden="true">
+    <div class="drawer-header">
+      <img src="assets/brand/logo.svg" alt="HaseenTech" style="height: 30px; width: auto;">
+      <button type="button" class="btn btn-ghost btn-sm" id="drawer-close" aria-label="Close navigation">✕</button>
+    </div>
+    <nav class="drawer-nav-list" aria-label="Mobile Navigation">
+      <a href="index.html" class="drawer-link">Home</a>
+      <a href="about.html" class="drawer-link">About</a>
+      <div>
+        <a href="services.html" class="drawer-link active drawer-dropdown-trigger" style="display: flex; justify-content: space-between; align-items: center;">
+          <span>Services</span>
+          <span style="font-size: 14px;">+</span>
+        </a>
+        <div class="drawer-submenu">
+          <a href="services.html" class="drawer-sublink">All Services Overview</a>
+          <a href="service-wordpress.html" class="drawer-sublink">WordPress Development</a>
+          <a href="service-woocommerce.html" class="drawer-sublink">WooCommerce Stores</a>
+          <a href="service-landing-pages.html" class="drawer-sublink">Landing Pages</a>
+          <a href="service-redesign.html" class="drawer-sublink active">Website Redesign</a>
+          <a href="service-maintenance.html" class="drawer-sublink">Maintenance &amp; Support</a>
+          <a href="service-seo-speed.html" class="drawer-sublink">SEO &amp; Speed Optimization</a>
+        </div>
+      </div>
+      <a href="portfolio.html" class="drawer-link">Portfolio</a>
+      <a href="pricing.html" class="drawer-link">Pricing</a>
+      <a href="contact.html" class="drawer-link">Contact</a>
+    </nav>
+    <div style="margin-top: auto; display: flex; flex-direction: column; gap: 8px;">
+      <a href="contact.html" class="btn btn-primary btn-block">Start a Project</a>
+      <a href="mailto:hello@haseentech.com" class="btn btn-ghost btn-block" style="font-size: 13px;">hello@haseentech.com</a>
+    </div>
+  </aside>
+
+  <main id="main-content">
+    <section class="service-hero-layout">
+      <div class="container container-narrow">
+        <a href="services.html" style="font-size: 13px; font-weight: 600; color: var(--color-orange); margin-bottom: 12px; display: inline-block;">← All Services</a>
+        <span class="eyebrow" style="display: block;">Modernization &amp; Re-Architecture</span>
+        <h1 class="section-title" style="font-size: var(--fs-4xl); margin-bottom: 20px;">
+          Website Redesign &amp; Overhaul Services
+        </h1>
+        <p class="section-lead">
+          Upgrade your outdated website into a clean, modern digital flagship. We preserve your valuable SEO rankings with careful 301 redirects while replacing clunky legacy designs with fast, responsive, and trustworthy user experiences.
+        </p>
+
+        <div class="service-specs-strip">
+          <div class="spec-column">
+            <span class="spec-column-label">Typical Timeline</span>
+            <span class="spec-column-val">3 to 5 weeks</span>
+          </div>
+          <div class="spec-column">
+            <span class="spec-column-label">Revision Rounds</span>
+            <span class="spec-column-val">3 structured passes</span>
+          </div>
+          <div class="spec-column">
+            <span class="spec-column-label">Migration Safety</span>
+            <span class="spec-column-val">Full 301 URL Mapping Included</span>
+          </div>
+          <div class="spec-column">
+            <span class="spec-column-label">Delivery Scope</span>
+            <span class="spec-column-val">Staged deployment with zero downtime</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-white">
+      <div class="container">
+        <div class="two-col-breakdown">
+          <div>
+            <h2 style="font-size: var(--fs-2xl); margin-bottom: 20px;">Signs Your Site Needs a Redesign</h2>
+            <div class="checklist-block">
+              <div class="check-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>
+                <div class="check-item-text">
+                  <h4>Doesn't Reflect Your Current Market Standing</h4>
+                  <p>Your business has evolved, but your website looks stuck in 2017. A fresh, authoritative presentation builds immediate trust with premium clients.</p>
+                </div>
+              </div>
+              <div class="check-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>
+                <div class="check-item-text">
+                  <h4>Slow, Laggy, or Brittle on Mobile</h4>
+                  <p>Over half of your visitors are browsing on mobile devices. If your buttons are hard to tap or text overflows, you are bleeding valuable inquiries.</p>
+                </div>
+              </div>
+              <div class="check-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>
+                <div class="check-item-text">
+                  <h4>Fear of Losing Existing Google Traffic</h4>
+                  <p>Inexperienced redesigns destroy search rankings by deleting URLs without 301 redirects. We audit and map every URL prior to launching.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h2 style="font-size: var(--fs-2xl); margin-bottom: 20px;">Our Safe Redesign Protocol</h2>
+            <div class="checklist-block">
+              <div class="check-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <div class="check-item-text">
+                  <h4>Comprehensive Content &amp; URL Audit</h4>
+                  <p>We crawl your current website, document all indexing URLs, extract your existing text assets, and identify gaps in conversion flow.</p>
+                </div>
+              </div>
+              <div class="check-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <div class="check-item-text">
+                  <h4>Modern Design System &amp; Typography Overhaul</h4>
+                  <p>Fresh typographic hierarchy (Poppins &amp; Inter), refined whitespace, high-contrast layouts, and clean responsive components.</p>
+                </div>
+              </div>
+              <div class="check-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <div class="check-item-text">
+                  <h4>Private Staging Environment Rebuild</h4>
+                  <p>Your current live site stays 100% online while we build the replacement on a private staging server for your iterative review.</p>
+                </div>
+              </div>
+              <div class="check-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <div class="check-item-text">
+                  <h4>Zero-Downtime Switchover &amp; Verification</h4>
+                  <p>Seamless deployment during off-peak hours with immediate redirect testing, SSL verification, and search console checks.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-dark">
+      <div class="container container-narrow text-center">
+        <h2 style="font-size: var(--fs-3xl); margin-bottom: 16px;">Ready to modernize your current website?</h2>
+        <p style="font-size: var(--fs-md); color: var(--text-inverse-muted); margin-bottom: 28px;">
+          Send us your current website URL. Hasan Ismail will review your site and provide an actionable redesign evaluation.
+        </p>
+        <a href="contact.html?service=redesign" class="btn btn-primary btn-lg">Request a Website Redesign Review →</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- SHARED FOOTER -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-columns-grid">
+        <div class="footer-brand-col">
+          <a href="index.html" aria-label="HaseenTech Home">
+            <img src="assets/brand/logo.svg" alt="HaseenTech" style="height: 32px; width: auto; filter: invert(1) hue-rotate(180deg);">
+          </a>
+          <span class="footer-tagline-text">Modern Websites. Real Results.</span>
+          <p class="footer-about-summary">
+            Founded by <strong>Hasan Ismail</strong> in Karachi, Pakistan. Delivering bespoke WordPress development, WooCommerce storefronts, and web engineering to clients worldwide.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-col-header">Navigation</h4>
+          <ul class="footer-nav-list">
+            <li><a href="index.html" class="footer-nav-link">Home</a></li>
+            <li><a href="about.html" class="footer-nav-link">About HaseenTech</a></li>
+            <li><a href="services.html" class="footer-nav-link">Services</a></li>
+            <li><a href="portfolio.html" class="footer-nav-link">Portfolio</a></li>
+            <li><a href="pricing.html" class="footer-nav-link">Pricing &amp; Packages</a></li>
+            <li><a href="contact.html" class="footer-nav-link">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-header">Services</h4>
+          <ul class="footer-nav-list">
+            <li><a href="service-wordpress.html" class="footer-nav-link">WordPress Development</a></li>
+            <li><a href="service-woocommerce.html" class="footer-nav-link">WooCommerce Stores</a></li>
+            <li><a href="service-landing-pages.html" class="footer-nav-link">Landing Pages</a></li>
+            <li><a href="service-redesign.html" class="footer-nav-link">Website Redesign</a></li>
+            <li><a href="service-maintenance.html" class="footer-nav-link">Maintenance &amp; Support</a></li>
+            <li><a href="service-seo-speed.html" class="footer-nav-link">SEO &amp; Speed Optimization</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-header">Contact &amp; Regions</h4>
+          <ul class="footer-nav-list">
+            <li><a href="mailto:hello@haseentech.com" class="footer-nav-link">hello@haseentech.com</a></li>
+            <li><a href="https://wa.me/923001234567" target="_blank" rel="noopener noreferrer" class="footer-nav-link">WhatsApp: +92 300 1234567</a></li>
+            <li><span style="font-size: 13px; color: var(--text-inverse-muted);">Karachi, Pakistan</span></li>
+            <li><span style="font-size: 13px; color: var(--text-inverse-muted);">USA • UK • UAE • Canada • Europe</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <div>
+          © <span id="current-year">2026</span> HaseenTech. Founded by Hasan Ismail. All rights reserved.
+        </div>
+        <div class="footer-bottom-nav">
+          <a href="privacy.html" class="footer-nav-link">Privacy Policy</a>
+          <a href="terms.html" class="footer-nav-link">Terms &amp; Conditions</a>
+          <a href="#main-content" class="footer-nav-link" style="color: var(--color-orange);">↑ Back to top</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

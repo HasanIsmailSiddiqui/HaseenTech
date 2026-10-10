@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 40" fill="none">
+  <!-- Modern Geometric Mark -->
+  <rect x="2" y="4" width="32" height="32" rx="8" fill="#171717"/>
+  <path d="M10 12h5v16h-5V12z" fill="#F7F7F2"/>
+  <path d="M18 12h5l-4 8 4 8h-5l-2-8 2-8z" fill="#FF6B35"/>
+  <!-- Typography Wordmark -->
+  <text x="44" y="27" font-family="'Poppins', sans-serif" font-size="20" font-weight="700" fill="#171717" letter-spacing="-0.02em">Haseen<tspan font-weight="400" fill="#737373">Tech</tspan></text>
+</svg>

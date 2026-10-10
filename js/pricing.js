@@ -1,177 +1,176 @@
 /**
- * HaseenTech — Country-Aware Pricing Logic
- * Verified baseline rates for US, UK, EU, UAE, CA, AU, and Pakistan.
+ * HaseenTech — Centralized Country-Aware Pricing Configuration & Switcher
+ * Packages: Landing Page / Business Website / WooCommerce Store
+ * Markets: USA, UK, EU, UAE, Canada, Australia, Saudi Arabia, Pakistan
  */
 
 (function () {
   'use strict';
 
-  // Verified market pricing definitions
-  const pricingMarkets = {
-    US: {
-      name: 'United States',
-      currency: 'USD',
-      symbol: '$',
-      prices: {
-        starter: 299,
-        business: 599,
-        woocommerce: 999
+  // Centrally defined country-specific package prices
+  const PRICING_CONFIG = {
+    markets: {
+      US: {
+        country: 'United States',
+        currency: 'USD',
+        symbol: '$',
+        rates: {
+          landing: 299,
+          business: 599,
+          woocommerce: 999
+        },
+        marketNote: 'Initial proposals in USD for clients in the United States and international markets.'
       },
-      note: 'Rates in USD for clients in the United States and global Americas.'
+      GB: {
+        country: 'United Kingdom',
+        currency: 'GBP',
+        symbol: '£',
+        rates: {
+          landing: 249,
+          business: 499,
+          woocommerce: 849
+        },
+        marketNote: 'Initial proposals in GBP for businesses based in the United Kingdom.'
+      },
+      EU: {
+        country: 'European Union',
+        currency: 'EUR',
+        symbol: '€',
+        rates: {
+          landing: 279,
+          business: 549,
+          woocommerce: 949
+        },
+        marketNote: 'Initial proposals in EUR for Eurozone and European clients.'
+      },
+      AE: {
+        country: 'United Arab Emirates',
+        currency: 'AED',
+        symbol: 'AED ',
+        rates: {
+          landing: 999,
+          business: 1999,
+          woocommerce: 3499
+        },
+        marketNote: 'Initial proposals in AED for clients across Dubai, Abu Dhabi, and the UAE.'
+      },
+      CA: {
+        country: 'Canada',
+        currency: 'CAD',
+        symbol: 'C$',
+        rates: {
+          landing: 399,
+          business: 799,
+          woocommerce: 1299
+        },
+        marketNote: 'Initial proposals in CAD for Canadian businesses.'
+      },
+      AU: {
+        country: 'Australia',
+        currency: 'AUD',
+        symbol: 'A$',
+        rates: {
+          landing: 449,
+          business: 899,
+          woocommerce: 1499
+        },
+        marketNote: 'Initial proposals in AUD for Australian and Oceanian clients.'
+      },
+      SA: {
+        country: 'Saudi Arabia',
+        currency: 'SAR',
+        symbol: 'SAR ',
+        rates: {
+          landing: 1099,
+          business: 2199,
+          woocommerce: 3899
+        },
+        marketNote: 'Initial proposals in SAR for clients across Saudi Arabia.'
+      },
+      PK: {
+        country: 'Pakistan',
+        currency: 'PKR',
+        symbol: 'PKR ',
+        rates: {
+          landing: 20000,
+          business: 40000,
+          woocommerce: 75000
+        },
+        marketNote: 'Local rates in PKR for businesses operating across Pakistan.'
+      }
     },
-    GB: {
-      name: 'United Kingdom',
-      currency: 'GBP',
-      symbol: '£',
-      prices: {
-        starter: 249,
-        business: 499,
-        woocommerce: 849
-      },
-      note: 'Rates in GBP for UK and British businesses.'
-    },
-    EU: {
-      name: 'European Union',
-      currency: 'EUR',
-      symbol: '€',
-      prices: {
-        starter: 279,
-        business: 549,
-        woocommerce: 949
-      },
-      note: 'Rates in EUR for European Union and Eurozone clients.'
-    },
-    AE: {
-      name: 'United Arab Emirates',
-      currency: 'AED',
-      symbol: 'AED ',
-      prices: {
-        starter: 999,
-        business: 1999,
-        woocommerce: 3499
-      },
-      note: 'Rates in AED for Dubai, Abu Dhabi, and UAE businesses.'
-    },
-    CA: {
-      name: 'Canada',
-      currency: 'CAD',
-      symbol: 'CA$',
-      prices: {
-        starter: 399,
-        business: 799,
-        woocommerce: 1299
-      },
-      note: 'Rates in CAD for Canadian clients.'
-    },
-    AU: {
-      name: 'Australia',
-      currency: 'AUD',
-      symbol: 'AU$',
-      prices: {
-        starter: 449,
-        business: 899,
-        woocommerce: 1499
-      },
-      note: 'Rates in AUD for Australian and Oceania businesses.'
-    },
-    PK: {
-      name: 'Pakistan',
-      currency: 'PKR',
-      symbol: 'PKR ',
-      prices: {
-        starter: 20000,
-        business: 40000,
-        woocommerce: 75000
-      },
-      note: 'Local rates in PKR for businesses across Pakistan.'
-    }
+    defaultMarket: 'US'
   };
 
-  function formatNumber(num) {
-    return num.toLocaleString('en-US');
+  function formatPrice(number) {
+    return number.toLocaleString('en-US');
   }
 
-  function applyMarketPricing(marketCode) {
-    const market = pricingMarkets[marketCode] || pricingMarkets.US;
+  function updatePricing(marketKey) {
+    const market = PRICING_CONFIG.markets[marketKey] || PRICING_CONFIG.markets[PRICING_CONFIG.defaultMarket];
 
-    // Update symbols and values
-    const symbolElements = document.querySelectorAll('.pricing-currency-symbol');
-    symbolElements.forEach(function (el) {
+    // Update symbols
+    document.querySelectorAll('.pricing-currency-sym').forEach(el => {
       el.textContent = market.symbol;
     });
 
-    const starterEl = document.querySelector('[data-price="starter"]');
-    if (starterEl) {
-      starterEl.textContent = formatNumber(market.prices.starter);
-    }
+    // Update prices
+    const landingEl = document.querySelector('[data-tier="landing"]');
+    if (landingEl) landingEl.textContent = formatPrice(market.rates.landing);
 
-    const businessEl = document.querySelector('[data-price="business"]');
-    if (businessEl) {
-      businessEl.textContent = formatNumber(market.prices.business);
-    }
+    const businessEl = document.querySelector('[data-tier="business"]');
+    if (businessEl) businessEl.textContent = formatPrice(market.rates.business);
 
-    const wooEl = document.querySelector('[data-price="woocommerce"]');
-    if (wooEl) {
-      wooEl.textContent = formatNumber(market.prices.woocommerce);
-    }
+    const wooEl = document.querySelector('[data-tier="woocommerce"]');
+    if (wooEl) wooEl.textContent = formatPrice(market.rates.woocommerce);
 
-    const noteEl = document.getElementById('pricing-market-note');
-    if (noteEl) {
-      noteEl.textContent = market.note;
-    }
+    // Update market notes & currency codes
+    const noteEl = document.getElementById('pricing-market-subtext');
+    if (noteEl) noteEl.textContent = market.marketNote;
 
-    const codePill = document.getElementById('pricing-currency-code');
-    if (codePill) {
-      codePill.textContent = market.currency;
-    }
+    const codePills = document.querySelectorAll('.pricing-currency-code');
+    codePills.forEach(pill => {
+      pill.textContent = market.currency;
+    });
 
-    // Save user choice
+    // Persist user selection
     try {
-      localStorage.setItem('haseentech_market', marketCode);
+      localStorage.setItem('ht_selected_market', marketKey);
     } catch (e) {
-      // LocalStorage might be disabled in private browsing
+      // LocalStorage access might be restricted
     }
   }
 
-  function initPricing() {
-    const select = document.getElementById('country-select');
-    if (!select) return;
+  function init() {
+    const selector = document.getElementById('country-select');
+    if (!selector) return;
 
-    // Load saved or detect default
-    let savedMarket = 'US';
+    let savedMarket = PRICING_CONFIG.defaultMarket;
     try {
-      savedMarket = localStorage.getItem('haseentech_market') || 'US';
+      const stored = localStorage.getItem('ht_selected_market');
+      if (stored && PRICING_CONFIG.markets[stored]) {
+        savedMarket = stored;
+      }
     } catch (e) {
-      savedMarket = 'US';
+      savedMarket = PRICING_CONFIG.defaultMarket;
     }
 
-    if (pricingMarkets[savedMarket]) {
-      select.value = savedMarket;
-      applyMarketPricing(savedMarket);
-    } else {
-      applyMarketPricing('US');
-    }
+    selector.value = savedMarket;
+    updatePricing(savedMarket);
 
-    select.addEventListener('change', function () {
-      applyMarketPricing(this.value);
-    });
-
-    // Inquire CTA buttons pre-selecting package in contact form
-    const packageCtaButtons = document.querySelectorAll('[data-package-trigger]');
-    packageCtaButtons.forEach(function (btn) {
-      btn.addEventListener('click', function (e) {
-        const pkg = this.getAttribute('data-package-trigger');
-        const contactSelect = document.getElementById('contact-service');
-        if (contactSelect && pkg) {
-          contactSelect.value = pkg;
-        }
-      });
+    selector.addEventListener('change', function () {
+      updatePricing(this.value);
     });
   }
 
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initPricing);
+    document.addEventListener('DOMContentLoaded', init);
   } else {
-    initPricing();
+    init();
   }
+
+  window.HaseenTechPricing = {
+    config: PRICING_CONFIG,
+    updatePricing: updatePricing
+  };
 })();
