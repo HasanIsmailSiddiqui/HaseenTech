@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+:root {
+  --midnight: #0b1220;
+  --slate-surface: #1e293b;
+  --brand-blue: #3b82f6;
+  --brand-violet: #8b5cf6;
+  --brand-cyan: #06b6d4;
+  --cloud-white: #f8fafc;
+  --body: #334155;
+}
+
+@theme inline {
+  --color-midnight: var(--midnight);
+  --color-slate-surface: var(--slate-surface);
+  --color-brand-blue: var(--brand-blue);
+  --color-brand-violet: var(--brand-violet);
+  --color-brand-cyan: var(--brand-cyan);
+  --color-cloud-white: var(--cloud-white);
+  --color-body: var(--body);
+  --font-heading: var(--font-poppins);
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-jetbrains);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+body {
+  background: var(--cloud-white);
+  color: var(--body);
+  font-family: var(--font-inter), system-ui, sans-serif;
+}
+
+.font-heading {
+  font-family: var(--font-poppins), system-ui, sans-serif;
+}
+
+.font-mono {
+  font-family: var(--font-jetbrains), ui-monospace, monospace;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}

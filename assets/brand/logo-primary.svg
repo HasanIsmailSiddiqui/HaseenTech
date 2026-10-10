@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 48" fill="none">
+  <defs>
+    <linearGradient id="ht-grad" x1="8" y1="40" x2="40" y2="8">
+      <stop stop-color="#3B82F6"/>
+      <stop offset="1" stop-color="#8B5CF6"/>
+    </linearGradient>
+  </defs>
+  <rect x="4" y="4" width="40" height="40" rx="10" fill="#0B1220" fill-opacity="0.08"/>
+  <path d="M14 12h8v24h-8V12zm10 0h10l-6 12 6 12H24V12z" fill="url(#ht-grad)"/>
+  <path d="M14 12h8v10H14V12zm10 14h10v10H24V26z" stroke="#06B6D4" stroke-width="1.5" fill="none"/>
+  <text x="56" y="32" font-family="Poppins, Arial, sans-serif" font-size="22" font-weight="600" fill="#0B1220">Haseen<tspan font-weight="400" fill="#334155">Tech</tspan></text>
+</svg>
