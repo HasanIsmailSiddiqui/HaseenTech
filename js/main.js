@@ -159,8 +159,9 @@
       const href = link.getAttribute('href');
       if (!href) return;
       const targetPage = href.split('#')[0].split('?')[0];
+      const targetFilename = targetPage.split('/').pop();
 
-      if (targetPage === currentPath || (currentPath === '' && targetPage === 'index.html')) {
+      if (targetFilename === currentPath || (currentPath === '' && targetFilename === 'index.html')) {
         link.classList.add('active');
         link.setAttribute('aria-current', 'page');
       }

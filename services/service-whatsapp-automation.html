@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WhatsApp Chatbots &amp; Business Workflow Automation — HaseenTech</title>
+  <meta name="description" content="Automate client conversations, lead qualification, and back-office workflows with custom WhatsApp chatbots and business integrations by HaseenTech.">
+  <link rel="icon" type="image/svg+xml" href="../assets/brand/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/main.css">
+</head>
+<body class="theme-obsidian">
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Header -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="../index.html" class="brand-logo" aria-label="HaseenTech Home">
+        <img src="../assets/brand/logo.svg" alt="HaseenTech" width="160" height="32">
+      </a>
+
+      <nav class="nav-desktop" aria-label="Primary Navigation">
+        <ul class="nav-list">
+          <li><a href="../index.html" class="nav-link">Home</a></li>
+          <li><a href="../portfolio.html" class="nav-link">Work</a></li>
+          <li class="nav-item-dropdown">
+            <a href="../services.html" class="nav-link dropdown-trigger active" aria-haspopup="true" aria-expanded="false">
+              Services
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </a>
+            <div class="dropdown-menu" role="menu">
+              <a href="../services.html" class="dropdown-item" role="menuitem" style="font-weight: 600; color: var(--color-orange); border-bottom: 1px solid var(--color-border); padding-bottom: 0.5rem; margin-bottom: 0.25rem;">All Services Overview ↗</a>
+              <a href="service-wordpress.html" class="dropdown-item" role="menuitem">WordPress Development</a>
+              <a href="service-woocommerce.html" class="dropdown-item" role="menuitem">WooCommerce Stores</a>
+              <a href="service-custom-web.html" class="dropdown-item" role="menuitem">Custom Web Development</a>
+              <a href="service-ai-chatbots.html" class="dropdown-item" role="menuitem">AI Chatbots &amp; Agents</a>
+              <a href="service-whatsapp-automation.html" class="dropdown-item active" role="menuitem" aria-current="page">WhatsApp &amp; Automations</a>
+              <a href="service-landing-pages.html" class="dropdown-item" role="menuitem">Landing Pages</a>
+              <a href="service-redesign.html" class="dropdown-item" role="menuitem">Website Redesign</a>
+              <a href="service-maintenance.html" class="dropdown-item" role="menuitem">Maintenance &amp; Support</a>
+              <a href="service-seo-speed.html" class="dropdown-item" role="menuitem">SEO &amp; Speed Optimization</a>
+            </div>
+          </li>
+          <li><a href="../about.html" class="nav-link">Studio</a></li>
+          <li><a href="../pricing.html" class="nav-link">Pricing</a></li>
+          <li><a href="../contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <div class="status-indicator-header">
+          <span class="pill-badge"><span class="pulse-dot"></span> Available Q4/2026</span>
+        </div>
+        <a href="../contact.html" class="btn btn-primary btn-sm">Start a Project ↗</a>
+        <button id="menu-toggle" class="mobile-toggle-btn" aria-label="Toggle Navigation Menu" aria-expanded="false">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div id="mobile-drawer" class="mobile-drawer" aria-hidden="true">
+    <div class="drawer-header">
+      <a href="../index.html" class="brand-logo" aria-label="HaseenTech Home">
+        <img src="../assets/brand/logo.svg" alt="HaseenTech" width="140" height="28">
+      </a>
+      <button id="menu-close" class="mobile-toggle-btn" aria-label="Close Navigation Menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <ul class="drawer-nav-list">
+      <li><a href="../index.html" class="drawer-link">Home</a></li>
+      <li><a href="../portfolio.html" class="drawer-link">Selected Work</a></li>
+      <li>
+        <a href="../services.html" class="drawer-link">Services Overview</a>
+        <div class="drawer-submenu">
+          <a href="../services.html" class="drawer-sublink" style="color: var(--color-orange); font-weight: 600;">All Capabilities Overview ↗</a>
+          <a href="service-wordpress.html" class="drawer-sublink">WordPress Development</a>
+          <a href="service-woocommerce.html" class="drawer-sublink">WooCommerce Stores</a>
+          <a href="service-custom-web.html" class="drawer-sublink">Custom Web Development</a>
+          <a href="service-ai-chatbots.html" class="drawer-sublink">AI Chatbots &amp; Agents</a>
+          <a href="service-whatsapp-automation.html" class="drawer-sublink active" aria-current="page">WhatsApp &amp; Automations</a>
+          <a href="service-landing-pages.html" class="drawer-sublink">Landing Pages</a>
+          <a href="service-redesign.html" class="drawer-sublink">Website Redesign</a>
+          <a href="service-maintenance.html" class="drawer-sublink">Maintenance &amp; Bug Fixes</a>
+          <a href="service-seo-speed.html" class="drawer-sublink">SEO &amp; Speed Optimization</a>
+        </div>
+      </li>
+      <li><a href="../about.html" class="drawer-link">Studio &amp; Founder</a></li>
+      <li><a href="../pricing.html" class="drawer-link">Packages &amp; Pricing</a></li>
+      <li><a href="../contact.html" class="drawer-link">Contact &amp; Inquiries</a></li>
+    </ul>
+    <div style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--color-border);">
+      <a href="../contact.html" class="btn btn-primary" style="width: 100%;">Start a Project ↗</a>
+    </div>
+  </div>
+
+  <main id="main-content">
+    <section class="page-hero-obsidian">
+      <div class="container page-hero-inner">
+        <div class="micro-label micro-label-orange">// SERVICE 05 · MESSAGING &amp; WORKFLOWS</div>
+        <h1 class="page-hero-title">WhatsApp Chatbots &amp; Workflow Automation.</h1>
+        <p class="page-hero-sub">
+          Turn your most active customer communication channel into an automated growth engine. We design rule-based and AI-powered WhatsApp chatbots integrated with your CRM, Google Sheets, and eCommerce order systems.
+        </p>
+      </div>
+    </section>
+
+    <section class="section-pad" style="background: var(--color-obsidian);">
+      <div class="container" style="max-width: 960px; display: flex; flex-direction: column; gap: 3rem;">
+        
+        <div class="asymmetric-project-row">
+          <div class="project-card-editorial" style="padding: 2rem;">
+            <span class="micro-label micro-label-orange">// BOT ARCHITECTURES</span>
+            <h2 style="font-size: var(--fs-xl); color: var(--color-warm-white); margin-top: 0.5rem;">Rule-Based vs. AI Bots</h2>
+            <ul class="tier-features-list" style="margin-top: 1rem;">
+              <li class="tier-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>Rule-Based Menu Bots:</strong> Fast, deterministic button menus and keyword triggers for instant catalog browsing, branch locations, and pricing tiers without conversational ambiguity.</span>
+              </li>
+              <li class="tier-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>AI-Powered WhatsApp Bots:</strong> Natural language understanding capable of answering unstructured customer queries using your business FAQs and policies.</span>
+              </li>
+              <li class="tier-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>Automated Human Handover:</strong> Instant routing to live human agents on your WhatsApp Business app or multi-agent inbox when critical thresholds are reached.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="project-card-editorial" style="padding: 2rem;">
+            <span class="micro-label micro-label-orange">// WORKFLOW AUTOMATION</span>
+            <h2 style="font-size: var(--fs-xl); color: var(--color-warm-white); margin-top: 0.5rem;">Connected Integrations</h2>
+            <ul class="tier-features-list" style="margin-top: 1rem;">
+              <li class="tier-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Instant lead sync from WhatsApp into Google Sheets, Notion, HubSpot, or Airtable</span>
+              </li>
+              <li class="tier-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>WooCommerce order confirmation and tracking lookup via WhatsApp API</span>
+              </li>
+              <li class="tier-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Automated appointment scheduling reminders and confirmation messages</span>
+              </li>
+              <li class="tier-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Official WhatsApp Cloud API &amp; Meta Business verification assistance</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Practical Business Value -->
+        <div style="background: var(--color-charcoal); border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: 2rem;">
+          <span class="micro-label micro-label-orange">// REALISTIC EXECUTION</span>
+          <h3 style="font-size: var(--fs-lg); color: var(--color-warm-white); margin-top: 0.5rem;">Transparent Meta API Operating Costs</h3>
+          <p style="font-size: var(--fs-sm); color: var(--text-secondary); line-height: 1.6; margin-top: 0.5rem;">
+            We build on the official Meta WhatsApp Cloud API or verified BSP providers. Our fees cover the engineering, workflow design, webhook development, and configuration. Meta's standard conversation usage fees are billed directly to your own Meta Business account, keeping your recurring costs completely transparent.
+          </p>
+        </div>
+
+        <!-- Transparent Starting Rates -->
+        <div style="background: var(--color-elevated); border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: 2.5rem; text-align: center;">
+          <span class="micro-label micro-label-orange">// TRANSPARENT STARTING PRICING</span>
+          <h2 style="font-size: var(--fs-2xl); color: var(--color-warm-white); margin-top: 0.5rem;">WhatsApp &amp; Automation Starting Rates</h2>
+          <p style="font-size: var(--fs-base); color: var(--text-secondary); max-width: 600px; margin: 0.5rem auto 1.5rem;">
+            Whether you need a dedicated WhatsApp sales bot or back-office webhook automation connecting your platforms, we deliver clean, tested workflows.
+          </p>
+          <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; margin-bottom: 2rem;">
+            <div style="background: var(--color-obsidian); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: 1.5rem 2rem; min-width: 250px; text-align: left;">
+              <span class="micro-label micro-label-orange">// RULE-BASED BOT</span>
+              <div style="font-size: var(--fs-xl); font-weight: 700; color: var(--color-warm-white); margin-top: 0.5rem;">PKR 45,000 / $349</div>
+              <ul class="tier-features-list" style="margin-top: 0.75rem; font-size: var(--fs-xs);">
+                <li>&bull; Interactive buttons &amp; menus</li>
+                <li>&bull; Quick reply decision tree</li>
+                <li>&bull; Lead capture to Google Sheets</li>
+              </ul>
+            </div>
+            <div style="background: var(--color-obsidian); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: 1.5rem 2rem; min-width: 250px; text-align: left;">
+              <span class="micro-label micro-label-orange">// WORKFLOW AUTOMATION</span>
+              <div style="font-size: var(--fs-xl); font-weight: 700; color: var(--color-warm-white); margin-top: 0.5rem;">PKR 50,000 / $399</div>
+              <ul class="tier-features-list" style="margin-top: 0.75rem; font-size: var(--fs-xs);">
+                <li>&bull; Webhooks &amp; multi-app data sync</li>
+                <li>&bull; CRM / Store integration</li>
+                <li>&bull; Automated notifications &amp; alerts</li>
+              </ul>
+            </div>
+          </div>
+          <a href="../contact.html?service=whatsapp-chatbot" class="btn btn-primary btn-lg">Build Your WhatsApp Automation ↗</a>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+    <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <!-- Column 1: Brand -->
+        <div class="footer-col-brand">
+          <a href="../index.html" class="brand-logo" aria-label="HaseenTech Home">
+            <img src="../assets/brand/logo.svg" alt="HaseenTech" width="160" height="32">
+          </a>
+          <p class="footer-brand-desc">
+            Independent creative technology studio founded by Hasan Ismail. Delivering modern, high-performance web engineering for ambitious international businesses.
+          </p>
+          <div class="footer-brand-meta" style="font-family: var(--font-mono); font-size: var(--fs-xs); color: var(--color-muted);">
+            Karachi, Pakistan &middot; Remote Worldwide
+          </div>
+          <div class="status-indicator-footer" style="display: inline-flex; align-items: center; gap: 0.5rem; margin-top: 0.25rem;">
+            <span class="pulse-dot"></span>
+            <span style="font-family: var(--font-mono); font-size: var(--fs-xs); color: var(--color-muted);">Active Studio Status</span>
+          </div>
+        </div>
+
+        <!-- Column 2: Services -->
+        <div class="footer-col-services">
+          <h4 class="footer-col-title">Services</h4>
+          <ul class="footer-links-list">
+            <li><a href="../services.html" class="footer-link">Web Design &amp; Development</a></li>
+            <li><a href="service-custom-web.html" class="footer-link">Custom Web Development</a></li>
+            <li><a href="service-wordpress.html" class="footer-link">WordPress &amp; WooCommerce</a></li>
+            <li><a href="service-ai-chatbots.html" class="footer-link">AI Chatbots &amp; Agents</a></li>
+            <li><a href="service-whatsapp-automation.html" class="footer-link">WhatsApp Automation</a></li>
+            <li><a href="service-seo-speed.html" class="footer-link">SEO &amp; Performance</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Company -->
+        <div class="footer-col-company">
+          <h4 class="footer-col-title">Company</h4>
+          <ul class="footer-links-list">
+            <li><a href="../about.html" class="footer-link">About</a></li>
+            <li><a href="../services.html" class="footer-link">Services</a></li>
+            <li><a href="../portfolio.html" class="footer-link">Portfolio</a></li>
+            <li><a href="../pricing.html" class="footer-link">Pricing</a></li>
+            <li><a href="../contact.html" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Contact -->
+        <div class="footer-col-contact">
+          <h4 class="footer-col-title">Contact</h4>
+          <ul class="footer-links-list">
+            <li><a href="mailto:hello@haseentech.com" class="footer-link">hello@haseentech.com</a></li>
+            <li><span style="font-size: var(--fs-sm); color: var(--text-secondary);">Direct WhatsApp upon project brief</span></li>
+            <li style="margin-top: 0.75rem;">
+              <a href="../contact.html" class="btn btn-secondary btn-sm" style="display: inline-flex;">Start a Project ↗</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom-bar">
+        <div>
+          &copy; <span id="current-year">2026</span> HaseenTech. All rights reserved. Founded by Hasan Ismail.
+        </div>
+        <div class="footer-legal-links">
+          <a href="../privacy.html" class="footer-link">Privacy Policy</a>
+          <a href="../terms.html" class="footer-link">Terms &amp; Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

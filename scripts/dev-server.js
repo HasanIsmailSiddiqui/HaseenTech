@@ -39,9 +39,17 @@ const server = http.createServer((req, res) => {
   // Check if file exists directly
   fs.stat(filePath, (err, stats) => {
     if (!err && stats.isDirectory()) {
-      filePath = path.join(filePath, 'index.html');
+      const dirIndex = path.join(filePath, 'index.html');
+      if (fs.existsSync(dirIndex)) {
+        filePath = dirIndex;
+      } else if (fs.existsSync(filePath + '.html')) {
+        // e.g. /services -> /services.html
+        filePath = filePath + '.html';
+      } else {
+        filePath = dirIndex; // will trigger 404 cleanly
+      }
     } else if (err && !path.extname(filePath)) {
-      // Clean URL support: e.g. /about -> /about.html
+      // Clean URL support: e.g. /about -> /about.html or /services/service-wordpress -> .html
       const htmlCandidate = filePath + '.html';
       if (fs.existsSync(htmlCandidate)) {
         filePath = htmlCandidate;
