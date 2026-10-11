@@ -125,15 +125,33 @@
 
     // Handle service pre-selection via URL param ?service=... or ?package=...
     const urlParams = new URLSearchParams(window.location.search);
-    const preselectedService = urlParams.get('service');
+    let preselectedService = urlParams.get('service');
     const preselectedPackage = urlParams.get('package');
+
+    // Friendly aliases
+    const serviceAliases = {
+      'ai': 'ai-chatbots',
+      'agent': 'ai-chatbots',
+      'agents': 'ai-chatbots',
+      'whatsapp': 'whatsapp-chatbot',
+      'chatbots': 'whatsapp-chatbot',
+      'web': 'custom-web',
+      'custom-web-development': 'custom-web',
+      'custom-website': 'custom-web',
+      'business': 'wordpress',
+      'speed': 'seo-speed',
+      'seo': 'seo-speed'
+    };
+    if (preselectedService && serviceAliases[preselectedService]) {
+      preselectedService = serviceAliases[preselectedService];
+    }
 
     if (serviceSelect) {
       if (preselectedService && serviceSelect.querySelector(`option[value="${preselectedService}"]`)) {
         serviceSelect.value = preselectedService;
       } else if (preselectedPackage) {
         if (preselectedPackage === 'landing') serviceSelect.value = 'landing';
-        else if (preselectedPackage === 'business') serviceSelect.value = 'business';
+        else if (preselectedPackage === 'business') serviceSelect.value = 'wordpress';
         else if (preselectedPackage === 'woocommerce') serviceSelect.value = 'woocommerce';
       }
     }
@@ -293,8 +311,8 @@
         this.setAttribute('aria-selected', 'true');
 
         projectCards.forEach(card => {
-          const cardCat = card.getAttribute('data-category');
-          if (targetCategory === 'all' || cardCat === targetCategory) {
+          const cardCats = (card.getAttribute('data-category') || '').split(/\s+/);
+          if (targetCategory === 'all' || cardCats.includes(targetCategory)) {
             card.style.display = '';
           } else {
             card.style.display = 'none';

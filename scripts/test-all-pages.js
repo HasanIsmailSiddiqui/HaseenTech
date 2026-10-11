@@ -39,6 +39,9 @@ const PAGES = [
   'services.html',
   'service-wordpress.html',
   'service-woocommerce.html',
+  'service-custom-web.html',
+  'service-ai-chatbots.html',
+  'service-whatsapp-automation.html',
   'service-landing-pages.html',
   'service-redesign.html',
   'service-maintenance.html',
@@ -86,7 +89,7 @@ async function runComprehensiveTests() {
 
   try {
     // 1. Test every page loads, has proper title, no console errors, no 404s, no horizontal scroll
-    console.log('--- TEST SUITE 1: 14 PAGES INTEGRITY & RESPONSIVENESS ---');
+    console.log(`--- TEST SUITE 1: ${PAGES.length} PAGES INTEGRITY & RESPONSIVENESS ---`);
     const viewports = [
       { name: 'Mobile (375px)', width: 375, height: 667 },
       { name: 'Tablet (768px)', width: 768, height: 1024 },
@@ -129,6 +132,12 @@ async function runComprehensiveTests() {
     let ariaExpanded = await page.$eval('#menu-toggle', el => el.getAttribute('aria-expanded'));
     assert(isDrawerOpen && ariaExpanded === 'true', 'Mobile drawer opens and aria-expanded is true');
 
+    // Drawer contains new service links
+    const customWebDrawerLink = await page.$eval('#mobile-drawer a[href="service-custom-web.html"]', el => el !== null);
+    const aiChatbotsDrawerLink = await page.$eval('#mobile-drawer a[href="service-ai-chatbots.html"]', el => el !== null);
+    const whatsappDrawerLink = await page.$eval('#mobile-drawer a[href="service-whatsapp-automation.html"]', el => el !== null);
+    assert(customWebDrawerLink && aiChatbotsDrawerLink && whatsappDrawerLink, 'Mobile drawer contains links to Custom Web, AI Chatbots, and WhatsApp services');
+
     // Close on Escape
     await page.keyboard.press('Escape');
     let isDrawerClosed = await page.$eval('#mobile-drawer', el => !el.classList.contains('open'));
@@ -139,93 +148,136 @@ async function runComprehensiveTests() {
     const isDesktopNavVisible = await page.$eval('.nav-desktop', el => window.getComputedStyle(el).display !== 'none');
     assert(isDesktopNavVisible, 'Desktop navigation is visible at 1440px');
 
+    const customWebDropdownLink = await page.$eval('.dropdown-menu a[href="service-custom-web.html"]', el => el !== null);
+    const aiChatbotsDropdownLink = await page.$eval('.dropdown-menu a[href="service-ai-chatbots.html"]', el => el !== null);
+    const whatsappDropdownLink = await page.$eval('.dropdown-menu a[href="service-whatsapp-automation.html"]', el => el !== null);
+    assert(customWebDropdownLink && aiChatbotsDropdownLink && whatsappDropdownLink, 'Desktop dropdown menu contains links to all new capabilities');
+
     // 3. Portfolio Page Filtering & Verification
     console.log('\n--- TEST SUITE 3: PORTFOLIO FILTERING & CASE STUDIES ---');
     await page.goto(`http://localhost:${PORT}/portfolio.html`);
     const totalProjects = await page.$$eval('.portfolio-card-item', els => els.length);
-    assert(totalProjects === 7, `7 real verified projects found in portfolio (count: ${totalProjects})`);
+    assert(totalProjects === 8, `8 real verified projects found in portfolio (count: ${totalProjects})`);
 
-    // Filter to Business
+    // Verify Atelier Rieber project card & live URL
+    const atelierCardExists = await page.$eval('#atelier-rieber', el => el !== null);
+    assert(atelierCardExists, 'Atelier Rieber project card exists with id #atelier-rieber');
+
+    const atelierLiveLink = await page.$eval('#atelier-rieber a[href*="atelier-rieber.de"]', el => el.getAttribute('href'));
+    assert(atelierLiveLink === 'https://atelier-rieber.de/', `Atelier Rieber live link is verified: ${atelierLiveLink}`);
+
+    const atelierImgSrc = await page.$eval('#atelier-rieber img.spotlight-preview-img', el => el.getAttribute('src'));
+    assert(atelierImgSrc && atelierImgSrc.includes('atelier-rieber'), `Atelier Rieber preview image is present: ${atelierImgSrc}`);
+
+    // Filter to Business (should match Atelier Rieber, Infratrade, KUZ Consultancy, M&D Royalty)
     await page.click('button[data-filter="business"]');
     let visibleBusiness = await page.$$eval('.portfolio-card-item', els => els.filter(e => e.style.display !== 'none').length);
-    assert(visibleBusiness === 3, `3 business/redesign projects visible under Business filter`);
+    assert(visibleBusiness === 4, `4 business projects visible under Business filter (count: ${visibleBusiness})`);
 
-    // Filter to E-Commerce
+    // Filter to International (should match Atelier Rieber)
+    await page.click('button[data-filter="international"]');
+    let visibleInternational = await page.$$eval('.portfolio-card-item', els => els.filter(e => e.style.display !== 'none').length);
+    assert(visibleInternational === 1, `1 international project visible under International filter (count: ${visibleInternational})`);
+
+    // Filter to E-Commerce (should match Baby Zone and Guns and Accessories)
     await page.click('button[data-filter="ecommerce"]');
     let visibleEcommerce = await page.$$eval('.portfolio-card-item', els => els.filter(e => e.style.display !== 'none').length);
-    assert(visibleEcommerce === 2, `2 e-commerce projects visible under E-Commerce filter`);
+    assert(visibleEcommerce === 2, `2 e-commerce projects visible under E-Commerce filter (count: ${visibleEcommerce})`);
 
     // Filter back to All
     await page.click('button[data-filter="all"]');
     let visibleAll = await page.$$eval('.portfolio-card-item', els => els.filter(e => e.style.display !== 'none').length);
-    assert(visibleAll === 7, `All 7 projects visible under All filter`);
+    assert(visibleAll === 8, `All 8 projects visible under All filter`);
 
     // 4. Country-Aware Pricing Logic
     console.log('\n--- TEST SUITE 4: COUNTRY-AWARE PRICING SYSTEM ---');
     await page.goto(`http://localhost:${PORT}/pricing.html`);
 
     // Check default US pricing
-    let usLanding = await page.$eval('[data-tier="landing"]', el => el.textContent);
-    let usBusiness = await page.$eval('[data-tier="business"]', el => el.textContent);
-    let usWoo = await page.$eval('[data-tier="woocommerce"]', el => el.textContent);
-    assert(usLanding === '299' && usBusiness === '599' && usWoo === '999', `USA initial proposals: $299 / $599 / $999`);
+    let usLanding = await page.$eval('[data-rate="landing"]', el => el.textContent);
+    let usWordpress = await page.$eval('[data-rate="wordpress"]', el => el.textContent);
+    let usWoo = await page.$eval('[data-rate="woocommerce"]', el => el.textContent);
+    let usCustomWeb = await page.$eval('[data-rate="customWeb"]', el => el.textContent);
+    let usWhatsapp = await page.$eval('[data-rate="whatsappRule"]', el => el.textContent);
+    let usAiChatbot = await page.$eval('[data-rate="aiChatbot"]', el => el.textContent);
+    let usAiAgent = await page.$eval('[data-rate="aiAgent"]', el => el.textContent);
+    assert(usLanding === '199' && usWordpress === '399' && usWoo === '699', `USA starting web rates: $199 / $399 / $699`);
+    assert(usCustomWeb === '1,200' && usWhatsapp === '349' && usAiChatbot === '499' && usAiAgent === '999', `USA advanced solutions: Custom Web $1,200 / WhatsApp $349 / AI Bot $499 / Agent $999`);
 
-    // Change to UK
+    // Change to UK (GB)
     await page.selectOption('#country-select', 'GB');
-    let ukSymbol = await page.$eval('.pricing-currency-sym', el => el.textContent);
-    let ukLanding = await page.$eval('[data-tier="landing"]', el => el.textContent);
-    let ukBusiness = await page.$eval('[data-tier="business"]', el => el.textContent);
-    let ukWoo = await page.$eval('[data-tier="woocommerce"]', el => el.textContent);
-    assert(ukSymbol === '£' && ukLanding === '249' && ukBusiness === '499' && ukWoo === '849', `UK proposals verified: £249 / £499 / £849`);
+    let ukSymbol = await page.$eval('.pricing-currency-sym', el => el.textContent.trim());
+    let ukLanding = await page.$eval('[data-rate="landing"]', el => el.textContent);
+    let ukWordpress = await page.$eval('[data-rate="wordpress"]', el => el.textContent);
+    let ukWoo = await page.$eval('[data-rate="woocommerce"]', el => el.textContent);
+    let ukCustomWeb = await page.$eval('[data-rate="customWeb"]', el => el.textContent);
+    assert(ukSymbol === '£' && ukLanding === '169' && ukWordpress === '329' && ukWoo === '579' && ukCustomWeb === '999', `UK proposals verified: £169 / £329 / £579 / £999`);
 
-    // Change to EU
+    // Change to EU (Germany & European Union)
     await page.selectOption('#country-select', 'EU');
-    let euSymbol = await page.$eval('.pricing-currency-sym', el => el.textContent);
-    let euLanding = await page.$eval('[data-tier="landing"]', el => el.textContent);
-    let euBusiness = await page.$eval('[data-tier="business"]', el => el.textContent);
-    let euWoo = await page.$eval('[data-tier="woocommerce"]', el => el.textContent);
-    assert(euSymbol === '€' && euLanding === '279' && euBusiness === '549' && euWoo === '949', `EU proposals verified: €279 / €549 / €949`);
+    let euSymbol = await page.$eval('.pricing-currency-sym', el => el.textContent.trim());
+    let euLanding = await page.$eval('[data-rate="landing"]', el => el.textContent);
+    let euWordpress = await page.$eval('[data-rate="wordpress"]', el => el.textContent);
+    let euWoo = await page.$eval('[data-rate="woocommerce"]', el => el.textContent);
+    let euCustomWeb = await page.$eval('[data-rate="customWeb"]', el => el.textContent);
+    assert(euSymbol === '€' && euLanding === '189' && euWordpress === '369' && euWoo === '649' && euCustomWeb === '1,100', `EU proposals verified: €189 / €369 / €649 / €1,100`);
 
     // Change to UAE
     await page.selectOption('#country-select', 'AE');
-    let aedLanding = await page.$eval('[data-tier="landing"]', el => el.textContent);
-    let aedBusiness = await page.$eval('[data-tier="business"]', el => el.textContent);
-    let aedWoo = await page.$eval('[data-tier="woocommerce"]', el => el.textContent);
-    assert(aedLanding === '999' && aedBusiness === '1,999' && aedWoo === '3,499', `UAE proposals verified: AED 999 / 1,999 / 3,499`);
+    let aedSymbol = await page.$eval('.pricing-currency-sym', el => el.textContent.trim());
+    let aedLanding = await page.$eval('[data-rate="landing"]', el => el.textContent);
+    let aedWordpress = await page.$eval('[data-rate="wordpress"]', el => el.textContent);
+    let aedCustomWeb = await page.$eval('[data-rate="customWeb"]', el => el.textContent);
+    assert(aedSymbol === 'AED' && aedLanding === '749' && aedWordpress === '1,499' && aedCustomWeb === '4,499', `UAE proposals verified: AED 749 / 1,499 / 4,499`);
 
     // Change to Canada
     await page.selectOption('#country-select', 'CA');
-    let cadLanding = await page.$eval('[data-tier="landing"]', el => el.textContent);
-    let cadBusiness = await page.$eval('[data-tier="business"]', el => el.textContent);
-    let cadWoo = await page.$eval('[data-tier="woocommerce"]', el => el.textContent);
-    assert(cadLanding === '399' && cadBusiness === '799' && cadWoo === '1,299', `Canada proposals verified: C$399 / C$799 / C$1,299`);
+    let cadSymbol = await page.$eval('.pricing-currency-sym', el => el.textContent.trim());
+    let cadLanding = await page.$eval('[data-rate="landing"]', el => el.textContent);
+    let cadWordpress = await page.$eval('[data-rate="wordpress"]', el => el.textContent);
+    assert(cadSymbol === 'C$' && cadLanding === '269' && cadWordpress === '539', `Canada proposals verified: C$269 / C$539`);
 
     // Change to Australia
     await page.selectOption('#country-select', 'AU');
-    let audLanding = await page.$eval('[data-tier="landing"]', el => el.textContent);
-    let audBusiness = await page.$eval('[data-tier="business"]', el => el.textContent);
-    let audWoo = await page.$eval('[data-tier="woocommerce"]', el => el.textContent);
-    assert(audLanding === '449' && audBusiness === '899' && audWoo === '1,499', `Australia proposals verified: A$449 / A$899 / A$1,499`);
+    let audSymbol = await page.$eval('.pricing-currency-sym', el => el.textContent.trim());
+    let audLanding = await page.$eval('[data-rate="landing"]', el => el.textContent);
+    let audWordpress = await page.$eval('[data-rate="wordpress"]', el => el.textContent);
+    assert(audSymbol === 'A$' && audLanding === '299' && audWordpress === '599', `Australia proposals verified: A$299 / A$599`);
 
     // Change to Saudi Arabia
     await page.selectOption('#country-select', 'SA');
-    let sarLanding = await page.$eval('[data-tier="landing"]', el => el.textContent);
-    let sarBusiness = await page.$eval('[data-tier="business"]', el => el.textContent);
-    let sarWoo = await page.$eval('[data-tier="woocommerce"]', el => el.textContent);
-    assert(sarLanding === '1,099' && sarBusiness === '2,199' && sarWoo === '3,899', `Saudi Arabia proposals verified: SAR 1,099 / 2,199 / 3,899`);
+    let sarSymbol = await page.$eval('.pricing-currency-sym', el => el.textContent.trim());
+    let sarLanding = await page.$eval('[data-rate="landing"]', el => el.textContent);
+    let sarWordpress = await page.$eval('[data-rate="wordpress"]', el => el.textContent);
+    assert(sarSymbol === 'SAR' && sarLanding === '799' && sarWordpress === '1,599', `Saudi Arabia proposals verified: SAR 799 / 1,599`);
 
     // Change to Pakistan
     await page.selectOption('#country-select', 'PK');
-    let pkLanding = await page.$eval('[data-tier="landing"]', el => el.textContent);
-    let pkBusiness = await page.$eval('[data-tier="business"]', el => el.textContent);
-    let pkWoo = await page.$eval('[data-tier="woocommerce"]', el => el.textContent);
-    assert(pkLanding === '20,000' && pkBusiness === '40,000' && pkWoo === '75,000', `Pakistan proposals verified: PKR 20,000 / 40,000 / 75,000`);
+    let pkSymbol = await page.$eval('.pricing-currency-sym', el => el.textContent.trim());
+    let pkLanding = await page.$eval('[data-rate="landing"]', el => el.textContent);
+    let pkWordpress = await page.$eval('[data-rate="wordpress"]', el => el.textContent);
+    let pkWoo = await page.$eval('[data-rate="woocommerce"]', el => el.textContent);
+    let pkCustomWeb = await page.$eval('[data-rate="customWeb"]', el => el.textContent);
+    let pkWhatsapp = await page.$eval('[data-rate="whatsappRule"]', el => el.textContent);
+    let pkAiBot = await page.$eval('[data-rate="aiChatbot"]', el => el.textContent);
+    let pkAiAgent = await page.$eval('[data-rate="aiAgent"]', el => el.textContent);
+    assert(pkSymbol === 'PKR' && pkLanding === '25,000' && pkWordpress === '50,000' && pkWoo === '90,000', `Pakistan web proposals verified: PKR 25,000 / 50,000 / 90,000`);
+    assert(pkCustomWeb === '150,000' && pkWhatsapp === '45,000' && pkAiBot === '75,000' && pkAiAgent === '150,000', `Pakistan advanced solutions verified: Custom Web PKR 150,000 / WhatsApp PKR 45,000 / AI Bot PKR 75,000 / AI Agent PKR 150,000`);
 
-    // 5. Contact Form Validation & Transparent Dispatch
+    // 5. Contact Form Validation, Pre-selection & Dispatch
     console.log('\n--- TEST SUITE 5: CONTACT INQUIRY VALIDATION & DISPATCH ---');
-    await page.goto(`http://localhost:${PORT}/contact.html`);
 
-    // Submit empty form
+    // Test URL param pre-selection for custom-web
+    await page.goto(`http://localhost:${PORT}/contact.html?service=custom-web`);
+    let preselectedCustomWeb = await page.$eval('#contact-service', el => el.value);
+    assert(preselectedCustomWeb === 'custom-web', 'URL param ?service=custom-web pre-selects Custom Web Development');
+
+    // Test URL param pre-selection for AI
+    await page.goto(`http://localhost:${PORT}/contact.html?service=ai`);
+    let preselectedAi = await page.$eval('#contact-service', el => el.value);
+    assert(preselectedAi === 'ai-chatbots', 'URL param ?service=ai pre-selects AI Chatbots & Agents');
+
+    // Submit empty form to verify validation
     await page.click('#btn-submit-inquiry');
     const hasError = await page.$eval('.form-group-modern.has-error', el => el !== null);
     const noticeText = await page.$eval('#form-status-message', el => el.textContent);
@@ -235,7 +287,7 @@ async function runComprehensiveTests() {
     await page.fill('#contact-name', 'Alexander Wright');
     await page.fill('#contact-email', 'alexander@wright-advisory.co.uk');
     await page.fill('#contact-country', 'United Kingdom');
-    await page.selectOption('#contact-service', 'business');
+    await page.selectOption('#contact-service', 'wordpress');
     await page.fill('#contact-message', 'We need a full WordPress and Elementor website redesign for our management consulting firm in London.');
 
     // Submit valid form

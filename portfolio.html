@@ -28,12 +28,16 @@
               <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
             </a>
             <div class="dropdown-menu" role="menu">
+              <a href="services.html" class="dropdown-item" role="menuitem" style="font-weight: 600; color: var(--color-orange); border-bottom: 1px solid var(--color-border); padding-bottom: 0.5rem; margin-bottom: 0.25rem;">All Services Overview ↗</a>
               <a href="service-wordpress.html" class="dropdown-item" role="menuitem">WordPress Development</a>
               <a href="service-woocommerce.html" class="dropdown-item" role="menuitem">WooCommerce Stores</a>
+              <a href="service-custom-web.html" class="dropdown-item" role="menuitem">Custom Web Development</a>
+              <a href="service-ai-chatbots.html" class="dropdown-item" role="menuitem">AI Chatbots &amp; Agents</a>
+              <a href="service-whatsapp-automation.html" class="dropdown-item" role="menuitem">WhatsApp &amp; Automations</a>
               <a href="service-landing-pages.html" class="dropdown-item" role="menuitem">Landing Pages</a>
               <a href="service-redesign.html" class="dropdown-item" role="menuitem">Website Redesign</a>
-              <a href="service-maintenance.html" class="dropdown-item" role="menuitem">Maintenance & Support</a>
-              <a href="service-seo-speed.html" class="dropdown-item" role="menuitem">SEO & Speed Optimization</a>
+              <a href="service-maintenance.html" class="dropdown-item" role="menuitem">Maintenance &amp; Support</a>
+              <a href="service-seo-speed.html" class="dropdown-item" role="menuitem">SEO &amp; Speed Optimization</a>
             </div>
           </li>
           <li><a href="about.html" class="nav-link">Studio</a></li>
@@ -64,12 +68,16 @@
       <li>
         <a href="services.html" class="drawer-link">Services Overview</a>
         <div class="drawer-submenu">
+          <a href="services.html" class="drawer-sublink" style="color: var(--color-orange); font-weight: 600;">All Capabilities Overview ↗</a>
           <a href="service-wordpress.html" class="drawer-sublink">WordPress Development</a>
           <a href="service-woocommerce.html" class="drawer-sublink">WooCommerce Stores</a>
+          <a href="service-custom-web.html" class="drawer-sublink">Custom Web Development</a>
+          <a href="service-ai-chatbots.html" class="drawer-sublink">AI Chatbots &amp; Agents</a>
+          <a href="service-whatsapp-automation.html" class="drawer-sublink">WhatsApp &amp; Automations</a>
           <a href="service-landing-pages.html" class="drawer-sublink">Landing Pages</a>
           <a href="service-redesign.html" class="drawer-sublink">Website Redesign</a>
-          <a href="service-maintenance.html" class="drawer-sublink">Maintenance & Bug Fixes</a>
-          <a href="service-seo-speed.html" class="drawer-sublink">SEO & Speed Optimization</a>
+          <a href="service-maintenance.html" class="drawer-sublink">Maintenance &amp; Bug Fixes</a>
+          <a href="service-seo-speed.html" class="drawer-sublink">SEO &amp; Speed Optimization</a>
         </div>
       </li>
       <li><a href="about.html" class="drawer-link">Studio & Founder</a></li>
@@ -95,13 +103,44 @@
       <div class="container">
         <!-- Filter Tabs -->
         <div class="filter-tabs-bar" role="tablist" aria-label="Project Category Filters">
-          <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">All Projects (7)</button>
-          <button class="filter-btn" data-filter="business" role="tab" aria-selected="false">Business Websites (3)</button>
+          <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">All Projects (8)</button>
+          <button class="filter-btn" data-filter="international" role="tab" aria-selected="false">International (1)</button>
+          <button class="filter-btn" data-filter="business" role="tab" aria-selected="false">Business Websites (4)</button>
           <button class="filter-btn" data-filter="ecommerce" role="tab" aria-selected="false">E-Commerce (2)</button>
           <button class="filter-btn" data-filter="consulting" role="tab" aria-selected="false">Consulting (2)</button>
         </div>
 
         <div id="portfolio-grid" style="display: flex; flex-direction: column; gap: 2.5rem;">
+          
+          <!-- 0. Atelier Rieber (Germany) -->
+          <article id="atelier-rieber" class="spotlight-project-card portfolio-card-item" data-category="business international">
+            <div class="spotlight-preview-wrap">
+              <img src="assets/portfolio/atelier-rieber.png" alt="Atelier Rieber - German Signage &amp; Visual Communication Website" class="spotlight-preview-img" width="800" height="500">
+            </div>
+            <div class="spotlight-info">
+              <div class="spotlight-tags">
+                <span class="tag-badge tag-badge-orange">Featured International</span>
+                <span class="tag-badge">Wiesbaden, Germany</span>
+                <span class="tag-badge">Werbetechnik &amp; Signage</span>
+              </div>
+              <h2 style="font-size: var(--fs-2xl); color: var(--color-warm-white);">Atelier Rieber</h2>
+              <p style="font-size: var(--fs-sm); color: var(--text-secondary); line-height: 1.65;">
+                High-impact corporate web platform built for <strong>Atelier Rieber</strong>, a premium vehicle advertising (<em>Fahrzeugbeschriftung</em>), car wrapping, large-format printing (<em>Großformatdruck</em>), and signage studio established in 1989 in Wiesbaden, Germany.
+              </p>
+              <div style="background: var(--color-elevated); padding: 1rem; border-radius: var(--radius-sm); border: 1px solid var(--color-border); font-size: var(--fs-xs);">
+                <span style="color: var(--color-orange); font-weight: 600;">Technical Challenge &amp; Solution:</span>
+                <p style="color: var(--text-secondary); margin-top: 0.25rem;">
+                  Showcasing comprehensive commercial services across vehicle fleets and architectural signage without degrading mobile page performance. Solved with responsive image optimization, high-contrast typography, and quick inquiry routing via WhatsApp and structured consultation forms.
+                </p>
+              </div>
+              <div style="font-family: var(--font-mono); font-size: var(--fs-xs); color: var(--color-muted);">
+                TECHNOLOGIES: Semantic HTML5 &middot; Modern CSS3 &middot; Responsive Viewports &middot; High-Res Asset Pipeline &middot; Local Wiesbaden SEO
+              </div>
+              <div style="display: flex; gap: 1rem; align-items: center; margin-top: 0.5rem;">
+                <a href="https://atelier-rieber.de/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">View Live Website ↗</a>
+              </div>
+            </div>
+          </article>
           
           <!-- 1. Izak10 -->
           <article id="izak10" class="spotlight-project-card portfolio-card-item" data-category="business">
@@ -331,10 +370,13 @@
           </ul>
         </div>
         <div>
-          <h4 class="footer-col-title">Services</h4>
+          <h4 class="footer-col-title">Services &amp; Capabilities</h4>
           <ul class="footer-links-list">
             <li><a href="service-wordpress.html" class="footer-link">WordPress Development</a></li>
             <li><a href="service-woocommerce.html" class="footer-link">WooCommerce Stores</a></li>
+            <li><a href="service-custom-web.html" class="footer-link">Custom Web Development</a></li>
+            <li><a href="service-ai-chatbots.html" class="footer-link">AI Chatbots &amp; Agents</a></li>
+            <li><a href="service-whatsapp-automation.html" class="footer-link">WhatsApp &amp; Automations</a></li>
             <li><a href="service-landing-pages.html" class="footer-link">Landing Pages</a></li>
             <li><a href="service-redesign.html" class="footer-link">Website Redesign</a></li>
             <li><a href="service-maintenance.html" class="footer-link">Maintenance &amp; Support</a></li>

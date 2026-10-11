@@ -3,19 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Packages & Country-Specific Pricing — HaseenTech</title>
-  <meta name="description" content="Transparent, country-aware website development packages for clients in the USA, UK, EU, UAE, Canada, Australia, Saudi Arabia, and Pakistan. Initial proposals with clear deliverables.">
-  <link rel="canonical" href="https://haseentech.com/pricing.html">
+  <title>Packages &amp; Country-Specific Pricing — HaseenTech</title>
+  <meta name="description" content="Transparent, country-aware starting prices for web development, custom web applications, AI chatbots, WhatsApp automation, and SEO by HaseenTech.">
   <link rel="icon" type="image/svg+xml" href="assets/brand/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="theme-obsidian">
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
   <!-- Header -->
   <header class="site-header">
-    <div class="container header-container">
-      <a href="index.html" class="brand-logo" aria-label="HaseenTech Home">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-monogram" aria-label="HaseenTech Home">
         <img src="assets/brand/logo.svg" alt="HaseenTech" width="160" height="32">
       </a>
       <nav class="nav-desktop" aria-label="Primary Navigation">
@@ -28,12 +30,16 @@
               <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
             </a>
             <div class="dropdown-menu" role="menu">
+              <a href="services.html" class="dropdown-item" role="menuitem" style="font-weight: 600; color: var(--color-orange); border-bottom: 1px solid var(--color-border); padding-bottom: 0.5rem; margin-bottom: 0.25rem;">All Services Overview ↗</a>
               <a href="service-wordpress.html" class="dropdown-item" role="menuitem">WordPress Development</a>
               <a href="service-woocommerce.html" class="dropdown-item" role="menuitem">WooCommerce Stores</a>
+              <a href="service-custom-web.html" class="dropdown-item" role="menuitem">Custom Web Development</a>
+              <a href="service-ai-chatbots.html" class="dropdown-item" role="menuitem">AI Chatbots &amp; Agents</a>
+              <a href="service-whatsapp-automation.html" class="dropdown-item" role="menuitem">WhatsApp &amp; Automations</a>
               <a href="service-landing-pages.html" class="dropdown-item" role="menuitem">Landing Pages</a>
               <a href="service-redesign.html" class="dropdown-item" role="menuitem">Website Redesign</a>
-              <a href="service-maintenance.html" class="dropdown-item" role="menuitem">Maintenance & Support</a>
-              <a href="service-seo-speed.html" class="dropdown-item" role="menuitem">SEO & Speed Optimization</a>
+              <a href="service-maintenance.html" class="dropdown-item" role="menuitem">Maintenance &amp; Support</a>
+              <a href="service-seo-speed.html" class="dropdown-item" role="menuitem">SEO &amp; Speed Optimization</a>
             </div>
           </li>
           <li><a href="about.html" class="nav-link">Studio</a></li>
@@ -64,17 +70,21 @@
       <li>
         <a href="services.html" class="drawer-link">Services Overview</a>
         <div class="drawer-submenu">
+          <a href="services.html" class="drawer-sublink" style="color: var(--color-orange); font-weight: 600;">All Capabilities Overview ↗</a>
           <a href="service-wordpress.html" class="drawer-sublink">WordPress Development</a>
           <a href="service-woocommerce.html" class="drawer-sublink">WooCommerce Stores</a>
+          <a href="service-custom-web.html" class="drawer-sublink">Custom Web Development</a>
+          <a href="service-ai-chatbots.html" class="drawer-sublink">AI Chatbots &amp; Agents</a>
+          <a href="service-whatsapp-automation.html" class="drawer-sublink">WhatsApp &amp; Automations</a>
           <a href="service-landing-pages.html" class="drawer-sublink">Landing Pages</a>
           <a href="service-redesign.html" class="drawer-sublink">Website Redesign</a>
-          <a href="service-maintenance.html" class="drawer-sublink">Maintenance & Bug Fixes</a>
-          <a href="service-seo-speed.html" class="drawer-sublink">SEO & Speed Optimization</a>
+          <a href="service-maintenance.html" class="drawer-sublink">Maintenance &amp; Bug Fixes</a>
+          <a href="service-seo-speed.html" class="drawer-sublink">SEO &amp; Speed Optimization</a>
         </div>
       </li>
-      <li><a href="about.html" class="drawer-link">Studio & Founder</a></li>
-      <li><a href="pricing.html" class="drawer-link active">Packages & Pricing</a></li>
-      <li><a href="contact.html" class="drawer-link">Contact & Inquiries</a></li>
+      <li><a href="about.html" class="drawer-link">Studio &amp; Founder</a></li>
+      <li><a href="pricing.html" class="drawer-link active">Pricing &amp; Countries</a></li>
+      <li><a href="contact.html" class="drawer-link">Start a Project</a></li>
     </ul>
   </div>
 
@@ -82,230 +92,519 @@
     <!-- Page Hero Banner -->
     <section class="page-hero-obsidian">
       <div class="container page-hero-inner">
-        <span class="micro-label micro-label-orange">// TRANSPARENT PACKAGES</span>
-        <h1 class="page-hero-title">Clear, Country-Aware Pricing.</h1>
+        <span class="micro-label micro-label-orange">// TRANSPARENT STARTING RATES</span>
+        <h1 class="page-hero-title">Transparent, Country-Aware Pricing.</h1>
         <p class="page-hero-sub">
-          We believe pricing should be transparent and tailored to your business jurisdiction. Select your target market below to inspect defined package deliverables in your local currency.
+          We believe in honest, upfront numbers rather than hidden agency markups. Select your market below to view starting baselines in your currency. Every proposal is tailored during technical scoping based on your actual requirements.
         </p>
       </div>
     </section>
 
-    <!-- Pricing Calculator & Tiers -->
+    <!-- Pricing Calculator & Categorized Grids -->
     <section class="section-pad" style="background: var(--color-obsidian);">
       <div class="container">
-        <!-- Interactive Selector Bar -->
-        <div class="pricing-controls-bar">
-          <div style="display: flex; align-items: center; gap: 0.75rem;">
-            <label for="country-select" style="font-family: var(--font-mono); font-size: var(--fs-xs); color: var(--color-warm-white); text-transform: uppercase;">
-              Select Region:
+        
+        <!-- Interactive Country Switcher Bar -->
+        <div class="pricing-controls-bar" style="margin-bottom: 3.5rem;">
+          <div style="display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap;">
+            <label for="country-select" style="font-family: var(--font-mono); font-size: var(--fs-xs); color: var(--color-warm-white); text-transform: uppercase; font-weight: 600;">
+              Select Market / Currency:
             </label>
             <select id="country-select" class="pricing-select-control" aria-label="Select Country for Regional Pricing">
               <option value="US">United States (USD $)</option>
               <option value="GB">United Kingdom (GBP £)</option>
-              <option value="EU">European Union (EUR €)</option>
+              <option value="EU">Germany &amp; European Union (EUR €)</option>
               <option value="AE">United Arab Emirates (AED)</option>
               <option value="CA">Canada (CAD C$)</option>
               <option value="AU">Australia (AUD A$)</option>
               <option value="SA">Saudi Arabia (SAR)</option>
-              <option value="PK">Pakistan (PKR ₨)</option>
+              <option value="PK">Pakistan (PKR)</option>
             </select>
           </div>
-          <div id="pricing-note" style="font-family: var(--font-mono); font-size: var(--fs-xs); color: var(--color-muted);">
-            Proposals shown in USD ($) · Editable initial proposals
+          <div id="pricing-market-subtext" style="font-family: var(--font-mono); font-size: var(--fs-xs); color: var(--color-muted);">
+            Transparent starting rates in USD for clients in the United States and global international markets.
           </div>
         </div>
 
-        <!-- 3 Tiers Grid -->
-        <div class="pricing-tiers-grid">
-          <!-- Tier 1: Landing Page -->
-          <article class="pricing-card-obsidian">
-            <h2 class="tier-name">Landing Page</h2>
-            <p class="tier-desc">Focused single-page site for high-converting marketing campaigns and product launches.</p>
-            <div class="tier-price-box">
-              <span class="pricing-currency-sym tier-currency-sym">$</span>
-              <span class="tier-amount" data-tier="landing">299</span>
-              <span class="tier-period">/ project</span>
-            </div>
-            <ul class="tier-features-list">
-              <li class="tier-feature-item">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Single-purpose custom conversion layout</span>
-              </li>
-              <li class="tier-feature-item">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Mobile-first responsive optimization</span>
-              </li>
-              <li class="tier-feature-item">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Lead capture contact form integration</span>
-              </li>
-              <li class="tier-feature-item">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Sub-second page loading speed pass</span>
-              </li>
-              <li class="tier-feature-item">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Delivery in 3 to 7 business days</span>
-              </li>
-            </ul>
-            <a href="contact.html?package=landing" class="btn btn-secondary" style="width: 100%;">Select Landing Page ↗</a>
-          </article>
+        <!-- ============================================================
+             CATEGORY 1: WEB DESIGN & DEVELOPMENT
+             ============================================================ -->
+        <div style="margin-bottom: 4rem;">
+          <div style="border-left: 3px solid var(--color-orange); padding-left: 1.25rem; margin-bottom: 1.75rem;">
+            <span class="micro-label micro-label-orange">// CATEGORY 01</span>
+            <h2 style="font-size: var(--fs-2xl); color: var(--color-warm-white); margin-top: 0.25rem;">Website Design &amp; Development</h2>
+            <p style="font-size: var(--fs-sm); color: var(--text-secondary); margin-top: 0.25rem;">
+              One-time milestone projects with complete source code ownership and content handover.
+            </p>
+          </div>
 
-          <!-- Tier 2: Business Website (Featured) -->
-          <article class="pricing-card-obsidian featured">
-            <span class="pricing-badge-popular">MOST POPULAR</span>
-            <h2 class="tier-name">Business Website</h2>
-            <p class="tier-desc">Complete multi-page corporate or service website built for long-term credibility.</p>
-            <div class="tier-price-box">
-              <span class="pricing-currency-sym tier-currency-sym">$</span>
-              <span class="tier-amount" data-tier="business">599</span>
-              <span class="tier-period">/ project</span>
-            </div>
-            <ul class="tier-features-list">
-              <li class="tier-feature-item">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Up to 5 to 7 bespoke page templates</span>
-              </li>
-              <li class="tier-feature-item">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>WordPress + Elementor CMS configuration</span>
-              </li>
-              <li class="tier-feature-item">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Custom design system aligned with brand</span>
-              </li>
-              <li class="tier-feature-item">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Foundational on-page SEO &amp; metadata</span>
-              </li>
-              <li class="tier-feature-item">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Comprehensive team admin video handover</span>
-              </li>
-            </ul>
-            <a href="contact.html?package=business" class="btn btn-primary" style="width: 100%;">Select Business Package ↗</a>
-          </article>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(310px, 1fr)); gap: 1.5rem;">
+            
+            <!-- Card 1: Landing Page -->
+            <article class="pricing-card-obsidian">
+              <span class="micro-label">// CONVERSION FOCUSED</span>
+              <h3 class="tier-name" style="margin-top: 0.5rem;">Landing Page</h3>
+              <p class="tier-desc">Focused single-page site engineered for PPC ads, lead capture, and immediate clarity.</p>
+              <div class="tier-price-box">
+                <span style="font-size: var(--fs-xs); color: var(--text-secondary); font-family: var(--font-mono);">Starting at </span>
+                <span class="pricing-currency-sym tier-currency-sym">$</span>
+                <span class="tier-amount" data-rate="landing" data-tier="landing">199</span>
+                <span class="tier-period">/ project</span>
+              </div>
+              <ul class="tier-features-list">
+                <li class="tier-feature-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Single-purpose conversion layout</span>
+                </li>
+                <li class="tier-feature-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Mobile-first responsive optimization</span>
+                </li>
+                <li class="tier-feature-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Lead capture form with instant routing</span>
+                </li>
+                <li class="tier-feature-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Core Web Vitals speed optimization pass</span>
+                </li>
+              </ul>
+              <a href="contact.html?service=landing" class="btn btn-secondary" style="width: 100%;">Select Landing Page ↗</a>
+            </article>
 
-          <!-- Tier 3: WooCommerce Store -->
-          <article class="pricing-card-obsidian">
-            <h2 class="tier-name">WooCommerce Store</h2>
-            <p class="tier-desc">Fully featured online storefront with products, payments, taxes, and order routing.</p>
-            <div class="tier-price-box">
-              <span class="pricing-currency-sym tier-currency-sym">$</span>
-              <span class="tier-amount" data-tier="woocommerce">999</span>
-              <span class="tier-period">/ project</span>
-            </div>
-            <ul class="tier-features-list">
-              <li class="tier-feature-item">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Complete WooCommerce store architecture</span>
-              </li>
-              <li class="tier-feature-item">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Product catalog, variable items, categories</span>
-              </li>
-              <li class="tier-feature-item">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Stripe / PayPal / Regional payment gateways</span>
-              </li>
-              <li class="tier-feature-item">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Shipping rules and transactional email setup</span>
-              </li>
-              <li class="tier-feature-item">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Detailed store management training session</span>
-              </li>
-            </ul>
-            <a href="contact.html?package=woocommerce" class="btn btn-secondary" style="width: 100%;">Select WooCommerce ↗</a>
-          </article>
+            <!-- Card 2: WordPress Business (Popular) -->
+            <article class="pricing-card-obsidian featured">
+              <span class="pricing-badge-popular">MOST POPULAR</span>
+              <span class="micro-label micro-label-orange">// MULTI-PAGE CORPORATE</span>
+              <h3 class="tier-name" style="margin-top: 0.5rem;">WordPress Business</h3>
+              <p class="tier-desc">Complete multi-page corporate or service site built with clean templates and CMS editing freedom.</p>
+              <div class="tier-price-box">
+                <span style="font-size: var(--fs-xs); color: var(--text-secondary); font-family: var(--font-mono);">Starting at </span>
+                <span class="pricing-currency-sym tier-currency-sym">$</span>
+                <span class="tier-amount" data-rate="wordpress" data-tier="business">399</span>
+                <span class="tier-period">/ project</span>
+              </div>
+              <ul class="tier-features-list">
+                <li class="tier-feature-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Up to 5 to 7 bespoke page templates</span>
+                </li>
+                <li class="tier-feature-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>WordPress + intuitive drag-and-drop editor</span>
+                </li>
+                <li class="tier-feature-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Custom brand design tokens &amp; assets</span>
+                </li>
+                <li class="tier-feature-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Foundational on-page SEO &amp; metadata</span>
+                </li>
+                <li class="tier-feature-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Security hardening &amp; backup configuration</span>
+                </li>
+              </ul>
+              <a href="contact.html?service=wordpress" class="btn btn-primary" style="width: 100%;">Select Business Site ↗</a>
+            </article>
+
+            <!-- Card 3: Website Redesign -->
+            <article class="pricing-card-obsidian">
+              <span class="micro-label">// REVAMP &amp; MODERNIZATION</span>
+              <h3 class="tier-name" style="margin-top: 0.5rem;">Website Redesign</h3>
+              <p class="tier-desc">Complete aesthetic and architectural overhaul with strict SEO URL preservation.</p>
+              <div class="tier-price-box">
+                <span style="font-size: var(--fs-xs); color: var(--text-secondary); font-family: var(--font-mono);">Starting at </span>
+                <span class="pricing-currency-sym tier-currency-sym">$</span>
+                <span class="tier-amount" data-rate="redesign">299</span>
+                <span class="tier-period">/ project</span>
+              </div>
+              <ul class="tier-features-list">
+                <li class="tier-feature-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Aesthetic modernization &amp; layout upgrade</span>
+                </li>
+                <li class="tier-feature-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Strict 301 URL redirects &amp; SEO preservation</span>
+                </li>
+                <li class="tier-feature-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Mobile layout fixes &amp; touch optimization</span>
+                </li>
+                <li class="tier-feature-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Asset compression &amp; script reduction</span>
+                </li>
+              </ul>
+              <a href="contact.html?service=redesign" class="btn btn-secondary" style="width: 100%;">Select Redesign ↗</a>
+            </article>
+
+            <!-- Card 4: WooCommerce Store -->
+            <article class="pricing-card-obsidian">
+              <span class="micro-label">// E-COMMERCE STORE</span>
+              <h3 class="tier-name" style="margin-top: 0.5rem;">WooCommerce Store</h3>
+              <p class="tier-desc">End-to-end online storefront with payment gateways, shipping rules, and catalog filters.</p>
+              <div class="tier-price-box">
+                <span style="font-size: var(--fs-xs); color: var(--text-secondary); font-family: var(--font-mono);">Starting at </span>
+                <span class="pricing-currency-sym tier-currency-sym">$</span>
+                <span class="tier-amount" data-rate="woocommerce" data-tier="woocommerce">699</span>
+                <span class="tier-period">/ project</span>
+              </div>
+              <ul class="tier-features-list">
+                <li class="tier-feature-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Product catalog structure &amp; variation rules</span>
+                </li>
+                <li class="tier-feature-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Payment gateways (Stripe, PayPal, local bank)</span>
+                </li>
+                <li class="tier-feature-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Tax zones &amp; localized shipping setup</span>
+                </li>
+                <li class="tier-feature-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Automated client receipts &amp; admin alerts</span>
+                </li>
+              </ul>
+              <a href="contact.html?service=woocommerce" class="btn btn-secondary" style="width: 100%;">Select Storefront ↗</a>
+            </article>
+
+            <!-- Card 5: Custom Web Development -->
+            <article class="pricing-card-obsidian" style="border-color: rgba(255, 107, 53, 0.4);">
+              <span class="micro-label micro-label-orange">// BESPOKE ENGINEERING</span>
+              <h3 class="tier-name" style="margin-top: 0.5rem;">Custom Web Application</h3>
+              <p class="tier-desc">Custom portals, calculation tools, member dashboards, and complex API architectures.</p>
+              <div class="tier-price-box">
+                <span style="font-size: var(--fs-xs); color: var(--text-secondary); font-family: var(--font-mono);">Starting at </span>
+                <span class="pricing-currency-sym tier-currency-sym">$</span>
+                <span class="tier-amount" data-rate="customWeb">1,200</span>
+                <span class="tier-period">/ scope</span>
+              </div>
+              <ul class="tier-features-list">
+                <li class="tier-feature-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Bespoke frontend &amp; backend architecture</span>
+                </li>
+                <li class="tier-feature-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Role-based authentication &amp; data privacy</span>
+                </li>
+                <li class="tier-feature-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>REST / Webhook integrations with internal tools</span>
+                </li>
+                <li class="tier-feature-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Full source code ownership &amp; clean documentation</span>
+                </li>
+              </ul>
+              <a href="contact.html?service=custom-web" class="btn btn-primary" style="width: 100%;">Get Custom Scope ↗</a>
+            </article>
+
+          </div>
         </div>
 
-        <!-- Comprehensive Deliverables Comparison Table -->
-        <div class="comparison-table-wrap">
-          <table class="comparison-table">
-            <thead>
-              <tr>
-                <th style="width: 35%;">Deliverable / Feature</th>
-                <th style="width: 20%;">Landing Page</th>
-                <th style="width: 22%;">Business Website</th>
-                <th style="width: 23%;">WooCommerce Store</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Target Page Volume</td>
-                <td>Single Landing View</td>
-                <td>Up to 5 to 7 Core Pages</td>
-                <td>Shop, Products + Core Pages</td>
-              </tr>
-              <tr>
-                <td>Content Management System</td>
-                <td>WordPress / Static HTML</td>
-                <td>WordPress + Elementor</td>
-                <td>WordPress + WooCommerce</td>
-              </tr>
-              <tr>
-                <td>Mobile &amp; Cross-Device QA</td>
-                <td>✓ Included</td>
-                <td>✓ Included</td>
-                <td>✓ Included</td>
-              </tr>
-              <tr>
-                <td>Payment Gateway Integration</td>
-                <td>—</td>
-                <td>—</td>
-                <td>✓ Stripe, PayPal &amp; Regional</td>
-              </tr>
-              <tr>
-                <td>Catalog Management Setup</td>
-                <td>—</td>
-                <td>—</td>
-                <td>✓ Up to 15 Sample Products</td>
-              </tr>
-              <tr>
-                <td>On-Page Technical SEO</td>
-                <td>Basic Metadata</td>
-                <td>✓ Full Site Structure</td>
-                <td>✓ Full Schema &amp; Products</td>
-              </tr>
-              <tr>
-                <td>Revisions Allowance</td>
-                <td>2 Iterative Rounds</td>
-                <td>3 Iterative Rounds</td>
-                <td>3 Iterative Rounds</td>
-              </tr>
-              <tr>
-                <td>Average Delivery Window</td>
-                <td>3 to 7 Business Days</td>
-                <td>2 to 3 Weeks</td>
-                <td>3 to 4 Weeks</td>
-              </tr>
-            </tbody>
-          </table>
+        <!-- ============================================================
+             CATEGORY 2: AI, CHATBOTS & AUTOMATION
+             ============================================================ -->
+        <div style="margin-bottom: 4rem;">
+          <div style="border-left: 3px solid var(--color-orange); padding-left: 1.25rem; margin-bottom: 1.75rem;">
+            <span class="micro-label micro-label-orange">// CATEGORY 02</span>
+            <h2 style="font-size: var(--fs-2xl); color: var(--color-warm-white); margin-top: 0.25rem;">AI, Chatbots &amp; Workflow Automation</h2>
+            <p style="font-size: var(--fs-sm); color: var(--text-secondary); margin-top: 0.25rem;">
+              Operational automations engineered to reduce repetitive support tasks and capture qualified client leads 24/7.
+            </p>
+          </div>
+
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(310px, 1fr)); gap: 1.5rem;">
+            
+            <!-- Bot 1: WhatsApp Rule-Based -->
+            <article class="pricing-card-obsidian">
+              <span class="micro-label">// MESSAGING MENUS</span>
+              <h3 class="tier-name" style="margin-top: 0.5rem;">WhatsApp Rule Bot</h3>
+              <p class="tier-desc">Fast, deterministic button menus and keyword reply funnels on official WhatsApp Cloud API.</p>
+              <div class="tier-price-box">
+                <span style="font-size: var(--fs-xs); color: var(--text-secondary); font-family: var(--font-mono);">Starting at </span>
+                <span class="pricing-currency-sym tier-currency-sym">$</span>
+                <span class="tier-amount" data-rate="whatsappRule">349</span>
+                <span class="tier-period">/ setup</span>
+              </div>
+              <ul class="tier-features-list">
+                <li class="tier-feature-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Menu buttons &amp; catalog decision trees</span>
+                </li>
+                <li class="tier-feature-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Lead capture directly to Google Sheets</span>
+                </li>
+                <li class="tier-feature-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Live human agent handover trigger</span>
+                </li>
+                <li class="tier-feature-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Meta Business API verification setup</span>
+                </li>
+              </ul>
+              <a href="contact.html?service=whatsapp-chatbot" class="btn btn-secondary" style="width: 100%;">Select WhatsApp Bot ↗</a>
+            </article>
+
+            <!-- Bot 2: AI Knowledge Chatbot -->
+            <article class="pricing-card-obsidian featured">
+              <span class="pricing-badge-popular">RAG POWERED</span>
+              <span class="micro-label micro-label-orange">// KNOWLEDGE ASSISTANT</span>
+              <h3 class="tier-name" style="margin-top: 0.5rem;">AI Knowledge Bot</h3>
+              <p class="tier-desc">Conversational assistant trained on your company FAQs, product docs, and policies with zero hallucinations.</p>
+              <div class="tier-price-box">
+                <span style="font-size: var(--fs-xs); color: var(--text-secondary); font-family: var(--font-mono);">Starting at </span>
+                <span class="pricing-currency-sym tier-currency-sym">$</span>
+                <span class="tier-amount" data-rate="aiChatbot">499</span>
+                <span class="tier-period">/ setup</span>
+              </div>
+              <ul class="tier-features-list">
+                <li class="tier-feature-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>RAG pipeline indexing your documents &amp; PDFs</span>
+                </li>
+                <li class="tier-feature-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Branded website chat widget integration</span>
+                </li>
+                <li class="tier-feature-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Strict guardrails to prevent invented answers</span>
+                </li>
+                <li class="tier-feature-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Human handoff &amp; conversation transcripts</span>
+                </li>
+              </ul>
+              <a href="contact.html?service=ai-chatbots" class="btn btn-primary" style="width: 100%;">Select AI Bot ↗</a>
+            </article>
+
+            <!-- Bot 3: Custom AI Agent -->
+            <article class="pricing-card-obsidian">
+              <span class="micro-label">// AUTONOMOUS TOOLS</span>
+              <h3 class="tier-name" style="margin-top: 0.5rem;">Custom AI Agent</h3>
+              <p class="tier-desc">Autonomous AI agent equipped with function calling to look up database records, update CRMs, and book meetings.</p>
+              <div class="tier-price-box">
+                <span style="font-size: var(--fs-xs); color: var(--text-secondary); font-family: var(--font-mono);">Starting at </span>
+                <span class="pricing-currency-sym tier-currency-sym">$</span>
+                <span class="tier-amount" data-rate="aiAgent">999</span>
+                <span class="tier-period">/ scope</span>
+              </div>
+              <ul class="tier-features-list">
+                <li class="tier-feature-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Tool execution &amp; external API calling</span>
+                </li>
+                <li class="tier-feature-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>CRM / database read &amp; write operations</span>
+                </li>
+                <li class="tier-feature-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Multi-step autonomous workflow execution</span>
+                </li>
+                <li class="tier-feature-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Dedicated testing &amp; prompt alignment pass</span>
+                </li>
+              </ul>
+              <a href="contact.html?service=ai-chatbots" class="btn btn-secondary" style="width: 100%;">Discuss AI Agent ↗</a>
+            </article>
+
+            <!-- Bot 4: Business Workflow Automation -->
+            <article class="pricing-card-obsidian">
+              <span class="micro-label">// INTEGRATIONS &amp; WEBHOOKS</span>
+              <h3 class="tier-name" style="margin-top: 0.5rem;">Workflow Automation</h3>
+              <p class="tier-desc">Custom webhook data pipelines syncing leads, orders, and notifications across your software stack.</p>
+              <div class="tier-price-box">
+                <span style="font-size: var(--fs-xs); color: var(--text-secondary); font-family: var(--font-mono);">Starting at </span>
+                <span class="pricing-currency-sym tier-currency-sym">$</span>
+                <span class="tier-amount" data-rate="automation">399</span>
+                <span class="tier-period">/ setup</span>
+              </div>
+              <ul class="tier-features-list">
+                <li class="tier-feature-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Multi-platform webhook integrations</span>
+                </li>
+                <li class="tier-feature-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Zapier / Make / custom serverless scripts</span>
+                </li>
+                <li class="tier-feature-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Automated alerts via WhatsApp, Slack, or Email</span>
+                </li>
+                <li class="tier-feature-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Error handling &amp; retry mechanisms</span>
+                </li>
+              </ul>
+              <a href="contact.html?service=automation" class="btn btn-secondary" style="width: 100%;">Select Automation ↗</a>
+            </article>
+
+          </div>
         </div>
 
-        <!-- Client Responsibilities Box -->
-        <div style="background: var(--color-charcoal); border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: 2rem; margin-top: 3rem;">
-          <span class="micro-label micro-label-orange">// TRANSPARENT ENGAGEMENT TERMS</span>
-          <h3 style="font-size: var(--fs-lg); color: var(--color-warm-white); margin-top: 0.5rem;">What is Expected from the Client</h3>
-          <p style="font-size: var(--fs-sm); color: var(--text-secondary); line-height: 1.6; margin-top: 0.5rem;">
-            To maintain high project velocity, clients are responsible for providing: (1) Domain name registration and DNS credentials; (2) Web hosting plan (we provide hosting recommendations); (3) High-resolution brand assets (logo files and imagery); (4) Approved page copy and product descriptions. Payment terms are 50% upfront to commence discovery and 50% upon final launch approval.
+        <!-- ============================================================
+             CATEGORY 3: RETAINERS & PERFORMANCE OPTIMIZATION
+             ============================================================ -->
+        <div style="margin-bottom: 4rem;">
+          <div style="border-left: 3px solid var(--color-orange); padding-left: 1.25rem; margin-bottom: 1.75rem;">
+            <span class="micro-label micro-label-orange">// CATEGORY 03</span>
+            <h2 style="font-size: var(--fs-2xl); color: var(--color-warm-white); margin-top: 0.25rem;">Ongoing Retainers &amp; Performance</h2>
+            <p style="font-size: var(--fs-sm); color: var(--text-secondary); margin-top: 0.25rem;">
+              Recurring technical maintenance and specialized performance tuning to ensure 99.9% uptime and lightning fast speeds.
+            </p>
+          </div>
+
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(310px, 1fr)); gap: 1.5rem;">
+            
+            <!-- Retainer 1: Website Maintenance -->
+            <article class="pricing-card-obsidian">
+              <span class="micro-label micro-label-orange">// MONTHLY RETAINER</span>
+              <h3 class="tier-name" style="margin-top: 0.5rem;">Maintenance &amp; Support</h3>
+              <p class="tier-desc">Complete peace of mind. Proactive updates, security hardening, backups, and emergency fixes.</p>
+              <div class="tier-price-box">
+                <span style="font-size: var(--fs-xs); color: var(--text-secondary); font-family: var(--font-mono);">Starting at </span>
+                <span class="pricing-currency-sym tier-currency-sym">$</span>
+                <span class="tier-amount" data-rate="maintenanceMonthly">79</span>
+                <span class="tier-period">/ month</span>
+              </div>
+              <ul class="tier-features-list">
+                <li class="tier-feature-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Weekly core, theme &amp; plugin safe updates</span>
+                </li>
+                <li class="tier-feature-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Automated off-site cloud backups</span>
+                </li>
+                <li class="tier-feature-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>24/7 uptime monitoring &amp; instant alerts</span>
+                </li>
+                <li class="tier-feature-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Dedicated monthly developer support hours</span>
+                </li>
+              </ul>
+              <a href="contact.html?service=maintenance" class="btn btn-secondary" style="width: 100%;">Subscribe to Support ↗</a>
+            </article>
+
+            <!-- Retainer 2: SEO Services -->
+            <article class="pricing-card-obsidian">
+              <span class="micro-label micro-label-orange">// MONTHLY RETAINER</span>
+              <h3 class="tier-name" style="margin-top: 0.5rem;">Technical &amp; On-Page SEO</h3>
+              <p class="tier-desc">Continuous technical crawling hygiene, metadata optimization, and Schema structured data updates.</p>
+              <div class="tier-price-box">
+                <span style="font-size: var(--fs-xs); color: var(--text-secondary); font-family: var(--font-mono);">Starting at </span>
+                <span class="pricing-currency-sym tier-currency-sym">$</span>
+                <span class="tier-amount" data-rate="seoMonthly">199</span>
+                <span class="tier-period">/ month</span>
+              </div>
+              <ul class="tier-features-list">
+                <li class="tier-feature-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Monthly Google Search Console error audits</span>
+                </li>
+                <li class="tier-feature-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Schema.org structured data maintenance</span>
+                </li>
+                <li class="tier-feature-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Sitemaps &amp; internal linking optimization</span>
+                </li>
+                <li class="tier-feature-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Monthly transparent performance reporting</span>
+                </li>
+              </ul>
+              <a href="contact.html?service=seo-speed" class="btn btn-secondary" style="width: 100%;">Subscribe to SEO ↗</a>
+            </article>
+
+            <!-- Service 3: Speed Optimization (One-Time) -->
+            <article class="pricing-card-obsidian">
+              <span class="micro-label">// ONE-TIME PASS</span>
+              <h3 class="tier-name" style="margin-top: 0.5rem;">Speed Optimization</h3>
+              <p class="tier-desc">Deep Core Web Vitals optimization pass targeting LCP, INP, and CLS scores.</p>
+              <div class="tier-price-box">
+                <span style="font-size: var(--fs-xs); color: var(--text-secondary); font-family: var(--font-mono);">Starting at </span>
+                <span class="pricing-currency-sym tier-currency-sym">$</span>
+                <span class="tier-amount" data-rate="speed">129</span>
+                <span class="tier-period">/ one-time</span>
+              </div>
+              <ul class="tier-features-list">
+                <li class="tier-feature-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Next-gen WebP/AVIF image compression</span>
+                </li>
+                <li class="tier-feature-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Render-blocking CSS &amp; JS reduction</span>
+                </li>
+                <li class="tier-feature-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Advanced browser caching &amp; Gzip rules</span>
+                </li>
+                <li class="tier-feature-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Before-and-after audit benchmark report</span>
+                </li>
+              </ul>
+              <a href="contact.html?service=seo-speed" class="btn btn-secondary" style="width: 100%;">Optimize Speed ↗</a>
+            </article>
+
+          </div>
+        </div>
+
+        <!-- Custom Scoping & Enterprise CTA Banner -->
+        <div style="background: var(--color-elevated); border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: 3rem; text-align: center; margin-top: 3rem;">
+          <span class="micro-label micro-label-orange">// BESPOKE REQUIREMENTS</span>
+          <h2 style="font-size: var(--fs-2xl); color: var(--color-warm-white); margin-top: 0.5rem;">Have a Complex or Multi-Phase Project?</h2>
+          <p style="font-size: var(--fs-base); color: var(--text-secondary); max-width: 680px; margin: 0.75rem auto 1.5rem;">
+            For custom software applications, multi-vendor marketplaces, enterprise AI agent networks, or high-volume integrations, we conduct an initial technical discovery session and quote the project with defined milestones.
           </p>
+          <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+            <a href="contact.html?service=custom" class="btn btn-primary btn-lg">Request a Custom Scoping Quote ↗</a>
+            <a href="about.html" class="btn btn-ghost btn-lg">Learn About Studio Process</a>
+          </div>
         </div>
 
-      </div>
-    </section>
+        <!-- Scope & Pricing Policy Clarifications -->
+        <div style="margin-top: 3rem; background: var(--color-charcoal); border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: 2rem;">
+          <span class="micro-label micro-label-orange">// TRANSPARENT SCOPING POLICY</span>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 1rem;">
+            <div>
+              <h4 style="font-size: var(--fs-base); color: var(--color-warm-white); font-weight: 600;">What "Starting at" Means</h4>
+              <p style="font-size: var(--fs-xs); color: var(--text-secondary); line-height: 1.6; margin-top: 0.25rem;">
+                Starting baselines cover standard page counts, clean client-provided copy, and direct integrations. Final quotes reflect custom design complexity, third-party API licensing, and delivery urgency.
+              </p>
+            </div>
+            <div>
+              <h4 style="font-size: var(--fs-base); color: var(--color-warm-white); font-weight: 600;">Third-Party Operating Costs</h4>
+              <p style="font-size: var(--fs-xs); color: var(--text-secondary); line-height: 1.6; margin-top: 0.25rem;">
+                Our fees represent engineering and design labor. Domain registration, hosting servers, Meta WhatsApp API conversation fees, and AI token usages are paid directly to providers under your ownership.
+              </p>
+            </div>
+            <div>
+              <h4 style="font-size: var(--fs-base); color: var(--color-warm-white); font-weight: 600;">Milestone Payment Terms</h4>
+              <p style="font-size: var(--fs-xs); color: var(--text-secondary); line-height: 1.6; margin-top: 0.25rem;">
+                All project engagements operate under a transparent 50% initiation deposit and 50% milestone completion structure. Full code ownership and admin rights transfer upon final balance clearance.
+              </p>
+            </div>
+          </div>
+        </div>
 
-    <!-- Closing Call to Action -->
-    <section class="cta-banner-obsidian">
-      <div class="container cta-banner-inner">
-        <span class="micro-label micro-label-orange">// CUSTOM ESTIMATES</span>
-        <h2 style="font-size: var(--fs-3xl); font-weight: 700; color: var(--color-warm-white);">Need a Tailored Quotation?</h2>
-        <p style="font-size: var(--fs-base); color: var(--text-secondary); max-width: 580px;">
-          For complex web migrations, custom integrations, or specific retainers, submit your project details.
-        </p>
-        <a href="contact.html" class="btn btn-primary btn-lg">Request Custom Quotation ↗</a>
       </div>
     </section>
   </main>
@@ -319,53 +618,42 @@
           <p class="footer-brand-desc">
             Independent creative technology studio founded by Hasan Ismail. Delivering modern, high-performance web engineering for ambitious international businesses.
           </p>
-          <div style="font-family: var(--font-mono); font-size: var(--fs-xs); color: var(--color-muted);">
-            Karachi, Pakistan · Remote Worldwide
+          <div class="footer-status-pill">
+            <span class="status-indicator"></span>
+            <span>Studio Status: Accepting Select Client Inquiries</span>
           </div>
         </div>
-        <div>
-          <h4 class="footer-col-title">Navigation</h4>
-          <ul class="footer-links-list">
-            <li><a href="index.html" class="footer-link">Home</a></li>
-            <li><a href="portfolio.html" class="footer-link">Selected Work</a></li>
-            <li><a href="services.html" class="footer-link">All Services</a></li>
-            <li><a href="about.html" class="footer-link">Studio &amp; Founder</a></li>
-            <li><a href="pricing.html" class="footer-link">Packages &amp; Pricing</a></li>
-            <li><a href="contact.html" class="footer-link">Contact</a></li>
+        <div class="footer-col-links">
+          <span class="footer-col-heading">Capabilities</span>
+          <ul class="footer-nav">
+            <li><a href="service-wordpress.html">WordPress Development</a></li>
+            <li><a href="service-woocommerce.html">WooCommerce Stores</a></li>
+            <li><a href="service-custom-web.html">Custom Web Development</a></li>
+            <li><a href="service-ai-chatbots.html">AI Chatbots &amp; Agents</a></li>
+            <li><a href="service-whatsapp-automation.html">WhatsApp &amp; Automations</a></li>
+            <li><a href="service-landing-pages.html">Landing Pages</a></li>
           </ul>
         </div>
-        <div>
-          <h4 class="footer-col-title">Services</h4>
-          <ul class="footer-links-list">
-            <li><a href="service-wordpress.html" class="footer-link">WordPress Development</a></li>
-            <li><a href="service-woocommerce.html" class="footer-link">WooCommerce Stores</a></li>
-            <li><a href="service-landing-pages.html" class="footer-link">Landing Pages</a></li>
-            <li><a href="service-redesign.html" class="footer-link">Website Redesign</a></li>
-            <li><a href="service-maintenance.html" class="footer-link">Maintenance &amp; Support</a></li>
-            <li><a href="service-seo-speed.html" class="footer-link">SEO &amp; Speed Optimization</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4 class="footer-col-title">Direct Inquiries</h4>
-          <ul class="footer-links-list">
-            <li><a href="mailto:hello@haseentech.com" class="footer-link">hello@haseentech.com</a></li>
-            <li><span style="font-size: var(--fs-sm); color: var(--text-secondary);">Direct WhatsApp upon project brief</span></li>
+        <div class="footer-col-links">
+          <span class="footer-col-heading">Studio &amp; Legal</span>
+          <ul class="footer-nav">
+            <li><a href="about.html">Studio &amp; Founder</a></li>
+            <li><a href="portfolio.html">Verified Portfolio</a></li>
+            <li><a href="pricing.html">Country Pricing</a></li>
+            <li><a href="contact.html">Contact &amp; Briefs</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms &amp; Conditions</a></li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom-bar">
-        <div>
-          © <span id="current-year">2026</span> HaseenTech. All rights reserved. Founded by Hasan Ismail.
-        </div>
-        <div class="footer-legal-links">
-          <a href="privacy.html" class="footer-link">Privacy Policy</a>
-          <a href="terms.html" class="footer-link">Terms &amp; Conditions</a>
-        </div>
+        <div>&copy; <span id="current-year">2026</span> HaseenTech. Founded by Hasan Ismail. All rights reserved.</div>
+        <div style="font-family: var(--font-mono); font-size: var(--fs-xs); color: var(--text-secondary);">Karachi, Pakistan &middot; Global Remote Delivery</div>
       </div>
     </div>
   </footer>
 
-  <script src="js/pricing.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/pricing.js"></script>
 </body>
 </html>
