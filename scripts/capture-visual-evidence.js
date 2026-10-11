@@ -87,9 +87,13 @@ async function runVisualEvidenceCapture() {
     await desktopPage.goto(`http://localhost:${PORT}/service-ai-chatbots.html`, { waitUntil: 'networkidle' });
     await desktopPage.screenshot({ path: path.join(SCREENSHOT_DIR, '08-service-ai-chatbots-desktop.png'), fullPage: false });
 
-    console.log('Capturing Desktop WhatsApp & Automations...');
-    await desktopPage.goto(`http://localhost:${PORT}/service-whatsapp-automation.html`, { waitUntil: 'networkidle' });
-    await desktopPage.screenshot({ path: path.join(SCREENSHOT_DIR, '09-service-whatsapp-desktop.png'), fullPage: false });
+    console.log('Capturing Desktop WordPress Service Detail...');
+    await desktopPage.goto(`http://localhost:${PORT}/service-wordpress.html`, { waitUntil: 'networkidle' });
+    await desktopPage.screenshot({ path: path.join(SCREENSHOT_DIR, '10-service-wordpress-desktop.png'), fullPage: false });
+
+    console.log('Capturing Desktop Privacy Policy...');
+    await desktopPage.goto(`http://localhost:${PORT}/privacy.html`, { waitUntil: 'networkidle' });
+    await desktopPage.screenshot({ path: path.join(SCREENSHOT_DIR, '11-privacy-desktop.png'), fullPage: false });
 
     await desktopContext.close();
 

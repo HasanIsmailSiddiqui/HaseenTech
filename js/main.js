@@ -16,7 +16,7 @@
     const drawer = document.getElementById('mobile-drawer');
     const backdrop = document.getElementById('drawer-backdrop');
     const closeBtn = document.getElementById('menu-close') || document.getElementById('drawer-close');
-    const drawerLinks = document.querySelectorAll('.drawer-link, .drawer-sublink');
+    const drawerLinks = drawer ? drawer.querySelectorAll('a') : [];
 
     // Scroll state for header styling
     function onScroll() {
@@ -29,6 +29,7 @@
     window.addEventListener('scroll', onScroll, { passive: true });
     onScroll();
 
+    // Mobile Drawer open/close
     function openDrawer() {
       if (!drawer) return;
       drawer.classList.add('open');
@@ -64,12 +65,84 @@
     backdrop?.addEventListener('click', closeDrawer);
 
     drawerLinks.forEach(link => {
-      link.addEventListener('click', closeDrawer);
+      link.addEventListener('click', function () {
+        // Close drawer cleanly on navigation
+        if (drawer?.classList.contains('open')) {
+          drawer.classList.remove('open');
+          backdrop?.classList.remove('active');
+          toggle?.setAttribute('aria-expanded', 'false');
+          drawer.setAttribute('aria-hidden', 'true');
+          backdrop?.setAttribute('aria-hidden', 'true');
+          document.body.style.overflow = '';
+        }
+      });
     });
 
+    // Desktop Dropdown accessible interactions
+    const dropdownItem = document.querySelector('.nav-item-dropdown');
+    const dropdownTrigger = dropdownItem?.querySelector('.dropdown-trigger');
+
+    function openDropdown() {
+      if (!dropdownItem) return;
+      dropdownItem.classList.add('open');
+      dropdownTrigger?.setAttribute('aria-expanded', 'true');
+    }
+
+    function closeDropdown() {
+      if (!dropdownItem) return;
+      dropdownItem.classList.remove('open');
+      dropdownTrigger?.setAttribute('aria-expanded', 'false');
+    }
+
+    if (dropdownTrigger && dropdownItem) {
+      dropdownTrigger.addEventListener('click', function (e) {
+        e.preventDefault();
+        const isOpen = dropdownItem.classList.contains('open');
+        if (isOpen) {
+          closeDropdown();
+        } else {
+          openDropdown();
+        }
+      });
+
+      dropdownItem.addEventListener('mouseleave', closeDropdown);
+
+      // Close dropdown if clicking anywhere outside
+      document.addEventListener('click', function (e) {
+        if (!dropdownItem.contains(e.target)) {
+          closeDropdown();
+        }
+      });
+
+      // Close dropdown on focusout (when tabbing away from dropdown)
+      dropdownItem.addEventListener('focusout', function (e) {
+        if (!dropdownItem.contains(e.relatedTarget)) {
+          closeDropdown();
+        }
+      });
+    }
+
+    // Escape key handler for both drawer and dropdown
     document.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape' && drawer?.classList.contains('open')) {
-        closeDrawer();
+      if (e.key === 'Escape') {
+        if (drawer?.classList.contains('open')) {
+          closeDrawer();
+        } else if (dropdownItem?.classList.contains('open') || dropdownItem?.contains(document.activeElement)) {
+          closeDropdown();
+          dropdownTrigger?.focus();
+        }
+      }
+    });
+
+    // Close mobile drawer if window resized to desktop
+    window.addEventListener('resize', function () {
+      if (window.innerWidth > 868 && drawer?.classList.contains('open')) {
+        drawer.classList.remove('open');
+        backdrop?.classList.remove('active');
+        toggle?.setAttribute('aria-expanded', 'false');
+        drawer.setAttribute('aria-hidden', 'true');
+        backdrop?.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
       }
     });
   }
@@ -79,6 +152,7 @@
      ------------------------------------------------------------------------ */
   function highlightActiveNavigation() {
     const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+    const isServicePage = currentPath.startsWith('service') || currentPath === 'services.html';
 
     const navLinks = document.querySelectorAll('.nav-link, .dropdown-item, .drawer-link, .drawer-sublink');
     navLinks.forEach(link => {
@@ -88,14 +162,17 @@
 
       if (targetPage === currentPath || (currentPath === '' && targetPage === 'index.html')) {
         link.classList.add('active');
-
-        // If it's a sub-service dropdown item, also highlight the parent "Services" nav link
-        if (link.classList.contains('dropdown-item')) {
-          const parentServices = document.querySelector('.dropdown-trigger');
-          if (parentServices) parentServices.classList.add('active');
-        }
+        link.setAttribute('aria-current', 'page');
       }
     });
+
+    // If on any service page, ensure parent Services trigger is active
+    if (isServicePage) {
+      const parentServices = document.querySelector('.dropdown-trigger');
+      if (parentServices) {
+        parentServices.classList.add('active');
+      }
+    }
   }
 
   /* ------------------------------------------------------------------------

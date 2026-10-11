@@ -12,12 +12,13 @@
 <body>
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
-  <!-- Header -->
+    <!-- Header -->
   <header class="site-header">
     <div class="container header-container">
       <a href="index.html" class="brand-logo" aria-label="HaseenTech Home">
         <img src="assets/brand/logo.svg" alt="HaseenTech" width="160" height="32">
       </a>
+
       <nav class="nav-desktop" aria-label="Primary Navigation">
         <ul class="nav-list">
           <li><a href="index.html" class="nav-link">Home</a></li>
@@ -25,7 +26,7 @@
           <li class="nav-item-dropdown">
             <a href="services.html" class="nav-link dropdown-trigger active" aria-haspopup="true" aria-expanded="false">
               Services
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
             </a>
             <div class="dropdown-menu" role="menu">
               <a href="services.html" class="dropdown-item" role="menuitem" style="font-weight: 600; color: var(--color-orange); border-bottom: 1px solid var(--color-border); padding-bottom: 0.5rem; margin-bottom: 0.25rem;">All Services Overview ↗</a>
@@ -37,7 +38,7 @@
               <a href="service-landing-pages.html" class="dropdown-item" role="menuitem">Landing Pages</a>
               <a href="service-redesign.html" class="dropdown-item" role="menuitem">Website Redesign</a>
               <a href="service-maintenance.html" class="dropdown-item" role="menuitem">Maintenance &amp; Support</a>
-              <a href="service-seo-speed.html" class="dropdown-item active" role="menuitem">SEO &amp; Speed Optimization</a>
+              <a href="service-seo-speed.html" class="dropdown-item active" role="menuitem" aria-current="page">SEO &amp; Speed Optimization</a>
             </div>
           </li>
           <li><a href="about.html" class="nav-link">Studio</a></li>
@@ -45,10 +46,14 @@
           <li><a href="contact.html" class="nav-link">Contact</a></li>
         </ul>
       </nav>
+
       <div class="header-actions">
-        <a href="contact.html?service=seo-speed" class="btn btn-primary btn-sm">Start a Project ↗</a>
+        <div class="status-indicator-header">
+          <span class="pill-badge"><span class="pulse-dot"></span> Available Q4/2026</span>
+        </div>
+        <a href="contact.html" class="btn btn-primary btn-sm">Start a Project ↗</a>
         <button id="menu-toggle" class="mobile-toggle-btn" aria-label="Toggle Navigation Menu" aria-expanded="false">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
         </button>
       </div>
     </div>
@@ -57,16 +62,18 @@
   <!-- Mobile Drawer -->
   <div id="mobile-drawer" class="mobile-drawer" aria-hidden="true">
     <div class="drawer-header">
-      <img src="assets/brand/logo.svg" alt="HaseenTech" width="140" height="28">
+      <a href="index.html" class="brand-logo" aria-label="HaseenTech Home">
+        <img src="assets/brand/logo.svg" alt="HaseenTech" width="140" height="28">
+      </a>
       <button id="menu-close" class="mobile-toggle-btn" aria-label="Close Navigation Menu">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12"/></svg>
       </button>
     </div>
     <ul class="drawer-nav-list">
       <li><a href="index.html" class="drawer-link">Home</a></li>
       <li><a href="portfolio.html" class="drawer-link">Selected Work</a></li>
       <li>
-        <a href="services.html" class="drawer-link active">Services Overview</a>
+        <a href="services.html" class="drawer-link">Services Overview</a>
         <div class="drawer-submenu">
           <a href="services.html" class="drawer-sublink" style="color: var(--color-orange); font-weight: 600;">All Capabilities Overview ↗</a>
           <a href="service-wordpress.html" class="drawer-sublink">WordPress Development</a>
@@ -77,13 +84,16 @@
           <a href="service-landing-pages.html" class="drawer-sublink">Landing Pages</a>
           <a href="service-redesign.html" class="drawer-sublink">Website Redesign</a>
           <a href="service-maintenance.html" class="drawer-sublink">Maintenance &amp; Bug Fixes</a>
-          <a href="service-seo-speed.html" class="drawer-sublink active">SEO &amp; Speed Optimization</a>
+          <a href="service-seo-speed.html" class="drawer-sublink active" aria-current="page">SEO &amp; Speed Optimization</a>
         </div>
       </li>
-      <li><a href="about.html" class="drawer-link">Studio & Founder</a></li>
-      <li><a href="pricing.html" class="drawer-link">Packages & Pricing</a></li>
-      <li><a href="contact.html" class="drawer-link">Contact & Inquiries</a></li>
+      <li><a href="about.html" class="drawer-link">Studio &amp; Founder</a></li>
+      <li><a href="pricing.html" class="drawer-link">Packages &amp; Pricing</a></li>
+      <li><a href="contact.html" class="drawer-link">Contact &amp; Inquiries</a></li>
     </ul>
+    <div style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--color-border);">
+      <a href="contact.html" class="btn btn-primary" style="width: 100%;">Start a Project ↗</a>
+    </div>
   </div>
 
   <main id="main-content">
@@ -173,46 +183,70 @@
     </section>
   </main>
 
-  <!-- Footer -->
+    <!-- Site Footer -->
   <footer class="site-footer">
     <div class="container">
       <div class="footer-top-grid">
+        <!-- Column 1: Brand -->
         <div class="footer-col-brand">
-          <img src="assets/brand/logo.svg" alt="HaseenTech" width="160" height="32">
-          <p class="footer-brand-desc">Independent creative technology studio founded by Hasan Ismail.</p>
-          <div style="font-family: var(--font-mono); font-size: var(--fs-xs); color: var(--color-muted);">Karachi, Pakistan · Remote Worldwide</div>
+          <a href="index.html" class="brand-logo" aria-label="HaseenTech Home">
+            <img src="assets/brand/logo.svg" alt="HaseenTech" width="160" height="32">
+          </a>
+          <p class="footer-brand-desc">
+            Independent creative technology studio founded by Hasan Ismail. Delivering modern, high-performance web engineering for ambitious international businesses.
+          </p>
+          <div class="footer-brand-meta" style="font-family: var(--font-mono); font-size: var(--fs-xs); color: var(--color-muted);">
+            Karachi, Pakistan &middot; Remote Worldwide
+          </div>
+          <div class="status-indicator-footer" style="display: inline-flex; align-items: center; gap: 0.5rem; margin-top: 0.25rem;">
+            <span class="pulse-dot"></span>
+            <span style="font-family: var(--font-mono); font-size: var(--fs-xs); color: var(--color-muted);">Active Studio Status</span>
+          </div>
         </div>
-        <div>
-          <h4 class="footer-col-title">Navigation</h4>
+
+        <!-- Column 2: Services -->
+        <div class="footer-col-services">
+          <h4 class="footer-col-title">Services</h4>
           <ul class="footer-links-list">
-            <li><a href="index.html" class="footer-link">Home</a></li>
-            <li><a href="portfolio.html" class="footer-link">Selected Work</a></li>
-            <li><a href="services.html" class="footer-link">All Services</a></li>
-            <li><a href="about.html" class="footer-link">Studio</a></li>
+            <li><a href="services.html" class="footer-link">Web Design &amp; Development</a></li>
+            <li><a href="service-custom-web.html" class="footer-link">Custom Web Development</a></li>
+            <li><a href="service-wordpress.html" class="footer-link">WordPress &amp; WooCommerce</a></li>
+            <li><a href="service-ai-chatbots.html" class="footer-link">AI Chatbots &amp; Agents</a></li>
+            <li><a href="service-whatsapp-automation.html" class="footer-link">WhatsApp Automation</a></li>
+            <li><a href="service-seo-speed.html" class="footer-link">SEO &amp; Performance</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Company -->
+        <div class="footer-col-company">
+          <h4 class="footer-col-title">Company</h4>
+          <ul class="footer-links-list">
+            <li><a href="about.html" class="footer-link">About</a></li>
+            <li><a href="services.html" class="footer-link">Services</a></li>
+            <li><a href="portfolio.html" class="footer-link">Portfolio</a></li>
             <li><a href="pricing.html" class="footer-link">Pricing</a></li>
             <li><a href="contact.html" class="footer-link">Contact</a></li>
           </ul>
         </div>
-        <div>
-          <h4 class="footer-col-title">Services</h4>
-          <ul class="footer-links-list">
-            <li><a href="service-wordpress.html" class="footer-link">WordPress Development</a></li>
-            <li><a href="service-woocommerce.html" class="footer-link">WooCommerce Stores</a></li>
-            <li><a href="service-landing-pages.html" class="footer-link">Landing Pages</a></li>
-            <li><a href="service-redesign.html" class="footer-link">Website Redesign</a></li>
-            <li><a href="service-maintenance.html" class="footer-link">Maintenance &amp; Support</a></li>
-            <li><a href="service-seo-speed.html" class="footer-link">SEO &amp; Speed Optimization</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4 class="footer-col-title">Direct Inquiries</h4>
+
+        <!-- Column 4: Contact -->
+        <div class="footer-col-contact">
+          <h4 class="footer-col-title">Contact</h4>
           <ul class="footer-links-list">
             <li><a href="mailto:hello@haseentech.com" class="footer-link">hello@haseentech.com</a></li>
+            <li><span style="font-size: var(--fs-sm); color: var(--text-secondary);">Direct WhatsApp upon project brief</span></li>
+            <li style="margin-top: 0.75rem;">
+              <a href="contact.html" class="btn btn-secondary btn-sm" style="display: inline-flex;">Start a Project ↗</a>
+            </li>
           </ul>
         </div>
       </div>
+
+      <!-- Bottom Bar -->
       <div class="footer-bottom-bar">
-        <div>© <span id="current-year">2026</span> HaseenTech. All rights reserved. Founded by Hasan Ismail.</div>
+        <div>
+          &copy; <span id="current-year">2026</span> HaseenTech. All rights reserved. Founded by Hasan Ismail.
+        </div>
         <div class="footer-legal-links">
           <a href="privacy.html" class="footer-link">Privacy Policy</a>
           <a href="terms.html" class="footer-link">Terms &amp; Conditions</a>
