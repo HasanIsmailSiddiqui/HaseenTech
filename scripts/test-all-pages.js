@@ -195,24 +195,35 @@ async function runComprehensiveTests() {
     // Atelier Rieber card & live URL
     const atelierCardExists = await page.$eval('#atelier-rieber', el => el !== null);
     assert(atelierCardExists, 'Atelier Rieber project card exists with id #atelier-rieber');
-
     const atelierLiveLink = await page.$eval('#atelier-rieber a[href*="atelier-rieber.de"]', el => el.getAttribute('href'));
     assert(atelierLiveLink === 'https://atelier-rieber.de/', `Atelier Rieber live link is verified: ${atelierLiveLink}`);
 
-    // Business filter: 4 projects
+    // Aqua Seafood card & live URL
+    const aquaCardExists = await page.$eval('#aquaseafood', el => el !== null);
+    assert(aquaCardExists, 'Aqua Seafood project card exists with id #aquaseafood');
+    const aquaLiveLink = await page.$eval('#aquaseafood a[href*="aquaseafood.co.uk"]', el => el.getAttribute('href'));
+    assert(aquaLiveLink === 'https://www.aquaseafood.co.uk/', `Aqua Seafood live link is verified: ${aquaLiveLink}`);
+
+    // IFKK Pakistan card & live URL
+    const ifkkCardExists = await page.$eval('#ifkkpakistan', el => el !== null);
+    assert(ifkkCardExists, 'IFKK Pakistan project card exists with id #ifkkpakistan');
+    const ifkkLiveLink = await page.$eval('#ifkkpakistan a[href*="ifkkpakistan.com"]', el => el.getAttribute('href'));
+    assert(ifkkLiveLink === 'https://ifkkpakistan.com/', `IFKK Pakistan live link is verified: ${ifkkLiveLink}`);
+
+    // Business filter: 5 projects
     await page.click('button[data-filter="business"]');
     let visibleBusiness = await page.$$eval('.portfolio-card-item', els => els.filter(e => e.style.display !== 'none').length);
-    assert(visibleBusiness === 4, `4 business projects visible under Business filter (count: ${visibleBusiness})`);
+    assert(visibleBusiness === 5, `5 business projects visible under Business filter (count: ${visibleBusiness})`);
 
-    // International filter: 1 project
+    // International filter: 3 projects
     await page.click('button[data-filter="international"]');
     let visibleInternational = await page.$$eval('.portfolio-card-item', els => els.filter(e => e.style.display !== 'none').length);
-    assert(visibleInternational === 1, `1 international project visible under International filter (count: ${visibleInternational})`);
+    assert(visibleInternational === 3, `3 international projects visible under International filter (count: ${visibleInternational})`);
 
-    // E-Commerce filter: 2 projects
+    // E-Commerce filter: 1 project
     await page.click('button[data-filter="ecommerce"]');
     let visibleEcommerce = await page.$$eval('.portfolio-card-item', els => els.filter(e => e.style.display !== 'none').length);
-    assert(visibleEcommerce === 2, `2 e-commerce projects visible under E-Commerce filter (count: ${visibleEcommerce})`);
+    assert(visibleEcommerce === 1, `1 e-commerce project visible under E-Commerce filter (count: ${visibleEcommerce})`);
 
     // All filter: 8 projects
     await page.click('button[data-filter="all"]');
