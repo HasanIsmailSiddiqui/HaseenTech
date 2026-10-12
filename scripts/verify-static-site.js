@@ -61,7 +61,9 @@ assert(fs.existsSync(path.join(ROOT_DIR, 'css', 'main.css')), 'Primary styleshee
 assert(fs.existsSync(path.join(ROOT_DIR, 'css', 'style.css')), 'Legacy stylesheet alias css/style.css exists');
 assert(fs.existsSync(path.join(ROOT_DIR, 'js', 'main.js')), 'Main script js/main.js exists');
 assert(fs.existsSync(path.join(ROOT_DIR, 'js', 'pricing.js')), 'Pricing script js/pricing.js exists');
-assert(fs.existsSync(path.join(ROOT_DIR, 'assets', 'brand', 'logo.svg')), 'Brand logo exists: assets/brand/logo.svg');
+assert(fs.existsSync(path.join(ROOT_DIR, 'assets', 'brand', 'logo.png')), 'Brand logo exists: assets/brand/logo.png');
+assert(fs.existsSync(path.join(ROOT_DIR, 'assets', 'brand', 'logo.svg')), 'Brand logo fallback exists: assets/brand/logo.svg');
+assert(fs.existsSync(path.join(ROOT_DIR, 'favicon.png')), 'Root favicon exists: favicon.png');
 assert(fs.existsSync(path.join(ROOT_DIR, 'assets', 'brand', 'favicon.svg')), 'Favicon exists: assets/brand/favicon.svg');
 assert(fs.existsSync(path.join(ROOT_DIR, 'assets', 'images', 'studio-space.jpg')), 'Studio image exists: assets/images/studio-space.jpg');
 assert(fs.existsSync(path.join(ROOT_DIR, 'assets', 'images', 'hasan-ismail.png')), 'Founder portrait exists: assets/images/hasan-ismail.png');
@@ -226,8 +228,8 @@ async function runHttpTests() {
   const assets = [
     '/css/main.css',
     '/js/main.js',
-    '/assets/brand/logo.svg',
-    '/assets/brand/favicon.svg',
+    '/assets/brand/logo.png',
+    '/favicon.png',
     '/assets/images/studio-space.jpg',
     '/assets/images/hasan-ismail.png',
     '/assets/portfolio/atelier-rieber.png',

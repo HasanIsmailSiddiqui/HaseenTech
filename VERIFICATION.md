@@ -36,6 +36,7 @@
 
 ## Assets & Images Preserved
 
+- `assets/brand/logo.png` & root `favicon.png` — Official HaseenTech chrome HT metallic emblem (used across all headers, drawers, footers & favicons)
 - `assets/brand/logo.svg` & variants
 - `assets/brand/favicon.svg` & root `favicon.svg`
 - `assets/images/studio-space.jpg` — Karachi studio environment photo (used in studio sections of `index.html` and `about.html`)

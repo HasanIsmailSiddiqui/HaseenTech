@@ -42,7 +42,7 @@ haseentech/
 │   └── service-wordpress.html           # Custom WordPress CMS Development
 │
 ├── assets/
-│   ├── brand/                           # SVG studio logos (light, dark, gradient, primary) and favicon
+│   ├── brand/                           # HaseenTech logo (logo.png), SVG variants, and identity assets
 │   ├── icons/                           # Apple touch icon, OpenGraph fallback, favicon
 │   ├── images/                          # Studio environment photography, hero artwork, founder portrait
 │   └── portfolio/                       # High-resolution production screenshots of delivered client websites
